@@ -1,0 +1,361 @@
+{
+  "generatedAt": "2026-10-17T21:39:51.952Z",
+  "commit": null,
+  "node": "v24.15.0",
+  "platform": "win32-x64",
+  "versions": {
+    "@angular/core": "22.2.3",
+    "forty-cdk": "0.38.0",
+    "ng-primitives": "0.131.2",
+    "@angular/aria": "22.2.3",
+    "@angular/cdk": "22.2.3",
+    "@spartan-ng/brain": "1.8.0"
+  },
+  "baseline": {
+    "initialJs": {
+      "raw": 96070,
+      "gzip": 32023,
+      "brotli": 28897
+    },
+    "lazyJs": {
+      "raw": 0,
+      "gzip": 0,
+      "brotli": 0
+    },
+    "css": {
+      "raw": 0,
+      "gzip": 20,
+      "brotli": 1
+    },
+    "files": {
+      "initial": ["main.js"],
+      "lazy": []
+    }
+  },
+  "rows": [
+    {
+      "pattern": "accordion",
+      "library": "forty",
+      "status": "measured",
+      "reason": null,
+      "initialJs": {
+        "raw": 132427,
+        "gzip": 44407,
+        "brotli": 39822
+      },
+      "initialJsDelta": {
+        "raw": 36357,
+        "gzip": 12384,
+        "brotli": 10925
+      },
+      "lazyJs": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 20,
+        "brotli": 1
+      },
+      "files": {
+        "initial": ["main.js"],
+        "lazy": []
+      }
+    },
+    {
+      "pattern": "accordion",
+      "library": "ng-primitives",
+      "status": "missing",
+      "reason": null
+    },
+    {
+      "pattern": "accordion",
+      "library": "angular-aria",
+      "status": "missing",
+      "reason": null
+    },
+    {
+      "pattern": "accordion",
+      "library": "angular-cdk",
+      "status": "missing",
+      "reason": null
+    },
+    {
+      "pattern": "accordion",
+      "library": "spartan",
+      "status": "missing",
+      "reason": null
+    },
+    {
+      "pattern": "tabs",
+      "library": "forty",
+      "status": "measured",
+      "reason": null,
+      "initialJs": {
+        "raw": 138025,
+        "gzip": 46147,
+        "brotli": 41293
+      },
+      "initialJsDelta": {
+        "raw": 41955,
+        "gzip": 14124,
+        "brotli": 12396
+      },
+      "lazyJs": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 20,
+        "brotli": 1
+      },
+      "files": {
+        "initial": ["main.js"],
+        "lazy": []
+      }
+    },
+    {
+      "pattern": "tabs",
+      "library": "ng-primitives",
+      "status": "missing",
+      "reason": null
+    },
+    {
+      "pattern": "tabs",
+      "library": "angular-aria",
+      "status": "missing",
+      "reason": null
+    },
+    {
+      "pattern": "tabs",
+      "library": "angular-cdk",
+      "status": "missing",
+      "reason": null
+    },
+    {
+      "pattern": "tabs",
+      "library": "spartan",
+      "status": "missing",
+      "reason": null
+    },
+    {
+      "pattern": "menu",
+      "library": "forty",
+      "status": "measured",
+      "reason": null,
+      "initialJs": {
+        "raw": 193961,
+        "gzip": 64158,
+        "brotli": 57212
+      },
+      "initialJsDelta": {
+        "raw": 97891,
+        "gzip": 32135,
+        "brotli": 28315
+      },
+      "lazyJs": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 20,
+        "brotli": 1
+      },
+      "files": {
+        "initial": ["main.js"],
+        "lazy": []
+      }
+    },
+    {
+      "pattern": "menu",
+      "library": "ng-primitives",
+      "status": "missing",
+      "reason": null
+    },
+    {
+      "pattern": "menu",
+      "library": "angular-aria",
+      "status": "missing",
+      "reason": null
+    },
+    {
+      "pattern": "menu",
+      "library": "angular-cdk",
+      "status": "missing",
+      "reason": null
+    },
+    {
+      "pattern": "menu",
+      "library": "spartan",
+      "status": "missing",
+      "reason": null
+    },
+    {
+      "pattern": "listbox",
+      "library": "forty",
+      "status": "measured",
+      "reason": null,
+      "initialJs": {
+        "raw": 160919,
+        "gzip": 53076,
+        "brotli": 47548
+      },
+      "initialJsDelta": {
+        "raw": 64849,
+        "gzip": 21053,
+        "brotli": 18651
+      },
+      "lazyJs": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 20,
+        "brotli": 1
+      },
+      "files": {
+        "initial": ["main.js"],
+        "lazy": []
+      }
+    },
+    {
+      "pattern": "listbox",
+      "library": "ng-primitives",
+      "status": "missing",
+      "reason": null
+    },
+    {
+      "pattern": "listbox",
+      "library": "angular-aria",
+      "status": "missing",
+      "reason": null
+    },
+    {
+      "pattern": "listbox",
+      "library": "angular-cdk",
+      "status": "missing",
+      "reason": null
+    },
+    {
+      "pattern": "listbox",
+      "library": "spartan",
+      "status": "missing",
+      "reason": null
+    },
+    {
+      "pattern": "combobox",
+      "library": "forty",
+      "status": "measured",
+      "reason": null,
+      "initialJs": {
+        "raw": 211445,
+        "gzip": 70091,
+        "brotli": 62243
+      },
+      "initialJsDelta": {
+        "raw": 115375,
+        "gzip": 38068,
+        "brotli": 33346
+      },
+      "lazyJs": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 20,
+        "brotli": 1
+      },
+      "files": {
+        "initial": ["main.js"],
+        "lazy": []
+      }
+    },
+    {
+      "pattern": "combobox",
+      "library": "ng-primitives",
+      "status": "missing",
+      "reason": null
+    },
+    {
+      "pattern": "combobox",
+      "library": "angular-aria",
+      "status": "missing",
+      "reason": null
+    },
+    {
+      "pattern": "combobox",
+      "library": "angular-cdk",
+      "status": "missing",
+      "reason": null
+    },
+    {
+      "pattern": "combobox",
+      "library": "spartan",
+      "status": "missing",
+      "reason": null
+    },
+    {
+      "pattern": "dialog",
+      "library": "forty",
+      "status": "measured",
+      "reason": null,
+      "initialJs": {
+        "raw": 152934,
+        "gzip": 50960,
+        "brotli": 45592
+      },
+      "initialJsDelta": {
+        "raw": 56864,
+        "gzip": 18937,
+        "brotli": 16695
+      },
+      "lazyJs": {
+        "raw": 0,
+        "gzip": 0,
+        "brotli": 0
+      },
+      "css": {
+        "raw": 0,
+        "gzip": 20,
+        "brotli": 1
+      },
+      "files": {
+        "initial": ["main.js"],
+        "lazy": []
+      }
+    },
+    {
+      "pattern": "dialog",
+      "library": "ng-primitives",
+      "status": "missing",
+      "reason": null
+    },
+    {
+      "pattern": "dialog",
+      "library": "angular-aria",
+      "status": "missing",
+      "reason": null
+    },
+    {
+      "pattern": "dialog",
+      "library": "angular-cdk",
+      "status": "missing",
+      "reason": null
+    },
+    {
+      "pattern": "dialog",
+      "library": "spartan",
+      "status": "missing",
+      "reason": null
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "forty-cdk-bench",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "bench:build": "node scripts/build.mjs",
+    "bench:smoke": "node scripts/smoke.mjs",
+    "bench:size": "node scripts/size.mjs",
+    "bench": "node scripts/build.mjs && node scripts/smoke.mjs && node scripts/size.mjs",
+    "format": "prettier --write ."
+  },
+  "private": true,
+  "packageManager": "pnpm@11.21.0",
+  "dependencies": {
+    "@angular/aria": "22.2.3",
+    "@angular/cdk": "22.2.3",
+    "@angular/common": "^22.2.3",
+    "@angular/compiler": "^22.2.3",
+    "@angular/core": "^22.2.3",
+    "@angular/forms": "^22.2.3",
+    "@angular/platform-browser": "^22.2.3",
+    "@angular/router": "^22.2.3",
+    "@floating-ui/dom": "1.8.0",
+    "@internationalized/date": "3.12.4",
+    "@spartan-ng/brain": "1.8.0",
+    "forty-cdk": "0.38.0",
+    "ng-primitives": "0.131.2",
+    "rxjs": "~7.8.2",
+    "tslib": "^2.8.1"
+  },
+  "devDependencies": {
+    "@angular/build": "^22.2.3",
+    "@angular/cli": "^22.2.3",
+    "@angular/compiler-cli": "^22.2.3",
+    "playwright": "1.64.1",
+    "prettier": "^3.9.10",
+    "typescript": "~6.0.3"
+  },
+  "description": "Reproducible comparisons between forty-cdk and other Angular headless libraries",
+  "engines": {
+    "node": "^22.22.3 || ^24.15.0 || >=26.0.0"
+  }
+}
