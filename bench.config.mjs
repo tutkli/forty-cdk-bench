@@ -13,6 +13,7 @@ export const patterns = [
     apg: 'https://www.w3.org/WAI/ARIA/apg/patterns/accordion/',
     probe: [
       { expect: 'role=button[name="Shipping"][expanded=true]', count: 1 },
+      { text: 'output', equals: 'shipping' },
       { click: 'role=button[name="Returns"]' },
       { expect: 'role=button[name="Returns"][expanded=true]', count: 1 },
       { expect: 'role=button[name="Shipping"][expanded=false]', count: 1 },
@@ -26,6 +27,7 @@ export const patterns = [
     probe: [
       { expect: 'role=tablist[name="Account settings"] >> role=tab', count: 3 },
       { expect: 'role=tab[name="Profile"][selected=true]', count: 1 },
+      { expect: 'role=tabpanel', count: 1 },
       { click: 'role=tab[name="Profile"]' },
       { press: 'ArrowRight' },
       { expect: 'role=tab[name="Security"][selected=true]', count: 1 },
@@ -39,6 +41,7 @@ export const patterns = [
     apg: 'https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/',
     probe: [
       { expect: 'role=menu', count: 0 },
+      { text: 'output', equals: '' },
       { click: 'role=button[name="Actions"]' },
       { expect: 'role=menu >> role=menuitem', count: 3 },
       { click: 'role=menuitem[name="Duplicate"]' },
@@ -52,6 +55,8 @@ export const patterns = [
     apg: 'https://www.w3.org/WAI/ARIA/apg/patterns/listbox/',
     probe: [
       { expect: 'role=listbox[name="Fruits"] >> role=option', count: 5 },
+      { expect: 'role=option[selected=true]', count: 0 },
+      { text: 'output', equals: '' },
       { click: 'role=option[name="Cherry"]' },
       { expect: 'role=option[name="Cherry"][selected=true]', count: 1 },
       { text: 'output', equals: 'cherry' },
@@ -63,6 +68,7 @@ export const patterns = [
     apg: 'https://www.w3.org/WAI/ARIA/apg/patterns/combobox/',
     probe: [
       { expect: 'role=combobox[name="Fruit"]', count: 1 },
+      { text: 'output', equals: '' },
       { click: 'role=combobox[name="Fruit"]' },
       { type: 'an' },
       { expect: 'role=option', count: 2 },
@@ -78,6 +84,7 @@ export const patterns = [
       { expect: 'role=dialog', count: 0 },
       { click: 'role=button[name="Open dialog"]' },
       { expect: 'role=dialog[name="Delete file?"]', count: 1 },
+      { expect: 'role=dialog[name="Delete file?"] >> role=button[name="Cancel"]', count: 1 },
       { press: 'Escape' },
       { expect: 'role=dialog', count: 0 },
       { focused: 'role=button[name="Open dialog"]' },
@@ -89,4 +96,14 @@ export const patterns = [
   },
 ];
 
-export const unsupported = {};
+export const unsupported = {
+  'dialog/angular-aria':
+    'No dialog entry point; the Angular team points to `@angular/cdk/dialog` (the Angular CDK column).',
+  'tabs/angular-cdk': '`@angular/cdk` has no tabs primitive.',
+  'menu/spartan':
+    "brain has no menu primitive; Spartan's dropdown menu is a styled wrapper over `@angular/cdk/menu` (the Angular CDK column).",
+  'listbox/spartan':
+    'brain has no standalone listbox; listbox roles exist only inside its combobox, select and command widgets.',
+  'combobox/angular-cdk':
+    '`@angular/cdk` has no combobox; the experimental one ships separately in `@angular/cdk-experimental`.',
+};
