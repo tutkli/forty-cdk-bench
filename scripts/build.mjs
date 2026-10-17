@@ -1,20 +1,36 @@
 import { spawn } from 'node:child_process';
 import { mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { join, relative } from 'node:path';
-import { BASELINE, distDir, entryFor, flagValue, root, selectScenarios } from './shared.mjs';
+import {
+  BASELINE,
+  SUITE_BASELINE,
+  distDir,
+  entriesDir,
+  entryFor,
+  flagValue,
+  root,
+  selectScenarios,
+  selectSuites,
+} from './shared.mjs';
 
 const argv = process.argv.slice(2);
 const jobs = Number(flagValue(argv, 'jobs', '1'));
 const filtered = argv.some((arg) => !arg.startsWith('--'));
 const ids = [
-  ...(filtered && !argv.includes('--baseline') ? [] : [BASELINE]),
+  ...(filtered && !argv.includes('--baseline') ? [] : [BASELINE, SUITE_BASELINE]),
   ...selectScenarios(argv).map((scenario) => scenario.id),
+  ...selectSuites(argv).map((suite) => suite.id),
 ];
 
 const ng = join(root, 'node_modules', '@angular', 'cli', 'bin', 'ng.js');
 
 function build(id) {
   const entry = relative(root, entryFor(id)).replaceAll('\\', '/');
+  const tsConfig = join(entriesDir, `${id}.tsconfig.json`);
+  writeFileSync(
+    tsConfig,
+    `${JSON.stringify({ extends: '../../tsconfig.json', compilerOptions: { types: [] }, files: [`../../${entry}`] }, null, 2)}\n`,
+  );
   const outputPath = join(distDir, id);
   rmSync(outputPath, { recursive: true, force: true });
   const started = performance.now();
@@ -26,6 +42,7 @@ function build(id) {
         'build',
         '--configuration=production',
         `--browser=${entry}`,
+        `--ts-config=${relative(root, tsConfig).replaceAll('\\', '/')}`,
         `--output-path=${outputPath}`,
         '--output-hashing=none',
       ],

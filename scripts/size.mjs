@@ -4,6 +4,8 @@ import { join } from 'node:path';
 import { brotliCompressSync, constants, gzipSync } from 'node:zlib';
 import {
   BASELINE,
+  SUITE_BASELINE,
+  discoverSuites,
   distDir,
   installedVersion,
   libraries,
@@ -101,6 +103,27 @@ for (const pattern of patterns) {
   }
 }
 
+const suiteBaseline = measure(SUITE_BASELINE);
+const suites = [];
+for (const suite of discoverSuites()) {
+  const measured = suiteBaseline && measure(suite.id);
+  if (!measured) {
+    continue;
+  }
+  const parts = rows.filter(
+    (row) =>
+      row.library === suite.library.id &&
+      row.status === 'measured' &&
+      suite.patterns.some((pattern) => pattern.id === row.pattern),
+  );
+  suites.push({
+    library: suite.library.id,
+    patterns: suite.patterns.map((pattern) => pattern.id),
+    initialJsDelta: delta(measured.initialJs, suiteBaseline.initialJs),
+    sumOfParts: sum(parts.map((row) => row.initialJsDelta)),
+  });
+}
+
 let commit = null;
 try {
   commit = execSync('git rev-parse --short HEAD', {
@@ -122,6 +145,7 @@ const report = {
   versions: Object.fromEntries(packages.map((pkg) => [pkg, installedVersion(pkg)])),
   baseline,
   rows,
+  suites,
 };
 
 mkdirSync(resultsDir, { recursive: true });
@@ -144,6 +168,17 @@ function table(metric) {
       return row.status === 'unsupported' ? 'n/a' : '—';
     });
     return `| ${pattern.name} | ${cells.join(' | ')} |`;
+  });
+  return [header, divider, ...body].join('\n');
+}
+
+function suiteTable() {
+  const header = '| Library | Patterns | Together (gzip) | Sum of separate (gzip) | Shared |';
+  const divider = '| --- | --- | ---: | ---: | ---: |';
+  const body = suites.map((suite) => {
+    const library = libraries.find((l) => l.id === suite.library);
+    const shared = suite.sumOfParts.gzip - suite.initialJsDelta.gzip;
+    return `| ${library.name} | ${suite.patterns.length} (${suite.patterns.join(', ')}) | ${signed(suite.initialJsDelta.gzip)} | ${signed(suite.sumOfParts.gzip)} | ${kb(shared)} |`;
   });
   return [header, divider, ...body].join('\n');
 }
@@ -177,6 +212,16 @@ const markdown = [
   '',
   '`n/a`: the library has no primitive for the pattern. `—`: not written yet.',
   '',
+  ...(suites.length > 0
+    ? [
+        '## All patterns in one app',
+        '',
+        "Every pattern a library supports, rendered together in one app, against the sum of the patterns measured one by one. *Shared* is what the patterns don't pay twice (common core, overlay, focus management). Libraries cover different sets of patterns, so compare this column within a library more than across them.",
+        '',
+        suiteTable(),
+        '',
+      ]
+    : []),
   ...(notes.length > 0 ? ['## Unsupported', '', ...notes, ''] : []),
   '## Versions',
   '',
