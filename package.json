@@ -6,8 +6,17 @@
     "bench:build": "node scripts/build.mjs",
     "bench:smoke": "node scripts/smoke.mjs",
     "bench:size": "node scripts/size.mjs",
+    "bench:a11y": "node scripts/a11y.mjs",
+    "bench:ssr:build": "node scripts/ssr-build.mjs",
+    "bench:ssr": "node scripts/ssr.mjs",
+    "bench:perf": "node scripts/perf.mjs",
+    "bench:api": "node scripts/api.mjs",
+    "bench:coverage": "node scripts/coverage.mjs",
+    "bench:code": "node scripts/consumer-code.mjs",
     "bench": "node scripts/build.mjs && node scripts/smoke.mjs && node scripts/size.mjs",
-    "format": "prettier --write ."
+    "bench:all": "pnpm bench && pnpm bench:a11y && pnpm bench:ssr:build && pnpm bench:ssr && pnpm bench:api && pnpm bench:coverage && pnpm bench:code && pnpm bench:perf && pnpm bench:summary",
+    "format": "prettier --write .",
+    "bench:summary": "node scripts/summary.mjs && prettier --write README.md --log-level warn"
   },
   "private": true,
   "packageManager": "pnpm@11.21.0",

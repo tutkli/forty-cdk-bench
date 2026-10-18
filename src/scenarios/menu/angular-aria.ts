@@ -20,7 +20,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
       <div ngMenu #actionsMenu="ngMenu" (itemSelected)="value.set($event ?? '')">
         <ng-template ngMenuContent>
           @for (action of actions; track action) {
-            <div ngMenuItem [value]="action">{{ action }}</div>
+            <div ngMenuItem [value]="action" [searchTerm]="action">{{ action }}</div>
           }
         </ng-template>
       </div>

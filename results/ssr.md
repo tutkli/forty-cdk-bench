@@ -1,6 +1,6 @@
 # SSR and hydration
 
-Generated 2026-10-18T01:07:17.217Z. Angular 22.2.3, `@angular/ssr` 22.2.3, Playwright 1.64.1 (Chromium 156.0.8078.4), Node v24.15.0.
+Generated 2026-10-18T01:23:44.892Z. Angular 22.2.3, `@angular/ssr` 22.2.3, Playwright 1.64.1 (Chromium 156.0.8078.4), Node v24.15.0.
 
 Libraries: forty-cdk 0.38.0, ng-primitives 0.131.2, Angular Aria 22.2.3, Angular CDK 22.2.3, Spartan (brain) 1.8.0.
 
@@ -19,12 +19,12 @@ Method: [SSR.md](../SSR.md). Each cell reads, in order: **server render** · **s
 
 | Scenario | Server render | Server markup | Hydration | Server elements | Discarded | Client-created | Server = hydrated | Post-hydration |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| accordion--forty | ✅ | ✅ 2/2 | ✅ | 18 | 0 | 0 | yes | ✅ |
+| accordion--forty | ✅ | ✅ 2/2 | ✅ | 14 | 0 | 0 | yes | ✅ |
 | accordion--ng-primitives | ❌ | ✅ 2/2 | ✅ | 18 | 0 | 0 | **no** (tree, tab stops) | ✅ |
 | accordion--angular-aria | ✅ | ✅ 2/2 | ✅ | 12 | 0 | 1 | **no** (tree) | ✅ |
 | accordion--angular-cdk | ✅ | ✅ 2/2 | ✅ | 14 | 0 | 0 | yes | ✅ |
 | accordion--spartan | ✅ | ✅ 2/2 | ✅ | 18 | 0 | 0 | yes | ✅ |
-| tabs--forty | ✅ | ✅ 3/3 | ✅ | 13 | 0 | 0 | yes | ✅ |
+| tabs--forty | ✅ | ✅ 3/3 | ✅ | 9 | 0 | 0 | yes | ✅ |
 | tabs--ng-primitives | ✅ | ✅ 3/3 | ✅ | 13 | 0 | 0 | yes | ✅ |
 | tabs--angular-aria | ✅ | ✅ 3/3 | ✅ | 10 | 0 | 1 | **no** (tree, tab stops) | ✅ |
 | tabs--spartan | ✅ | ✅ 3/3 | ✅ | 13 | 0 | 0 | yes | ✅ |

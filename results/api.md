@@ -1,6 +1,6 @@
 # Modern Angular API
 
-Generated 2026-10-18T00:53:56.454Z. Static analysis of each library's own published typings (`types/**/*.d.ts`) and bundles (`fesm2022/**/*.mjs`), testing entry points excluded. Dependencies are not counted: ng-primitives and Spartan build on `@angular/cdk`, which has its own column.
+Generated 2026-10-18T01:23:45.403Z. Static analysis of each library's own published typings (`types/**/*.d.ts`) and bundles (`fesm2022/**/*.mjs`), testing entry points excluded. Dependencies are not counted: ng-primitives and Spartan build on `@angular/cdk`, which has its own column.
 
 | | forty-cdk | ng-primitives | Angular Aria | Angular CDK | Spartan (brain) |
 | --- | ---: | ---: | ---: | ---: | ---: |

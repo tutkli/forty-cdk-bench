@@ -9,7 +9,7 @@ import { FRUITS } from '../data';
   template: `
     <div forListbox [(value)]="value" aria-label="Fruits">
       @for (fruit of fruits; track fruit.value) {
-        <div forListboxOption [value]="fruit.value">{{ fruit.label }}</div>
+        <button type="button" forListboxOption [value]="fruit.value">{{ fruit.label }}</button>
       }
     </div>
     <output>{{ value()[0] ?? '' }}</output>

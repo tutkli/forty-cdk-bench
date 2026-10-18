@@ -1,0 +1,1308 @@
+{
+  "generatedAt": "2026-10-18T01:42:42.024Z",
+  "node": "v24.15.0",
+  "platform": "win32-x64",
+  "chromium": "156.0.8078.4",
+  "playwright": "1.64.1",
+  "settings": {
+    "cpuThrottling": 4,
+    "renderRuns": 9,
+    "interactionCycles": 15,
+    "leakWarmup": 30,
+    "leakCycles": 100,
+    "scaleSize": 1000
+  },
+  "versions": {
+    "@angular/core": "22.2.3",
+    "forty-cdk": "0.38.0",
+    "ng-primitives": "0.131.2",
+    "@angular/aria": "22.2.3",
+    "@angular/cdk": "22.2.3",
+    "@spartan-ng/brain": "1.8.0"
+  },
+  "rows": [
+    {
+      "pattern": "accordion",
+      "library": "forty",
+      "render": {
+        "n": 9,
+        "median": 92.5,
+        "p90": 106.94000000059606,
+        "min": 56.79999999701977,
+        "max": 127.8999999910593
+      },
+      "interactions": {
+        "open Returns": {
+          "n": 15,
+          "median": 5.5,
+          "p90": 9.460000002384186,
+          "min": 2.2999999970197678,
+          "max": 11
+        },
+        "open Shipping": {
+          "n": 15,
+          "median": 5.5,
+          "p90": 7.720000001788139,
+          "min": 2.0999999940395355,
+          "max": 11.800000011920929
+        }
+      },
+      "leaks": {
+        "cycles": 100,
+        "nodesPerCycle": 0,
+        "listenersPerCycle": 0,
+        "heapBytesPerCycle": 3437.2,
+        "start": {
+          "nodes": 58,
+          "listeners": 39,
+          "heap": 3168736
+        },
+        "end": {
+          "nodes": 58,
+          "listeners": 39,
+          "heap": 3512456
+        }
+      }
+    },
+    {
+      "pattern": "accordion",
+      "library": "ng-primitives",
+      "render": {
+        "n": 9,
+        "median": 153.6000000089407,
+        "p90": 160.14000000953675,
+        "min": 113.59999999403954,
+        "max": 163.5
+      },
+      "interactions": {
+        "open Returns": {
+          "n": 15,
+          "median": 14.200000002980232,
+          "p90": 16.64000000357628,
+          "min": 4.5,
+          "max": 19.400000005960464
+        },
+        "open Shipping": {
+          "n": 15,
+          "median": 13.100000008940697,
+          "p90": 15.519999995827675,
+          "min": 2.9000000059604645,
+          "max": 16.700000002980232
+        }
+      },
+      "leaks": {
+        "cycles": 100,
+        "nodesPerCycle": 0,
+        "listenersPerCycle": 0,
+        "heapBytesPerCycle": 2406.36,
+        "start": {
+          "nodes": 61,
+          "listeners": 45,
+          "heap": 3266132
+        },
+        "end": {
+          "nodes": 61,
+          "listeners": 45,
+          "heap": 3506768
+        }
+      }
+    },
+    {
+      "pattern": "accordion",
+      "library": "angular-aria",
+      "render": {
+        "n": 9,
+        "median": 131,
+        "p90": 166.57999999523165,
+        "min": 95.5,
+        "max": 184.5
+      },
+      "interactions": {
+        "open Returns": {
+          "n": 15,
+          "median": 13.600000008940697,
+          "p90": 16.439999997615814,
+          "min": 3.8999999910593033,
+          "max": 17.700000002980232
+        },
+        "open Shipping": {
+          "n": 15,
+          "median": 14.700000002980232,
+          "p90": 16.77999999821186,
+          "min": 2.5,
+          "max": 17.5
+        }
+      },
+      "leaks": {
+        "cycles": 100,
+        "nodesPerCycle": 0,
+        "listenersPerCycle": 0,
+        "heapBytesPerCycle": 3257.4,
+        "start": {
+          "nodes": 63,
+          "listeners": 38,
+          "heap": 3262428
+        },
+        "end": {
+          "nodes": 63,
+          "listeners": 38,
+          "heap": 3588168
+        }
+      }
+    },
+    {
+      "pattern": "accordion",
+      "library": "angular-cdk",
+      "render": {
+        "n": 9,
+        "median": 129.40000000596046,
+        "p90": 136.83999999761582,
+        "min": 107.09999999403954,
+        "max": 147
+      },
+      "interactions": {
+        "open Returns": {
+          "n": 15,
+          "median": 13.900000005960464,
+          "p90": 16.68000000119209,
+          "min": 10.899999991059303,
+          "max": 21.100000008940697
+        },
+        "open Shipping": {
+          "n": 15,
+          "median": 14.200000002980232,
+          "p90": 15.659999999403954,
+          "min": 9.399999991059303,
+          "max": 16.599999994039536
+        }
+      },
+      "leaks": {
+        "cycles": 100,
+        "nodesPerCycle": 0,
+        "listenersPerCycle": 0,
+        "heapBytesPerCycle": 2818.56,
+        "start": {
+          "nodes": 54,
+          "listeners": 38,
+          "heap": 2971440
+        },
+        "end": {
+          "nodes": 54,
+          "listeners": 38,
+          "heap": 3253296
+        }
+      }
+    },
+    {
+      "pattern": "accordion",
+      "library": "spartan",
+      "render": {
+        "n": 9,
+        "median": 189.40000000596046,
+        "p90": 217.1199999988079,
+        "min": 99.40000000596046,
+        "max": 229.59999999403954
+      },
+      "interactions": {
+        "open Returns": {
+          "n": 15,
+          "median": 14.900000005960464,
+          "p90": 16.119999992847443,
+          "min": 3.7000000029802322,
+          "max": 26
+        },
+        "open Shipping": {
+          "n": 15,
+          "median": 14.099999994039536,
+          "p90": 16.420000004768372,
+          "min": 1.8999999910593033,
+          "max": 18.099999994039536
+        }
+      },
+      "leaks": {
+        "cycles": 100,
+        "nodesPerCycle": 0,
+        "listenersPerCycle": 0,
+        "heapBytesPerCycle": 2852.04,
+        "start": {
+          "nodes": 67,
+          "listeners": 54,
+          "heap": 3352464
+        },
+        "end": {
+          "nodes": 67,
+          "listeners": 54,
+          "heap": 3637668
+        }
+      }
+    },
+    {
+      "pattern": "tabs",
+      "library": "forty",
+      "render": {
+        "n": 9,
+        "median": 185.90000000596046,
+        "p90": 190.5,
+        "min": 155.29999999701977,
+        "max": 197.69999998807907
+      },
+      "interactions": {
+        "ArrowRight": {
+          "n": 15,
+          "median": 16.099999994039536,
+          "p90": 21.499999994039534,
+          "min": 9.899999991059303,
+          "max": 23.099999994039536
+        },
+        "ArrowLeft": {
+          "n": 15,
+          "median": 14.799999997019768,
+          "p90": 17.519999992847442,
+          "min": 7.0999999940395355,
+          "max": 22.200000002980232
+        }
+      },
+      "leaks": {
+        "cycles": 100,
+        "nodesPerCycle": 0,
+        "listenersPerCycle": 0,
+        "heapBytesPerCycle": 3677.4,
+        "start": {
+          "nodes": 50,
+          "listeners": 42,
+          "heap": 3165480
+        },
+        "end": {
+          "nodes": 50,
+          "listeners": 42,
+          "heap": 3533220
+        }
+      }
+    },
+    {
+      "pattern": "tabs",
+      "library": "ng-primitives",
+      "render": {
+        "n": 9,
+        "median": 186.59999999403954,
+        "p90": 211.49999999701976,
+        "min": 161.69999998807907,
+        "max": 212.29999999701977
+      },
+      "interactions": {
+        "ArrowRight": {
+          "n": 15,
+          "median": 17.899999991059303,
+          "p90": 21.35999999642372,
+          "min": 10.900000005960464,
+          "max": 34.29999999701977
+        },
+        "ArrowLeft": {
+          "n": 15,
+          "median": 14.200000002980232,
+          "p90": 20.439999997615814,
+          "min": 8.599999994039536,
+          "max": 22.900000005960464
+        }
+      },
+      "leaks": {
+        "cycles": 100,
+        "nodesPerCycle": 0,
+        "listenersPerCycle": 0,
+        "heapBytesPerCycle": 1408.84,
+        "start": {
+          "nodes": 53,
+          "listeners": 75,
+          "heap": 3219708
+        },
+        "end": {
+          "nodes": 53,
+          "listeners": 75,
+          "heap": 3360592
+        }
+      }
+    },
+    {
+      "pattern": "tabs",
+      "library": "angular-aria",
+      "render": {
+        "n": 9,
+        "median": 202.1000000089407,
+        "p90": 234.4200000077486,
+        "min": 151.40000000596046,
+        "max": 237.70000000298023
+      },
+      "interactions": {
+        "ArrowRight": {
+          "n": 15,
+          "median": 16.399999991059303,
+          "p90": 20.759999999403952,
+          "min": 10.400000005960464,
+          "max": 22.899999991059303
+        },
+        "ArrowLeft": {
+          "n": 15,
+          "median": 20.200000002980232,
+          "p90": 22.019999992847442,
+          "min": 11.5,
+          "max": 23.400000005960464
+        }
+      },
+      "leaks": {
+        "cycles": 100,
+        "nodesPerCycle": 0,
+        "listenersPerCycle": 0,
+        "heapBytesPerCycle": 2889.2,
+        "start": {
+          "nodes": 53,
+          "listeners": 36,
+          "heap": 3184964
+        },
+        "end": {
+          "nodes": 53,
+          "listeners": 36,
+          "heap": 3473884
+        }
+      }
+    },
+    {
+      "pattern": "tabs",
+      "library": "spartan",
+      "render": {
+        "n": 9,
+        "median": 174.1000000089407,
+        "p90": 205.60000001192094,
+        "min": 162.30000001192093,
+        "max": 206.80000001192093
+      },
+      "interactions": {
+        "ArrowRight": {
+          "n": 15,
+          "median": 17.899999991059303,
+          "p90": 22.059999990463258,
+          "min": 8.200000002980232,
+          "max": 22.900000005960464
+        },
+        "ArrowLeft": {
+          "n": 15,
+          "median": 15.800000011920929,
+          "p90": 21.419999998807906,
+          "min": 9.5,
+          "max": 28.100000008940697
+        }
+      },
+      "leaks": {
+        "cycles": 100,
+        "nodesPerCycle": 0,
+        "listenersPerCycle": 0,
+        "heapBytesPerCycle": 1137.2,
+        "start": {
+          "nodes": 54,
+          "listeners": 37,
+          "heap": 2891976
+        },
+        "end": {
+          "nodes": 54,
+          "listeners": 37,
+          "heap": 3005696
+        }
+      }
+    },
+    {
+      "pattern": "menu",
+      "library": "forty",
+      "render": {
+        "n": 9,
+        "median": 189.29999999701977,
+        "p90": 200.2199999988079,
+        "min": 168.20000000298023,
+        "max": 217.90000000596046
+      },
+      "interactions": {
+        "open": {
+          "n": 15,
+          "median": 36.5,
+          "p90": 45.44000000655651,
+          "min": 24,
+          "max": 105.5
+        },
+        "Escape": {
+          "n": 15,
+          "median": 16.799999997019768,
+          "p90": 20.719999998807907,
+          "min": 8.299999997019768,
+          "max": 24.799999997019768
+        }
+      },
+      "leaks": {
+        "cycles": 100,
+        "nodesPerCycle": 0,
+        "listenersPerCycle": 0,
+        "heapBytesPerCycle": 3991,
+        "start": {
+          "nodes": 44,
+          "listeners": 35,
+          "heap": 3855644
+        },
+        "end": {
+          "nodes": 44,
+          "listeners": 35,
+          "heap": 4254744
+        }
+      }
+    },
+    {
+      "pattern": "menu",
+      "library": "ng-primitives",
+      "render": {
+        "n": 9,
+        "median": 173.80000001192093,
+        "p90": 178.98000000417233,
+        "min": 153.29999999701977,
+        "max": 180.1000000089407
+      },
+      "interactions": {
+        "open": {
+          "n": 15,
+          "median": 23.5,
+          "p90": 47.77999999225139,
+          "min": 14.299999997019768,
+          "max": 119.70000000298023
+        },
+        "Escape": {
+          "n": 15,
+          "median": 15.200000002980232,
+          "p90": 22.919999998807906,
+          "min": 7.899999991059303,
+          "max": 42.900000005960464
+        }
+      },
+      "leaks": {
+        "cycles": 100,
+        "nodesPerCycle": 8,
+        "listenersPerCycle": 0,
+        "heapBytesPerCycle": 5457.04,
+        "start": {
+          "nodes": 274,
+          "listeners": 49,
+          "heap": 4118112
+        },
+        "end": {
+          "nodes": 1074,
+          "listeners": 49,
+          "heap": 4663816
+        }
+      }
+    },
+    {
+      "pattern": "menu",
+      "library": "angular-aria",
+      "render": {
+        "n": 9,
+        "median": 204.5,
+        "p90": 222.30000000298023,
+        "min": 109.5,
+        "max": 223.8999999910593
+      },
+      "interactions": {
+        "open": {
+          "n": 15,
+          "median": 26.399999991059303,
+          "p90": 33.400000002980235,
+          "min": 19.400000005960464,
+          "max": 98.6000000089407
+        },
+        "Escape": {
+          "n": 15,
+          "median": 18.900000005960464,
+          "p90": 27.719999998807907,
+          "min": 11,
+          "max": 31.400000005960464
+        }
+      },
+      "leaks": {
+        "cycles": 100,
+        "nodesPerCycle": 0,
+        "listenersPerCycle": 0,
+        "heapBytesPerCycle": 4474.04,
+        "start": {
+          "nodes": 41,
+          "listeners": 40,
+          "heap": 4007392
+        },
+        "end": {
+          "nodes": 41,
+          "listeners": 40,
+          "heap": 4454796
+        }
+      }
+    },
+    {
+      "pattern": "menu",
+      "library": "angular-cdk",
+      "render": {
+        "n": 9,
+        "median": 182.8999999910593,
+        "p90": 195.00000000298024,
+        "min": 153.90000000596046,
+        "max": 204.20000000298023
+      },
+      "interactions": {
+        "open": {
+          "n": 15,
+          "median": 21.900000005960464,
+          "p90": 28.899999994039536,
+          "min": 14.099999994039536,
+          "max": 103.6000000089407
+        },
+        "Escape": {
+          "n": 15,
+          "median": 24.100000008940697,
+          "p90": 33.119999998807906,
+          "min": 14.5,
+          "max": 38.20000000298023
+        }
+      },
+      "leaks": {
+        "cycles": 100,
+        "nodesPerCycle": 0,
+        "listenersPerCycle": 0,
+        "heapBytesPerCycle": 4006.28,
+        "start": {
+          "nodes": 51,
+          "listeners": 44,
+          "heap": 3904624
+        },
+        "end": {
+          "nodes": 51,
+          "listeners": 44,
+          "heap": 4305252
+        }
+      }
+    },
+    {
+      "pattern": "listbox",
+      "library": "forty",
+      "render": {
+        "n": 9,
+        "median": 202.59999999403954,
+        "p90": 212.82000000476836,
+        "min": 183.3999999910593,
+        "max": 226.5
+      },
+      "interactions": {
+        "select Cherry": {
+          "n": 15,
+          "median": 14,
+          "p90": 17.599999997019765,
+          "min": 8.400000005960464,
+          "max": 36
+        },
+        "select Banana": {
+          "n": 15,
+          "median": 12.900000005960464,
+          "p90": 16.15999999642372,
+          "min": 7.9000000059604645,
+          "max": 19.799999997019768
+        }
+      },
+      "leaks": {
+        "cycles": 100,
+        "nodesPerCycle": 0,
+        "listenersPerCycle": 0,
+        "heapBytesPerCycle": 2709.8,
+        "start": {
+          "nodes": 52,
+          "listeners": 70,
+          "heap": 3192152
+        },
+        "end": {
+          "nodes": 52,
+          "listeners": 70,
+          "heap": 3463132
+        }
+      },
+      "scale": {
+        "size": 1000,
+        "render": {
+          "n": 9,
+          "median": 469.20000000298023,
+          "p90": 531.4799999952317,
+          "min": 447.70000000298023,
+          "max": 539
+        },
+        "interactions": {
+          "ArrowDown": {
+            "n": 15,
+            "median": 46.900000005960464,
+            "p90": 64.5,
+            "min": 16.899999991059303,
+            "max": 69.70000000298023
+          },
+          "ArrowUp": {
+            "n": 15,
+            "median": 50.29999999701977,
+            "p90": 62.96000000238418,
+            "min": 14.300000011920929,
+            "max": 70.5
+          }
+        }
+      }
+    },
+    {
+      "pattern": "listbox",
+      "library": "ng-primitives",
+      "render": {
+        "n": 9,
+        "median": 183,
+        "p90": 217.55999999940397,
+        "min": 115.30000001192093,
+        "max": 231.79999999701977
+      },
+      "interactions": {
+        "select Cherry": {
+          "n": 15,
+          "median": 15.600000008940697,
+          "p90": 19.480000001192092,
+          "min": 11.700000002980232,
+          "max": 23.200000002980232
+        },
+        "select Banana": {
+          "n": 15,
+          "median": 14.799999997019768,
+          "p90": 16.400000005960464,
+          "min": 10.700000002980232,
+          "max": 17.200000002980232
+        }
+      },
+      "leaks": {
+        "cycles": 100,
+        "nodesPerCycle": 0,
+        "listenersPerCycle": 0,
+        "heapBytesPerCycle": 3377.92,
+        "start": {
+          "nodes": 48,
+          "listeners": 100,
+          "heap": 3504728
+        },
+        "end": {
+          "nodes": 48,
+          "listeners": 100,
+          "heap": 3842520
+        }
+      },
+      "scale": {
+        "size": 1000,
+        "render": {
+          "n": 9,
+          "median": 964.5,
+          "p90": 997.9799999982118,
+          "min": 908.6000000089407,
+          "max": 1023.8999999910593
+        },
+        "interactions": {
+          "ArrowDown": {
+            "n": 15,
+            "median": 22.799999997019768,
+            "p90": 33.26000000834465,
+            "min": 17.899999991059303,
+            "max": 36.29999999701977
+          },
+          "ArrowUp": {
+            "n": 15,
+            "median": 25.19999998807907,
+            "p90": 29.859999999403954,
+            "min": 14.900000005960464,
+            "max": 36.400000005960464
+          }
+        }
+      }
+    },
+    {
+      "pattern": "listbox",
+      "library": "angular-aria",
+      "render": {
+        "n": 9,
+        "median": 151.59999999403954,
+        "p90": 169.24000000357628,
+        "min": 136.90000000596046,
+        "max": 177.40000000596046
+      },
+      "interactions": {
+        "select Cherry": {
+          "n": 15,
+          "median": 13.799999997019768,
+          "p90": 19.540000000596045,
+          "min": 7.5,
+          "max": 26.700000002980232
+        },
+        "select Banana": {
+          "n": 15,
+          "median": 12.600000008940697,
+          "p90": 15.419999998807906,
+          "min": 8.200000002980232,
+          "max": 16.200000002980232
+        }
+      },
+      "leaks": {
+        "cycles": 100,
+        "nodesPerCycle": 0,
+        "listenersPerCycle": 0,
+        "heapBytesPerCycle": 2621.92,
+        "start": {
+          "nodes": 52,
+          "listeners": 36,
+          "heap": 3079584
+        },
+        "end": {
+          "nodes": 52,
+          "listeners": 36,
+          "heap": 3341776
+        }
+      },
+      "scale": {
+        "size": 1000,
+        "render": {
+          "n": 9,
+          "median": 4358.79999999702,
+          "p90": 4426.640000006557,
+          "min": 3455,
+          "max": 4495.600000008941
+        },
+        "interactions": {
+          "ArrowDown": {
+            "n": 15,
+            "median": 30.5,
+            "p90": 37.33999999761581,
+            "min": 21.799999997019768,
+            "max": 39.79999999701977
+          },
+          "ArrowUp": {
+            "n": 15,
+            "median": 30.100000008940697,
+            "p90": 43.35999999344349,
+            "min": 19.600000008940697,
+            "max": 48.8999999910593
+          }
+        }
+      }
+    },
+    {
+      "pattern": "listbox",
+      "library": "angular-cdk",
+      "render": {
+        "n": 9,
+        "median": 149.5,
+        "p90": 165.64000000059605,
+        "min": 137.3999999910593,
+        "max": 168.20000000298023
+      },
+      "interactions": {
+        "select Cherry": {
+          "n": 15,
+          "median": 15.799999997019768,
+          "p90": 18.000000005960466,
+          "min": 10,
+          "max": 21.600000008940697
+        },
+        "select Banana": {
+          "n": 15,
+          "median": 13.699999988079071,
+          "p90": 16.47999999523163,
+          "min": 9.899999991059303,
+          "max": 21
+        }
+      },
+      "leaks": {
+        "cycles": 100,
+        "nodesPerCycle": 0,
+        "listenersPerCycle": 0,
+        "heapBytesPerCycle": 2373.12,
+        "start": {
+          "nodes": 55,
+          "listeners": 48,
+          "heap": 3183440
+        },
+        "end": {
+          "nodes": 55,
+          "listeners": 48,
+          "heap": 3420752
+        }
+      },
+      "scale": {
+        "size": 1000,
+        "render": {
+          "n": 9,
+          "median": 217.59999999403954,
+          "p90": 317.2199999988079,
+          "min": 178.29999999701977,
+          "max": 356.09999999403954
+        },
+        "interactions": {
+          "ArrowDown": {
+            "n": 15,
+            "median": 21,
+            "p90": 28.10000000298023,
+            "min": 13.200000002980232,
+            "max": 30
+          },
+          "ArrowUp": {
+            "n": 15,
+            "median": 21.5,
+            "p90": 26.040000000596045,
+            "min": 7.299999997019768,
+            "max": 26.5
+          }
+        }
+      }
+    },
+    {
+      "pattern": "combobox",
+      "library": "forty",
+      "render": {
+        "n": 9,
+        "median": 200.09999999403954,
+        "p90": 216.2599999934435,
+        "min": 190.09999999403954,
+        "max": 220.8999999910593
+      },
+      "interactions": {
+        "type a": {
+          "n": 15,
+          "median": 20.599999994039536,
+          "p90": 41.03999999761581,
+          "min": 15.899999991059303,
+          "max": 143.40000000596046
+        },
+        "Backspace": {
+          "n": 15,
+          "median": 24.200000002980232,
+          "p90": 36.059999999403956,
+          "min": 15.700000002980232,
+          "max": 56.5
+        }
+      },
+      "leaks": {
+        "cycles": 100,
+        "nodesPerCycle": 1,
+        "listenersPerCycle": 0,
+        "heapBytesPerCycle": 4244.28,
+        "start": {
+          "nodes": 85,
+          "listeners": 72,
+          "heap": 3598576
+        },
+        "end": {
+          "nodes": 185,
+          "listeners": 72,
+          "heap": 4023004
+        }
+      },
+      "scale": {
+        "size": 1000,
+        "render": {
+          "n": 9,
+          "median": 203.20000000298023,
+          "p90": 212.26000000536442,
+          "min": 190.09999999403954,
+          "max": 213.70000000298023
+        },
+        "interactions": {
+          "type 5": {
+            "n": 15,
+            "median": 144.8999999910593,
+            "p90": 184.74000000357628,
+            "min": 49.099999994039536,
+            "max": 330.59999999403954
+          },
+          "Backspace": {
+            "n": 15,
+            "median": 252.70000000298023,
+            "p90": 311.1599999964237,
+            "min": 202,
+            "max": 371.09999999403954
+          }
+        }
+      }
+    },
+    {
+      "pattern": "combobox",
+      "library": "ng-primitives",
+      "render": {
+        "n": 9,
+        "median": 206.5,
+        "p90": 213.71999999284745,
+        "min": 89.79999999701977,
+        "max": 219
+      },
+      "interactions": {
+        "type a": {
+          "n": 15,
+          "median": 20.80000001192093,
+          "p90": 24.87999999821186,
+          "min": 12.399999991059303,
+          "max": 35.79999999701977
+        },
+        "Backspace": {
+          "n": 15,
+          "median": 24.200000002980232,
+          "p90": 30.439999997615814,
+          "min": 15,
+          "max": 31
+        }
+      },
+      "leaks": {
+        "cycles": 100,
+        "nodesPerCycle": 1,
+        "listenersPerCycle": 0,
+        "heapBytesPerCycle": 3953.6,
+        "start": {
+          "nodes": 84,
+          "listeners": 128,
+          "heap": 3901556
+        },
+        "end": {
+          "nodes": 184,
+          "listeners": 128,
+          "heap": 4296916
+        }
+      },
+      "scale": {
+        "size": 1000,
+        "render": {
+          "n": 9,
+          "median": 212.29999999701977,
+          "p90": 237.6400000065565,
+          "min": 177.8999999910593,
+          "max": 245.79999999701977
+        },
+        "interactions": {
+          "type 5": {
+            "n": 15,
+            "median": 134.29999999701977,
+            "p90": 153.8,
+            "min": 109,
+            "max": 424.70000000298023
+          },
+          "Backspace": {
+            "n": 15,
+            "median": 410.30000001192093,
+            "p90": 465.740000000596,
+            "min": 355.09999999403954,
+            "max": 513.7999999970198
+          }
+        }
+      }
+    },
+    {
+      "pattern": "combobox",
+      "library": "angular-aria",
+      "render": {
+        "n": 9,
+        "median": 196.5,
+        "p90": 217.05999999940394,
+        "min": 187.29999999701977,
+        "max": 224.1000000089407
+      },
+      "interactions": {
+        "type a": {
+          "n": 15,
+          "median": 19.5,
+          "p90": 25.480000010132787,
+          "min": 8.599999994039536,
+          "max": 27.600000008940697
+        },
+        "Backspace": {
+          "n": 15,
+          "median": 18.5,
+          "p90": 23.239999997615815,
+          "min": 10.799999997019768,
+          "max": 24.099999994039536
+        }
+      },
+      "leaks": {
+        "cycles": 100,
+        "nodesPerCycle": 1,
+        "listenersPerCycle": 0,
+        "heapBytesPerCycle": 3118.84,
+        "start": {
+          "nodes": 87,
+          "listeners": 55,
+          "heap": 3603548
+        },
+        "end": {
+          "nodes": 187,
+          "listeners": 55,
+          "heap": 3915432
+        }
+      },
+      "scale": {
+        "size": 1000,
+        "render": {
+          "n": 9,
+          "median": 203.70000000298023,
+          "p90": 211.3999999910593,
+          "min": 186.40000000596046,
+          "max": 228.20000000298023
+        },
+        "interactions": {
+          "type 5": {
+            "n": 15,
+            "median": 86,
+            "p90": 100.7200000077486,
+            "min": 68.1000000089407,
+            "max": 153.3999999910593
+          },
+          "Backspace": {
+            "n": 15,
+            "median": 6613.70000000298,
+            "p90": 6816.319999995828,
+            "min": 6201.9000000059605,
+            "max": 6874
+          }
+        }
+      }
+    },
+    {
+      "pattern": "combobox",
+      "library": "spartan",
+      "render": {
+        "n": 9,
+        "median": 188.29999999701977,
+        "p90": 208.78000000417234,
+        "min": 153.29999999701977,
+        "max": 225.1000000089407
+      },
+      "interactions": {
+        "type a": {
+          "n": 15,
+          "median": 15.799999997019768,
+          "p90": 19.899999994039536,
+          "min": 11.799999997019768,
+          "max": 21
+        },
+        "Backspace": {
+          "n": 15,
+          "median": 16.400000005960464,
+          "p90": 21.260000002384185,
+          "min": 10,
+          "max": 23.19999998807907
+        }
+      },
+      "leaks": {
+        "cycles": 100,
+        "nodesPerCycle": 1,
+        "listenersPerCycle": 0,
+        "heapBytesPerCycle": 2333.56,
+        "start": {
+          "nodes": 95,
+          "listeners": 63,
+          "heap": 3692256
+        },
+        "end": {
+          "nodes": 195,
+          "listeners": 63,
+          "heap": 3925612
+        }
+      },
+      "scale": {
+        "size": 1000,
+        "render": {
+          "n": 9,
+          "median": 204,
+          "p90": 210.09999999403954,
+          "min": 193.29999999701977,
+          "max": 212.09999999403954
+        },
+        "interactions": {
+          "type 5": {
+            "n": 15,
+            "median": 45.1000000089407,
+            "p90": 54.099999997019765,
+            "min": 30.200000002980232,
+            "max": 57
+          },
+          "Backspace": {
+            "n": 15,
+            "median": 90.80000001192093,
+            "p90": 110.15999999642372,
+            "min": 46.29999999701977,
+            "max": 130.29999999701977
+          }
+        }
+      }
+    },
+    {
+      "pattern": "dialog",
+      "library": "forty",
+      "render": {
+        "n": 9,
+        "median": 121.1000000089407,
+        "p90": 139.15999999940396,
+        "min": 102.3999999910593,
+        "max": 139.79999999701977
+      },
+      "interactions": {
+        "open": {
+          "n": 15,
+          "median": 19.900000005960464,
+          "p90": 21.240000000596048,
+          "min": 15.599999994039536,
+          "max": 76.90000000596046
+        },
+        "Escape": {
+          "n": 15,
+          "median": 14.399999991059303,
+          "p90": 18.36000000536442,
+          "min": 8.400000005960464,
+          "max": 18.799999997019768
+        }
+      },
+      "leaks": {
+        "cycles": 100,
+        "nodesPerCycle": 0,
+        "listenersPerCycle": 0,
+        "heapBytesPerCycle": 2751.68,
+        "start": {
+          "nodes": 35,
+          "listeners": 34,
+          "heap": 3369972
+        },
+        "end": {
+          "nodes": 35,
+          "listeners": 34,
+          "heap": 3645140
+        }
+      }
+    },
+    {
+      "pattern": "dialog",
+      "library": "ng-primitives",
+      "render": {
+        "n": 9,
+        "median": 157,
+        "p90": 169.93999999463557,
+        "min": 140.5,
+        "max": 175.29999999701977
+      },
+      "interactions": {
+        "open": {
+          "n": 15,
+          "median": 13.299999997019768,
+          "p90": 16.160000005364417,
+          "min": 9.600000008940697,
+          "max": 70.6000000089407
+        },
+        "Escape": {
+          "n": 15,
+          "median": 14.299999997019768,
+          "p90": 21.219999995827674,
+          "min": 5.200000002980232,
+          "max": 26.5
+        }
+      },
+      "leaks": {
+        "cycles": 100,
+        "nodesPerCycle": 0,
+        "listenersPerCycle": 0,
+        "heapBytesPerCycle": 3478.8,
+        "start": {
+          "nodes": 41,
+          "listeners": 40,
+          "heap": 3769360
+        },
+        "end": {
+          "nodes": 41,
+          "listeners": 40,
+          "heap": 4117240
+        }
+      }
+    },
+    {
+      "pattern": "dialog",
+      "library": "angular-cdk",
+      "render": {
+        "n": 9,
+        "median": 125.20000000298023,
+        "p90": 130.67999999821185,
+        "min": 94.40000000596046,
+        "max": 132.20000000298023
+      },
+      "interactions": {
+        "open": {
+          "n": 15,
+          "median": 18,
+          "p90": 19.760000002384185,
+          "min": 15.099999994039536,
+          "max": 76.3999999910593
+        },
+        "Escape": {
+          "n": 15,
+          "median": 14.100000008940697,
+          "p90": 20.619999992847443,
+          "min": 6.799999997019768,
+          "max": 20.80000001192093
+        }
+      },
+      "leaks": {
+        "cycles": 100,
+        "nodesPerCycle": 0,
+        "listenersPerCycle": 0,
+        "heapBytesPerCycle": 3113.68,
+        "start": {
+          "nodes": 39,
+          "listeners": 40,
+          "heap": 3567292
+        },
+        "end": {
+          "nodes": 39,
+          "listeners": 40,
+          "heap": 3878660
+        }
+      }
+    },
+    {
+      "pattern": "dialog",
+      "library": "spartan",
+      "render": {
+        "n": 9,
+        "median": 147.5,
+        "p90": 160.41999999582768,
+        "min": 130.70000000298023,
+        "max": 173.70000000298023
+      },
+      "interactions": {
+        "open": {
+          "n": 15,
+          "median": 17.700000002980232,
+          "p90": 20.07999999821186,
+          "min": 15.800000011920929,
+          "max": 88.5
+        },
+        "Escape": {
+          "n": 15,
+          "median": 15.799999997019768,
+          "p90": 21.81999999880791,
+          "min": 8.900000005960464,
+          "max": 23.799999997019768
+        }
+      },
+      "leaks": {
+        "cycles": 100,
+        "nodesPerCycle": 0,
+        "listenersPerCycle": 0,
+        "heapBytesPerCycle": 3759.2,
+        "start": {
+          "nodes": 55,
+          "listeners": 40,
+          "heap": 3885784
+        },
+        "end": {
+          "nodes": 55,
+          "listeners": 40,
+          "heap": 4261704
+        }
+      }
+    }
+  ]
+}

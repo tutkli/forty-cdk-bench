@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-10-18T00:54:36.360Z",
+  "generatedAt": "2026-10-18T01:23:45.992Z",
   "rows": [
     {
       "id": "accordion--forty",
       "pattern": "accordion",
       "library": "forty",
       "status": "measured",
-      "templateLines": 12,
+      "templateLines": 13,
       "typescriptLines": 5,
       "librarySymbols": 4,
       "imports": [
@@ -80,7 +80,7 @@
       "pattern": "tabs",
       "library": "forty",
       "status": "measured",
-      "templateLines": 11,
+      "templateLines": 12,
       "typescriptLines": 5,
       "librarySymbols": 4,
       "imports": [

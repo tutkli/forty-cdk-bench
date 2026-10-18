@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-17T21:55:49.792Z",
-  "commit": "7f94166",
+  "generatedAt": "2026-10-18T01:19:37.968Z",
+  "commit": "0ad7ad2",
   "node": "v24.15.0",
   "platform": "win32-x64",
   "versions": {
@@ -41,14 +41,14 @@
       "status": "measured",
       "reason": null,
       "initialJs": {
-        "raw": 132427,
-        "gzip": 44407,
-        "brotli": 39822
+        "raw": 133460,
+        "gzip": 44746,
+        "brotli": 40135
       },
       "initialJsDelta": {
-        "raw": 36357,
-        "gzip": 12384,
-        "brotli": 10925
+        "raw": 37390,
+        "gzip": 12723,
+        "brotli": 11238
       },
       "lazyJs": {
         "raw": 0,
@@ -226,14 +226,14 @@
       "status": "measured",
       "reason": null,
       "initialJs": {
-        "raw": 138025,
-        "gzip": 46147,
-        "brotli": 41293
+        "raw": 138911,
+        "gzip": 46446,
+        "brotli": 41598
       },
       "initialJsDelta": {
-        "raw": 41955,
-        "gzip": 14124,
-        "brotli": 12396
+        "raw": 42841,
+        "gzip": 14423,
+        "brotli": 12701
       },
       "lazyJs": {
         "raw": 0,
@@ -454,14 +454,14 @@
       "status": "measured",
       "reason": null,
       "initialJs": {
-        "raw": 231596,
-        "gzip": 68716,
-        "brotli": 61053
+        "raw": 231625,
+        "gzip": 68729,
+        "brotli": 60994
       },
       "initialJsDelta": {
-        "raw": 135526,
-        "gzip": 36693,
-        "brotli": 32156
+        "raw": 135555,
+        "gzip": 36706,
+        "brotli": 32097
       },
       "lazyJs": {
         "raw": 0,
@@ -534,14 +534,14 @@
       "status": "measured",
       "reason": null,
       "initialJs": {
-        "raw": 160919,
-        "gzip": 53076,
-        "brotli": 47548
+        "raw": 161245,
+        "gzip": 53230,
+        "brotli": 47730
       },
       "initialJsDelta": {
-        "raw": 64849,
-        "gzip": 21053,
-        "brotli": 18651
+        "raw": 65175,
+        "gzip": 21207,
+        "brotli": 18833
       },
       "lazyJs": {
         "raw": 0,
@@ -571,14 +571,14 @@
       "status": "measured",
       "reason": null,
       "initialJs": {
-        "raw": 216243,
-        "gzip": 69966,
-        "brotli": 62279
+        "raw": 216547,
+        "gzip": 70096,
+        "brotli": 62456
       },
       "initialJsDelta": {
-        "raw": 120173,
-        "gzip": 37943,
-        "brotli": 33382
+        "raw": 120477,
+        "gzip": 38073,
+        "brotli": 33559
       },
       "lazyJs": {
         "raw": 0,
@@ -608,14 +608,14 @@
       "status": "measured",
       "reason": null,
       "initialJs": {
-        "raw": 139219,
-        "gzip": 45057,
-        "brotli": 40255
+        "raw": 139523,
+        "gzip": 45211,
+        "brotli": 40425
       },
       "initialJsDelta": {
-        "raw": 43149,
-        "gzip": 13034,
-        "brotli": 11358
+        "raw": 43453,
+        "gzip": 13188,
+        "brotli": 11528
       },
       "lazyJs": {
         "raw": 0,
@@ -645,14 +645,14 @@
       "status": "measured",
       "reason": null,
       "initialJs": {
-        "raw": 161484,
-        "gzip": 51678,
-        "brotli": 46373
+        "raw": 161788,
+        "gzip": 51817,
+        "brotli": 46535
       },
       "initialJsDelta": {
-        "raw": 65414,
-        "gzip": 19655,
-        "brotli": 17476
+        "raw": 65718,
+        "gzip": 19794,
+        "brotli": 17638
       },
       "lazyJs": {
         "raw": 0,
@@ -688,14 +688,14 @@
       "status": "measured",
       "reason": null,
       "initialJs": {
-        "raw": 211466,
-        "gzip": 70096,
-        "brotli": 62288
+        "raw": 211770,
+        "gzip": 70246,
+        "brotli": 62443
       },
       "initialJsDelta": {
-        "raw": 115396,
-        "gzip": 38073,
-        "brotli": 33391
+        "raw": 115700,
+        "gzip": 38223,
+        "brotli": 33546
       },
       "lazyJs": {
         "raw": 0,
@@ -725,14 +725,14 @@
       "status": "measured",
       "reason": null,
       "initialJs": {
-        "raw": 246578,
-        "gzip": 77581,
-        "brotli": 68848
+        "raw": 246882,
+        "gzip": 77736,
+        "brotli": 68881
       },
       "initialJsDelta": {
-        "raw": 150508,
-        "gzip": 45558,
-        "brotli": 39951
+        "raw": 150812,
+        "gzip": 45713,
+        "brotli": 39984
       },
       "lazyJs": {
         "raw": 0,
@@ -762,14 +762,14 @@
       "status": "measured",
       "reason": null,
       "initialJs": {
-        "raw": 233594,
-        "gzip": 69710,
-        "brotli": 61880
+        "raw": 233898,
+        "gzip": 69848,
+        "brotli": 61949
       },
       "initialJsDelta": {
-        "raw": 137524,
-        "gzip": 37687,
-        "brotli": 32983
+        "raw": 137828,
+        "gzip": 37825,
+        "brotli": 33052
       },
       "lazyJs": {
         "raw": 0,
@@ -805,14 +805,14 @@
       "status": "measured",
       "reason": null,
       "initialJs": {
-        "raw": 281731,
-        "gzip": 82648,
-        "brotli": 73010
+        "raw": 282035,
+        "gzip": 82770,
+        "brotli": 73113
       },
       "initialJsDelta": {
-        "raw": 185661,
-        "gzip": 50625,
-        "brotli": 44113
+        "raw": 185965,
+        "gzip": 50747,
+        "brotli": 44216
       },
       "lazyJs": {
         "raw": 0,
@@ -1003,14 +1003,14 @@
         "dialog"
       ],
       "initialJsDelta": {
-        "raw": 177043,
-        "gzip": 52727,
-        "brotli": 44374
+        "raw": 177468,
+        "gzip": 52987,
+        "brotli": 44546
       },
       "sumOfParts": {
-        "raw": 413312,
-        "gzip": 136706,
-        "brotli": 120373
+        "raw": 415861,
+        "gzip": 137648,
+        "brotli": 121328
       }
     },
     {
@@ -1024,14 +1024,14 @@
         "dialog"
       ],
       "initialJsDelta": {
-        "raw": 285072,
-        "gzip": 82448,
-        "brotli": 70571
+        "raw": 285223,
+        "gzip": 82595,
+        "brotli": 70650
       },
       "sumOfParts": {
-        "raw": 703563,
-        "gzip": 216428,
-        "brotli": 189642
+        "raw": 704171,
+        "gzip": 216713,
+        "brotli": 189852
       }
     },
     {
@@ -1044,14 +1044,14 @@
         "combobox"
       ],
       "initialJsDelta": {
-        "raw": 163698,
-        "gzip": 41267,
-        "brotli": 34718
+        "raw": 163878,
+        "gzip": 41407,
+        "brotli": 34812
       },
       "sumOfParts": {
-        "raw": 416665,
-        "gzip": 119047,
-        "brotli": 104139
+        "raw": 417302,
+        "gzip": 119352,
+        "brotli": 104319
       }
     },
     {
@@ -1063,14 +1063,14 @@
         "dialog"
       ],
       "initialJsDelta": {
-        "raw": 159360,
-        "gzip": 43009,
-        "brotli": 36929
+        "raw": 159664,
+        "gzip": 43142,
+        "brotli": 36974
       },
       "sumOfParts": {
-        "raw": 305780,
-        "gzip": 88529,
-        "brotli": 78335
+        "raw": 306084,
+        "gzip": 88668,
+        "brotli": 78497
       }
     },
     {
@@ -1082,14 +1082,14 @@
         "dialog"
       ],
       "initialJsDelta": {
-        "raw": 229613,
-        "gzip": 61244,
-        "brotli": 50947
+        "raw": 229917,
+        "gzip": 61391,
+        "brotli": 51101
       },
       "sumOfParts": {
-        "raw": 438795,
-        "gzip": 125460,
-        "brotli": 109963
+        "raw": 439099,
+        "gzip": 125582,
+        "brotli": 110066
       }
     }
   ]

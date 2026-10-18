@@ -1,4 +1,11 @@
-import { createReadStream, existsSync, mkdirSync, statSync, writeFileSync } from 'node:fs';
+import {
+  createReadStream,
+  existsSync,
+  mkdirSync,
+  readFileSync,
+  statSync,
+  writeFileSync,
+} from 'node:fs';
 import { createServer } from 'node:http';
 import { extname, join, normalize } from 'node:path';
 import { chromium } from 'playwright';
@@ -121,7 +128,7 @@ async function measureInteractions(browser, url, cycle) {
       const before = await page.evaluate(() => window.__bench.samples.length);
       await act(page, action);
       await page.waitForFunction((count) => window.__bench.samples.length > count, before, {
-        timeout: 5000,
+        timeout: 60000,
       });
       samples[action.name].push(await page.evaluate(() => window.__bench.samples.at(-1)));
       await page.waitForTimeout(30);
@@ -152,24 +159,26 @@ async function measureLeaks(browser, url, cycle) {
       const before = await page.evaluate(() => window.__bench.samples.length);
       await act(page, action);
       await page.waitForFunction((count) => window.__bench.samples.length > count, before, {
-        timeout: 5000,
+        timeout: 60000,
       });
     }
   };
-  await runCycle();
+  for (let run = 0; run < settings.leakWarmup; run++) {
+    await runCycle();
+  }
   await page.waitForTimeout(300);
   const start = await counters(cdp);
-  for (let run = 0; run < settings.leakCycles; run++) {
+  for (let run = 0; run < leakCycles; run++) {
     await runCycle();
   }
   await page.waitForTimeout(300);
   const end = await counters(cdp);
   await page.close();
   return {
-    cycles: settings.leakCycles,
-    nodesPerCycle: (end.nodes - start.nodes) / settings.leakCycles,
-    listenersPerCycle: (end.listeners - start.listeners) / settings.leakCycles,
-    heapBytesPerCycle: (end.heap - start.heap) / settings.leakCycles,
+    cycles: leakCycles,
+    nodesPerCycle: (end.nodes - start.nodes) / leakCycles,
+    listenersPerCycle: (end.listeners - start.listeners) / leakCycles,
+    heapBytesPerCycle: (end.heap - start.heap) / leakCycles,
     start,
     end,
   };
@@ -185,9 +194,15 @@ async function guarded(label, task) {
 }
 
 const argv = process.argv.slice(2);
+const leakCycles = Number(
+  flagValue(process.argv.slice(2), 'leak-cycles', String(settings.leakCycles)),
+);
 const only = flagValue(argv, 'only', 'render,interactions,leaks,scale').split(',');
 const scenarios = selectScenarios(argv);
 const browser = await chromium.launch();
+const previous = existsSync(join(resultsDir, 'perf.json'))
+  ? JSON.parse(readFileSync(join(resultsDir, 'perf.json'), 'utf8')).rows
+  : [];
 const rows = [];
 
 for (const scenario of scenarios) {
@@ -222,8 +237,15 @@ for (const scenario of scenarios) {
       ),
     };
   }
-  rows.push(row);
+  const earlier = previous.find((r) => r.pattern === row.pattern && r.library === row.library);
+  rows.push({ ...earlier, ...row });
   server.close();
+}
+
+for (const earlier of previous) {
+  if (!rows.some((r) => r.pattern === earlier.pattern && r.library === earlier.library)) {
+    rows.push(earlier);
+  }
 }
 
 const browserVersion = browser.version();
@@ -304,7 +326,10 @@ const markdown = [
   '',
   '## Leaks',
   '',
-  `Each cycle (open/close, toggle, select) repeated ${settings.leakCycles} times after one warm-up cycle, with forced garbage collection before both readings. Cell: **DOM nodes / event listeners / JS heap (kB)** retained per cycle. Values near zero mean nothing is retained; small heap noise of ±1 kB per cycle is normal.`,
+  `Each cycle (open/close, toggle, select) runs ${settings.leakWarmup} times to warm up, then ${leakCycles} more times between two readings, each taken after forced garbage collection. Cell: **DOM nodes / event listeners / JS heap (kB)** retained per measured cycle.`,
+  '',
+  "- **Nodes and listeners** are the leak signal: a steady non-zero value means each cycle leaves DOM or listeners behind. The combobox cycle types into an `<input>`, and Chromium keeps one node per edit in the input's undo history: a plain `<input>` with no library shows the same +1.0, so that value is the browser, not the library.",
+  '- **Heap** is reported but is a weak signal on its own: it includes V8 warm-up (compiled code, inline caches) that keeps shrinking per cycle as the run gets longer. Compare it across libraries within a row, not against zero.',
   '',
   ...table('Pattern', (row) =>
     row.leaks.error

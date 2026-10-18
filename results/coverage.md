@@ -1,6 +1,6 @@
 # Coverage
 
-Generated 2026-10-18T00:58:01.049Z. Which [WAI-ARIA APG patterns](https://www.w3.org/WAI/ARIA/apg/patterns/) each library ships a primitive for (Landmarks and Link are left out: they are plain HTML). A cell names the entry point; every claim is checked against the installed package on each run (the entry point must be exported and its typings must contain the evidence recorded in `coverage.config.mjs`), so a stale claim fails the script.
+Generated 2026-10-18T01:23:45.731Z. Which [WAI-ARIA APG patterns](https://www.w3.org/WAI/ARIA/apg/patterns/) each library ships a primitive for (Landmarks and Link are left out: they are plain HTML). A cell names the entry point; every claim is checked against the installed package on each run (the entry point must be exported and its typings must contain the evidence recorded in `coverage.config.mjs`), so a stale claim fails the script.
 
 | APG pattern | forty-cdk | ng-primitives | Angular Aria | Angular CDK | Spartan (brain) |
 | --- | :---: | :---: | :---: | :---: | :---: |

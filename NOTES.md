@@ -4,13 +4,16 @@ Per library, what each scenario had to add by hand to meet [SCENARIOS.md](SCENAR
 
 ## forty-cdk
 
+- **accordion**: panels are mounted with `@if (item.expanded())`, one of the two ways the README offers; the other needs a `[data-state="closed"] { display: none }` rule, and rule 4 allows no CSS. Closed panels carry `aria-hidden` + `inert` when mounted, but the library never hides them visually. With `@if`, a collapsed trigger has no `aria-controls` (the README says so), which fails the optional `accordion.aria-controls-collapsed` check.
+- **tabs**: the same choice, `@if (value() === tab.value)`, for the same reason.
+- **listbox**: options are `<button>`s, as the README requires: selection rides on the native click, and other host elements break keyboard activation.
 - **combobox**: the root's `ariaLabel` names the listbox popup, not the input, so the input carries its own `aria-label`. The library's own hero example labels only the root and leaves the input named by its `placeholder`.
 
 ## ng-primitives
 
 Docs: [angularprimitives.com](https://angularprimitives.com/primitives/accordion) and the example sources in the [`ng-primitives` repo](https://github.com/ng-primitives/ng-primitives/tree/main/apps/documentation/src/app/examples). No providers needed; `@angular/cdk` and `@floating-ui/dom` are required peers.
 
-- **accordion**: nothing hand-written. Closed panels use `hidden="until-found"`.
+- **accordion**: nothing hand-written. A closed panel only gets `hidden="until-found"` once its measured height reaches 0, which takes consumer CSS; with none, a panel the user closes stays visible and exposed in `data-exit` (the accessibility benchmark's three accordion failures). On the server the content directive calls `new MutationObserver` without a platform check, which aborts the server render of the remaining sections (see the SSR benchmark).
 - **tabs**: hand-written `[hidden]` on inactive panels (the library only sets `aria-hidden="true"`; the docs hide them with consumer CSS) and the tablist `aria-label` (no input for it). Automatic activation is opt-in through `ngpTabsetActivateOnFocus`; the default is manual.
 - **menu**: hand-written focus return to the trigger after a **pointer** activation. The library restores focus only when the menu was opened or closed by keyboard, while the docs say selecting an item returns focus. Positioning needs a consumer style the docs list as required (`[ngpMenu] { position: fixed }`); the library writes `top`/`left` inline but they do nothing without it. Not added here, per rule 4 it is one line of CSS.
 - **listbox**: hand-written `aria-selected` on every option. The library never emits it (only `data-selected`), on 0.131.2 and on `main` at the time of writing. This is an APG conformance gap.
@@ -23,7 +26,7 @@ Docs: the [angular.dev Aria guides](https://angular.dev/guide/aria/accordion) an
 
 - **accordion**: no group-level value; each trigger has its own `expanded` model, so the scenario derives the open section from per-trigger bindings. Single-expand needs `[multiExpandable]="false"` (the default is `true`). The library emits all the ARIA itself. Collapsed panels leave an empty, `inert` `role=region` element in the DOM.
 - **tabs**: hand-written `[hidden]` on inactive panels. Without it they stay as empty, visible, `inert` `role=tabpanel` elements; the typings say "proper styling is required for visual hiding" and the guide hides them with CSS. Automatic activation (`selectionMode="follow"`) is the default.
-- **menu**: positioning through `cdkConnectedOverlay` from `@angular/cdk/overlay`, as the guide does. The guide's `cdkAttachPopoverAsChild` does not exist in CDK 22.2.3. The menu has no accessible name.
+- **menu**: positioning through `cdkConnectedOverlay` from `@angular/cdk/overlay`, as the guide does. Each item sets `[searchTerm]`, which the menu needs for typeahead. The guide's `cdkAttachPopoverAsChild` does not exist in CDK 22.2.3. The menu has no accessible name.
 - **listbox**: needs `selectionMode="explicit"`: the default `follow` selects the first option on render, so "nothing selected initially" is impossible without opting out.
 - **combobox**: based on the guide's "manual" autocomplete (`selectionMode="explicit"`); with the default `follow`, opening the popup selects Apple and blurring writes it into the input. Hand-written: the filtering `computed()`, committing the picked label to the input, closing and refocusing, opening on click, and both labels (the docs example labels neither). `aria-controls` / `aria-haspopup` are only present while open.
 

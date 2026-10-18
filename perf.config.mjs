@@ -2,7 +2,8 @@ export const settings = {
   cpuThrottling: 4,
   renderRuns: 9,
   interactionCycles: 15,
-  leakCycles: 50,
+  leakWarmup: 30,
+  leakCycles: 100,
   scaleSize: 1000,
 };
 

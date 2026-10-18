@@ -1,6 +1,6 @@
 {
   "meta": {
-    "date": "2026-10-18T01:07:17.217Z",
+    "date": "2026-10-18T01:23:44.892Z",
     "node": "v24.15.0",
     "platform": "win32-x64",
     "chromium": "156.0.8078.4",
@@ -45,7 +45,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 5.4,
+        "seconds": 6.5,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -89,7 +89,7 @@
         "ok": true,
         "hydrated": true,
         "started": true,
-        "serverElements": 18,
+        "serverElements": 14,
         "discarded": 0,
         "clientCreated": 0,
         "added": 0,
@@ -135,7 +135,7 @@
       "serverRender": {
         "ok": false,
         "exitCode": 0,
-        "seconds": 21.4,
+        "seconds": 6.7,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -245,7 +245,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 33.8,
+        "seconds": 7.1,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -340,7 +340,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 31.5,
+        "seconds": 6.7,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -430,7 +430,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 46.6,
+        "seconds": 13.8,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -520,7 +520,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 5.4,
+        "seconds": 13.3,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -570,7 +570,7 @@
         "ok": true,
         "hydrated": true,
         "started": true,
-        "serverElements": 13,
+        "serverElements": 9,
         "discarded": 0,
         "clientCreated": 0,
         "added": 0,
@@ -613,7 +613,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 39.4,
+        "seconds": 9.2,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -706,7 +706,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 34.3,
+        "seconds": 9.2,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -802,7 +802,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 27.2,
+        "seconds": 10.2,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -895,7 +895,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 7.4,
+        "seconds": 10.2,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -977,7 +977,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 19.1,
+        "seconds": 10.6,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -1059,7 +1059,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 18.2,
+        "seconds": 11.1,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -1141,7 +1141,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 11.1,
+        "seconds": 11.7,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -1223,7 +1223,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 10,
+        "seconds": 10.8,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -1312,7 +1312,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 24.1,
+        "seconds": 8.6,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -1401,7 +1401,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 23.4,
+        "seconds": 8.4,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -1486,7 +1486,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 20.9,
+        "seconds": 8.4,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -1575,7 +1575,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 19.9,
+        "seconds": 9.3,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -1657,7 +1657,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 21.2,
+        "seconds": 9.5,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -1739,7 +1739,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 20.4,
+        "seconds": 9.7,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -1821,7 +1821,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 11.9,
+        "seconds": 11.1,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -1903,7 +1903,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 10.2,
+        "seconds": 9.4,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -1978,7 +1978,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 11.2,
+        "seconds": 9.4,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -2053,7 +2053,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 9.8,
+        "seconds": 9.1,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -2128,7 +2128,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 6.8,
+        "seconds": 6.5,
         "prerendered": true,
         "setup": {
           "imports": [],

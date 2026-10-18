@@ -13,13 +13,15 @@ import {
   template: `
     <div forAccordion [(value)]="value" collapsible>
       @for (section of sections; track section.value) {
-        <div forAccordionItem [value]="section.value">
+        <div forAccordionItem #item="forAccordionItem" [value]="section.value">
           <h3>
             <button type="button" forAccordionTrigger>{{ section.title }}</button>
           </h3>
-          <div forAccordionContent>
-            <p>{{ section.body }}</p>
-          </div>
+          @if (item.expanded()) {
+            <div forAccordionContent>
+              <p>{{ section.body }}</p>
+            </div>
+          }
         </div>
       }
     </div>

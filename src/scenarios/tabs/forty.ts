@@ -13,9 +13,11 @@ import { ForTabs, ForTabsContent, ForTabsList, ForTabsTrigger } from 'forty-cdk/
         }
       </div>
       @for (tab of tabs; track tab.value) {
-        <div forTabsContent [value]="tab.value">
-          <p>{{ tab.body }}</p>
-        </div>
+        @if (value() === tab.value) {
+          <div forTabsContent [value]="tab.value">
+            <p>{{ tab.body }}</p>
+          </div>
+        }
       }
     </div>
     <output>{{ value() }}</output>

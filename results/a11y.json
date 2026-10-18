@@ -1,0 +1,3644 @@
+{
+  "meta": {
+    "date": "2026-10-18T01:48:28.590Z",
+    "durationMs": 81031,
+    "node": "24.15.0",
+    "playwright": "1.64.1",
+    "chromium": "156.0.8078.4",
+    "axe": "4.11.0",
+    "axeTags": [
+      "wcag2a",
+      "wcag2aa",
+      "wcag21a",
+      "wcag21aa",
+      "wcag22aa"
+    ],
+    "versions": {
+      "@angular/core": "22.2.3",
+      "forty-cdk": "0.38.0",
+      "ng-primitives": "0.131.2",
+      "@angular/aria": "22.2.3",
+      "@angular/cdk": "22.2.3",
+      "@spartan-ng/brain": "1.8.0"
+    }
+  },
+  "unsupported": {
+    "dialog/angular-aria": "No dialog entry point; the Angular team points to `@angular/cdk/dialog` (the Angular CDK column).",
+    "tabs/angular-cdk": "`@angular/cdk` has no tabs primitive.",
+    "menu/spartan": "brain has no menu primitive; Spartan's dropdown menu is a styled wrapper over `@angular/cdk/menu` (the Angular CDK column).",
+    "listbox/spartan": "brain has no standalone listbox; listbox roles exist only inside its combobox, select and command widgets.",
+    "combobox/angular-cdk": "`@angular/cdk` has no combobox; the experimental one ships separately in `@angular/cdk-experimental`."
+  },
+  "scenarios": [
+    {
+      "id": "accordion--forty",
+      "pattern": "accordion",
+      "library": "forty",
+      "status": "ok",
+      "durationMs": 3132,
+      "checks": [
+        {
+          "id": "accordion.header-structure",
+          "title": "Each header is a button wrapped in a heading with a level, and is its only element",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.expanded-state",
+          "title": "aria-expanded is \"true\" on the open header and \"false\" on the others, matching which panel is exposed",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.panel-rendering",
+          "title": "Only the panel whose header has aria-expanded \"true\" is rendered on screen",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.aria-controls",
+          "title": "An expanded header has aria-controls referencing the element containing its panel",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.aria-controls-collapsed",
+          "title": "Collapsed headers also have aria-controls, referencing an element that exists in the DOM",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "fail",
+          "flaky": false,
+          "message": "collapsed \"Returns\" header has no aria-controls",
+          "pageErrors": [],
+          "note": {
+            "cause": "scenario",
+            "text": "the scenario unmounts closed panels with `@if`, one of the two ways the forty README documents (the other needs CSS); the README states that the trigger then emits `aria-controls` only while expanded."
+          }
+        },
+        {
+          "id": "accordion.enter-toggles",
+          "title": "Enter expands a collapsed header (collapsing the open one) and collapses an expanded one",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.space-toggles",
+          "title": "Space expands a collapsed header (collapsing the open one) and collapses an expanded one",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.tab-sequence",
+          "title": "Every header button is in the page Tab sequence, in order, both directions",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.region",
+          "title": "The open panel is a role=region labelled by its header button",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        }
+      ],
+      "axe": [
+        {
+          "state": "initial",
+          "violations": []
+        }
+      ]
+    },
+    {
+      "id": "accordion--ng-primitives",
+      "pattern": "accordion",
+      "library": "ng-primitives",
+      "status": "ok",
+      "durationMs": 13030,
+      "checks": [
+        {
+          "id": "accordion.header-structure",
+          "title": "Each header is a button wrapped in a heading with a level, and is its only element",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.expanded-state",
+          "title": "aria-expanded is \"true\" on the open header and \"false\" on the others, matching which panel is exposed",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.panel-rendering",
+          "title": "Only the panel whose header has aria-expanded \"true\" is rendered on screen",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "fail",
+          "flaky": false,
+          "message": "panel text \"Orders ship within two business days.\" is rendered on screen, expected not rendered",
+          "pageErrors": [],
+          "note": {
+            "cause": "library",
+            "text": "ng-primitives sets `hidden=\"until-found\"` on a closed panel only once its measured height is 0, which needs consumer CSS that collapses it; with none (SCENARIOS rule 4) a panel the user closes stays rendered and exposed with `data-exit` set. Initially closed panels are hidden. The CSS is not recorded in NOTES.md."
+          }
+        },
+        {
+          "id": "accordion.aria-controls",
+          "title": "An expanded header has aria-controls referencing the element containing its panel",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.aria-controls-collapsed",
+          "title": "Collapsed headers also have aria-controls, referencing an element that exists in the DOM",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.enter-toggles",
+          "title": "Enter expands a collapsed header (collapsing the open one) and collapses an expanded one",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#keyboard_interaction",
+          "status": "fail",
+          "flaky": false,
+          "message": "panel text \"Orders ship within two business days.\" is exposed in the accessibility tree, expected hidden",
+          "pageErrors": [],
+          "note": {
+            "cause": "library",
+            "text": "ng-primitives sets `hidden=\"until-found\"` on a closed panel only once its measured height is 0, which needs consumer CSS that collapses it; with none (SCENARIOS rule 4) a panel the user closes stays rendered and exposed with `data-exit` set. Initially closed panels are hidden. The CSS is not recorded in NOTES.md."
+          }
+        },
+        {
+          "id": "accordion.space-toggles",
+          "title": "Space expands a collapsed header (collapsing the open one) and collapses an expanded one",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#keyboard_interaction",
+          "status": "fail",
+          "flaky": false,
+          "message": "panel text \"Orders ship within two business days.\" is exposed in the accessibility tree, expected hidden",
+          "pageErrors": [],
+          "note": {
+            "cause": "library",
+            "text": "ng-primitives sets `hidden=\"until-found\"` on a closed panel only once its measured height is 0, which needs consumer CSS that collapses it; with none (SCENARIOS rule 4) a panel the user closes stays rendered and exposed with `data-exit` set. Initially closed panels are hidden. The CSS is not recorded in NOTES.md."
+          }
+        },
+        {
+          "id": "accordion.tab-sequence",
+          "title": "Every header button is in the page Tab sequence, in order, both directions",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.region",
+          "title": "The open panel is a role=region labelled by its header button",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        }
+      ],
+      "axe": [
+        {
+          "state": "initial",
+          "violations": []
+        }
+      ]
+    },
+    {
+      "id": "accordion--angular-aria",
+      "pattern": "accordion",
+      "library": "angular-aria",
+      "status": "ok",
+      "durationMs": 2546,
+      "checks": [
+        {
+          "id": "accordion.header-structure",
+          "title": "Each header is a button wrapped in a heading with a level, and is its only element",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.expanded-state",
+          "title": "aria-expanded is \"true\" on the open header and \"false\" on the others, matching which panel is exposed",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.panel-rendering",
+          "title": "Only the panel whose header has aria-expanded \"true\" is rendered on screen",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.aria-controls",
+          "title": "An expanded header has aria-controls referencing the element containing its panel",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.aria-controls-collapsed",
+          "title": "Collapsed headers also have aria-controls, referencing an element that exists in the DOM",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.enter-toggles",
+          "title": "Enter expands a collapsed header (collapsing the open one) and collapses an expanded one",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.space-toggles",
+          "title": "Space expands a collapsed header (collapsing the open one) and collapses an expanded one",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.tab-sequence",
+          "title": "Every header button is in the page Tab sequence, in order, both directions",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.region",
+          "title": "The open panel is a role=region labelled by its header button",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        }
+      ],
+      "axe": [
+        {
+          "state": "initial",
+          "violations": []
+        }
+      ]
+    },
+    {
+      "id": "accordion--angular-cdk",
+      "pattern": "accordion",
+      "library": "angular-cdk",
+      "status": "ok",
+      "durationMs": 2683,
+      "checks": [
+        {
+          "id": "accordion.header-structure",
+          "title": "Each header is a button wrapped in a heading with a level, and is its only element",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.expanded-state",
+          "title": "aria-expanded is \"true\" on the open header and \"false\" on the others, matching which panel is exposed",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.panel-rendering",
+          "title": "Only the panel whose header has aria-expanded \"true\" is rendered on screen",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.aria-controls",
+          "title": "An expanded header has aria-controls referencing the element containing its panel",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.aria-controls-collapsed",
+          "title": "Collapsed headers also have aria-controls, referencing an element that exists in the DOM",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "fail",
+          "flaky": false,
+          "message": "collapsed \"Returns\" header aria-controls=\"cdk-accordion-child-1-body\" references an id that is not in the DOM",
+          "pageErrors": [],
+          "note": {
+            "cause": "scenario",
+            "text": "the ARIA is hand-written (the CDK provides only state), copied from the CDK docs example, which unmounts the panel with `@if` while keeping the id in `aria-controls`."
+          }
+        },
+        {
+          "id": "accordion.enter-toggles",
+          "title": "Enter expands a collapsed header (collapsing the open one) and collapses an expanded one",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.space-toggles",
+          "title": "Space expands a collapsed header (collapsing the open one) and collapses an expanded one",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.tab-sequence",
+          "title": "Every header button is in the page Tab sequence, in order, both directions",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.region",
+          "title": "The open panel is a role=region labelled by its header button",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        }
+      ],
+      "axe": [
+        {
+          "state": "initial",
+          "violations": []
+        }
+      ]
+    },
+    {
+      "id": "accordion--spartan",
+      "pattern": "accordion",
+      "library": "spartan",
+      "status": "ok",
+      "durationMs": 2596,
+      "checks": [
+        {
+          "id": "accordion.header-structure",
+          "title": "Each header is a button wrapped in a heading with a level, and is its only element",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.expanded-state",
+          "title": "aria-expanded is \"true\" on the open header and \"false\" on the others, matching which panel is exposed",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.panel-rendering",
+          "title": "Only the panel whose header has aria-expanded \"true\" is rendered on screen",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.aria-controls",
+          "title": "An expanded header has aria-controls referencing the element containing its panel",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.aria-controls-collapsed",
+          "title": "Collapsed headers also have aria-controls, referencing an element that exists in the DOM",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.enter-toggles",
+          "title": "Enter expands a collapsed header (collapsing the open one) and collapses an expanded one",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.space-toggles",
+          "title": "Space expands a collapsed header (collapsing the open one) and collapses an expanded one",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.tab-sequence",
+          "title": "Every header button is in the page Tab sequence, in order, both directions",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "accordion.region",
+          "title": "The open panel is a role=region labelled by its header button",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        }
+      ],
+      "axe": [
+        {
+          "state": "initial",
+          "violations": []
+        }
+      ]
+    },
+    {
+      "id": "tabs--forty",
+      "pattern": "tabs",
+      "library": "forty",
+      "status": "ok",
+      "durationMs": 5358,
+      "checks": [
+        {
+          "id": "tabs.roles",
+          "title": "A tablist labelled \"Account settings\" contains the three tabs; a tabpanel is present",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.aria-selected",
+          "title": "The active tab has aria-selected=\"true\", every other tab \"false\"",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.aria-controls",
+          "title": "The active tab has aria-controls referencing its visible tabpanel",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.aria-controls-inactive",
+          "title": "Inactive tabs have aria-controls referencing an element that exists in the DOM",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#roles_states_properties",
+          "status": "fail",
+          "flaky": false,
+          "message": "inactive tab \"Security\" has no aria-controls",
+          "pageErrors": [],
+          "note": {
+            "cause": "scenario",
+            "text": "the scenario unmounts inactive panels with `@if` (the forty README offers that or CSS); `aria-controls` is emitted only for a registered panel, so an unmounted one has none."
+          }
+        },
+        {
+          "id": "tabs.panel-labelledby",
+          "title": "The visible tabpanel has aria-labelledby referencing its tab",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.tab-enters-active",
+          "title": "Tab into the tablist focuses the active tab",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.tab-leaves-tablist",
+          "title": "Tab from the active tab moves focus out of the tablist",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.panel-in-tab-sequence",
+          "title": "With no focusable content in the panel, Tab from the tablist lands on the tabpanel",
+          "level": "recommended",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.arrow-right",
+          "title": "Right Arrow moves focus to the next tab",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.arrow-right-wraps",
+          "title": "Right Arrow on the last tab moves focus to the first tab",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.arrow-left",
+          "title": "Left Arrow moves focus to the previous tab",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.arrow-left-wraps",
+          "title": "Left Arrow on the first tab moves focus to the last tab",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.automatic-activation",
+          "title": "Arrow focus movement activates the focused tab and shows its panel",
+          "level": "recommended",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.panel-rendering",
+          "title": "Only the active tab panel is rendered on screen",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#about",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.home-end",
+          "title": "Home focuses the first tab, End the last",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.vertical-arrows-ignored",
+          "title": "A horizontal tablist does not act on Down or Up Arrow",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        }
+      ],
+      "axe": [
+        {
+          "state": "initial",
+          "violations": []
+        }
+      ]
+    },
+    {
+      "id": "tabs--ng-primitives",
+      "pattern": "tabs",
+      "library": "ng-primitives",
+      "status": "ok",
+      "durationMs": 5363,
+      "checks": [
+        {
+          "id": "tabs.roles",
+          "title": "A tablist labelled \"Account settings\" contains the three tabs; a tabpanel is present",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.aria-selected",
+          "title": "The active tab has aria-selected=\"true\", every other tab \"false\"",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.aria-controls",
+          "title": "The active tab has aria-controls referencing its visible tabpanel",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.aria-controls-inactive",
+          "title": "Inactive tabs have aria-controls referencing an element that exists in the DOM",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.panel-labelledby",
+          "title": "The visible tabpanel has aria-labelledby referencing its tab",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.tab-enters-active",
+          "title": "Tab into the tablist focuses the active tab",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.tab-leaves-tablist",
+          "title": "Tab from the active tab moves focus out of the tablist",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.panel-in-tab-sequence",
+          "title": "With no focusable content in the panel, Tab from the tablist lands on the tabpanel",
+          "level": "recommended",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.arrow-right",
+          "title": "Right Arrow moves focus to the next tab",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.arrow-right-wraps",
+          "title": "Right Arrow on the last tab moves focus to the first tab",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.arrow-left",
+          "title": "Left Arrow moves focus to the previous tab",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.arrow-left-wraps",
+          "title": "Left Arrow on the first tab moves focus to the last tab",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.automatic-activation",
+          "title": "Arrow focus movement activates the focused tab and shows its panel",
+          "level": "recommended",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.panel-rendering",
+          "title": "Only the active tab panel is rendered on screen",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#about",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.home-end",
+          "title": "Home focuses the first tab, End the last",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.vertical-arrows-ignored",
+          "title": "A horizontal tablist does not act on Down or Up Arrow",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        }
+      ],
+      "axe": [
+        {
+          "state": "initial",
+          "violations": []
+        }
+      ]
+    },
+    {
+      "id": "tabs--angular-aria",
+      "pattern": "tabs",
+      "library": "angular-aria",
+      "status": "ok",
+      "durationMs": 5473,
+      "checks": [
+        {
+          "id": "tabs.roles",
+          "title": "A tablist labelled \"Account settings\" contains the three tabs; a tabpanel is present",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.aria-selected",
+          "title": "The active tab has aria-selected=\"true\", every other tab \"false\"",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.aria-controls",
+          "title": "The active tab has aria-controls referencing its visible tabpanel",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.aria-controls-inactive",
+          "title": "Inactive tabs have aria-controls referencing an element that exists in the DOM",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.panel-labelledby",
+          "title": "The visible tabpanel has aria-labelledby referencing its tab",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.tab-enters-active",
+          "title": "Tab into the tablist focuses the active tab",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.tab-leaves-tablist",
+          "title": "Tab from the active tab moves focus out of the tablist",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.panel-in-tab-sequence",
+          "title": "With no focusable content in the panel, Tab from the tablist lands on the tabpanel",
+          "level": "recommended",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.arrow-right",
+          "title": "Right Arrow moves focus to the next tab",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.arrow-right-wraps",
+          "title": "Right Arrow on the last tab moves focus to the first tab",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.arrow-left",
+          "title": "Left Arrow moves focus to the previous tab",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.arrow-left-wraps",
+          "title": "Left Arrow on the first tab moves focus to the last tab",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.automatic-activation",
+          "title": "Arrow focus movement activates the focused tab and shows its panel",
+          "level": "recommended",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.panel-rendering",
+          "title": "Only the active tab panel is rendered on screen",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#about",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.home-end",
+          "title": "Home focuses the first tab, End the last",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.vertical-arrows-ignored",
+          "title": "A horizontal tablist does not act on Down or Up Arrow",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        }
+      ],
+      "axe": [
+        {
+          "state": "initial",
+          "violations": []
+        }
+      ]
+    },
+    {
+      "id": "tabs--spartan",
+      "pattern": "tabs",
+      "library": "spartan",
+      "status": "ok",
+      "durationMs": 5241,
+      "checks": [
+        {
+          "id": "tabs.roles",
+          "title": "A tablist labelled \"Account settings\" contains the three tabs; a tabpanel is present",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.aria-selected",
+          "title": "The active tab has aria-selected=\"true\", every other tab \"false\"",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.aria-controls",
+          "title": "The active tab has aria-controls referencing its visible tabpanel",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.aria-controls-inactive",
+          "title": "Inactive tabs have aria-controls referencing an element that exists in the DOM",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.panel-labelledby",
+          "title": "The visible tabpanel has aria-labelledby referencing its tab",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.tab-enters-active",
+          "title": "Tab into the tablist focuses the active tab",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.tab-leaves-tablist",
+          "title": "Tab from the active tab moves focus out of the tablist",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.panel-in-tab-sequence",
+          "title": "With no focusable content in the panel, Tab from the tablist lands on the tabpanel",
+          "level": "recommended",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.arrow-right",
+          "title": "Right Arrow moves focus to the next tab",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.arrow-right-wraps",
+          "title": "Right Arrow on the last tab moves focus to the first tab",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.arrow-left",
+          "title": "Left Arrow moves focus to the previous tab",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.arrow-left-wraps",
+          "title": "Left Arrow on the first tab moves focus to the last tab",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.automatic-activation",
+          "title": "Arrow focus movement activates the focused tab and shows its panel",
+          "level": "recommended",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.panel-rendering",
+          "title": "Only the active tab panel is rendered on screen",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#about",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.home-end",
+          "title": "Home focuses the first tab, End the last",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "tabs.vertical-arrows-ignored",
+          "title": "A horizontal tablist does not act on Down or Up Arrow",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        }
+      ],
+      "axe": [
+        {
+          "state": "initial",
+          "violations": []
+        }
+      ]
+    },
+    {
+      "id": "menu--forty",
+      "pattern": "menu",
+      "library": "forty",
+      "status": "ok",
+      "durationMs": 7251,
+      "checks": [
+        {
+          "id": "menu.button",
+          "title": "The trigger has role button and aria-haspopup \"menu\" or \"true\"",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.expanded-state",
+          "title": "The trigger has aria-expanded \"false\" while the menu is hidden and \"true\" while shown",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.structure",
+          "title": "The popup has role menu and contains the three items with a menuitem role",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.name",
+          "title": "The menu is labelled by the button (aria-labelledby) or has an aria-label",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.item-focus-model",
+          "title": "Menu items have tabindex -1, or the menu uses aria-activedescendant",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.enter-opens",
+          "title": "Enter on the button opens the menu and focuses the first item",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.space-opens",
+          "title": "Space on the button opens the menu and focuses the first item",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.arrow-down-opens",
+          "title": "Down Arrow on the button opens the menu and focuses the first item",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.arrow-up-opens",
+          "title": "Up Arrow on the button opens the menu and focuses the last item",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.aria-controls",
+          "title": "While open, the button has aria-controls referencing the menu",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.arrow-navigation",
+          "title": "Down and Up Arrow move focus to the next and previous item",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.home-end-or-wrap",
+          "title": "Either arrow keys wrap, or Home and End move to the first and last item",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.arrow-wrap",
+          "title": "Arrow keys wrap between the last and first item",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.home-end",
+          "title": "Home and End move focus to the first and last item",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.typeahead",
+          "title": "Typing a character moves focus to the next item starting with it",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.enter-activates",
+          "title": "Enter on an item activates it and closes the menu",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.space-activates",
+          "title": "Space on an item activates it and closes the menu",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.focus-return-after-activation",
+          "title": "After keyboard activation of an item, focus returns to the button",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.escape",
+          "title": "Escape closes the menu and returns focus to the button",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.tab-closes",
+          "title": "Tab on an item moves focus out of the menu and closes it",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        }
+      ],
+      "axe": [
+        {
+          "state": "initial",
+          "violations": []
+        },
+        {
+          "state": "open",
+          "violations": []
+        }
+      ]
+    },
+    {
+      "id": "menu--ng-primitives",
+      "pattern": "menu",
+      "library": "ng-primitives",
+      "status": "ok",
+      "durationMs": 21317,
+      "checks": [
+        {
+          "id": "menu.button",
+          "title": "The trigger has role button and aria-haspopup \"menu\" or \"true\"",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.expanded-state",
+          "title": "The trigger has aria-expanded \"false\" while the menu is hidden and \"true\" while shown",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.structure",
+          "title": "The popup has role menu and contains the three items with a menuitem role",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.name",
+          "title": "The menu is labelled by the button (aria-labelledby) or has an aria-label",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#roles_states_properties",
+          "status": "fail",
+          "flaky": false,
+          "message": "the menu has aria-labelledby=null and aria-label=null",
+          "pageErrors": [],
+          "note": {
+            "cause": "library",
+            "text": "the library puts no `aria-labelledby`/`aria-label` on the menu, and the scenario does not add one by hand."
+          }
+        },
+        {
+          "id": "menu.item-focus-model",
+          "title": "Menu items have tabindex -1, or the menu uses aria-activedescendant",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#roles_states_properties",
+          "status": "fail",
+          "flaky": false,
+          "message": "items with tabindex >= 0: Edit (0)",
+          "pageErrors": [],
+          "note": {
+            "cause": "library",
+            "text": "roving tabindex: the active item has `tabindex=\"0\"`, as in the roving-tabindex practice the menu pattern links to; the menu text asks for `-1` on every item."
+          }
+        },
+        {
+          "id": "menu.enter-opens",
+          "title": "Enter on the button opens the menu and focuses the first item",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.space-opens",
+          "title": "Space on the button opens the menu and focuses the first item",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.arrow-down-opens",
+          "title": "Down Arrow on the button opens the menu and focuses the first item",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#keyboard_interaction",
+          "status": "fail",
+          "flaky": false,
+          "message": "no visible role=menu element after opening",
+          "pageErrors": [],
+          "note": {
+            "cause": "library",
+            "text": "arrow keys open the menu only when `arrowkey` is added to the trigger triggers; the default is `click` only."
+          }
+        },
+        {
+          "id": "menu.arrow-up-opens",
+          "title": "Up Arrow on the button opens the menu and focuses the last item",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#keyboard_interaction",
+          "status": "fail",
+          "flaky": false,
+          "message": "no visible role=menu element after opening",
+          "pageErrors": [],
+          "note": {
+            "cause": "library",
+            "text": "arrow keys open the menu only when `arrowkey` is added to the trigger triggers (and Up Arrow only for a top placement); the default is `click` only."
+          }
+        },
+        {
+          "id": "menu.aria-controls",
+          "title": "While open, the button has aria-controls referencing the menu",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#roles_states_properties",
+          "status": "fail",
+          "flaky": false,
+          "message": "\"Actions\" has aria-controls=null, which does not reference the menu",
+          "pageErrors": [],
+          "note": {
+            "cause": "library",
+            "text": "the trigger never gets `aria-controls`."
+          }
+        },
+        {
+          "id": "menu.arrow-navigation",
+          "title": "Down and Up Arrow move focus to the next and previous item",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.home-end-or-wrap",
+          "title": "Either arrow keys wrap, or Home and End move to the first and last item",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.arrow-wrap",
+          "title": "Arrow keys wrap between the last and first item",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.home-end",
+          "title": "Home and End move focus to the first and last item",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.typeahead",
+          "title": "Typing a character moves focus to the next item starting with it",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "fail",
+          "flaky": false,
+          "message": "expected focus on menu item \"Duplicate\", focus is on <button role=menuitem> \"Edit\"",
+          "pageErrors": [],
+          "note": {
+            "cause": "library",
+            "text": "the menu has no typeahead."
+          }
+        },
+        {
+          "id": "menu.enter-activates",
+          "title": "Enter on an item activates it and closes the menu",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.space-activates",
+          "title": "Space on an item activates it and closes the menu",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.focus-return-after-activation",
+          "title": "After keyboard activation of an item, focus returns to the button",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.escape",
+          "title": "Escape closes the menu and returns focus to the button",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.tab-closes",
+          "title": "Tab on an item moves focus out of the menu and closes it",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "fail",
+          "flaky": false,
+          "message": "the menu is still visible",
+          "pageErrors": [],
+          "note": {
+            "cause": "library",
+            "text": "the menu always installs a focus trap (by design, per a comment in its source), so Tab cycles inside the open menu instead of leaving and closing it."
+          }
+        }
+      ],
+      "axe": [
+        {
+          "state": "initial",
+          "violations": []
+        },
+        {
+          "state": "open",
+          "violations": [
+            {
+              "rule": "target-size",
+              "impact": "serious",
+              "help": "All touch targets must be 24px large, or leave sufficient space",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=axeAPI",
+              "nodes": 2,
+              "target": "button[aria-haspopup=\"true\"]",
+              "note": {
+                "cause": "scenario",
+                "text": "layout, not semantics: without the `[ngpMenu] { position: fixed }` rule NOTES.md lists, the menu renders in flow flush under the trigger, so the 21 px default buttons have no spacing."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "menu--angular-aria",
+      "pattern": "menu",
+      "library": "angular-aria",
+      "status": "ok",
+      "durationMs": 7692,
+      "checks": [
+        {
+          "id": "menu.button",
+          "title": "The trigger has role button and aria-haspopup \"menu\" or \"true\"",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.expanded-state",
+          "title": "The trigger has aria-expanded \"false\" while the menu is hidden and \"true\" while shown",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.structure",
+          "title": "The popup has role menu and contains the three items with a menuitem role",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.name",
+          "title": "The menu is labelled by the button (aria-labelledby) or has an aria-label",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#roles_states_properties",
+          "status": "fail",
+          "flaky": false,
+          "message": "the menu has aria-labelledby=null and aria-label=null",
+          "pageErrors": [],
+          "note": {
+            "cause": "library",
+            "text": "the library puts no `aria-labelledby`/`aria-label` on the menu, and the scenario does not add one by hand."
+          }
+        },
+        {
+          "id": "menu.item-focus-model",
+          "title": "Menu items have tabindex -1, or the menu uses aria-activedescendant",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#roles_states_properties",
+          "status": "fail",
+          "flaky": false,
+          "message": "items with tabindex >= 0: Edit (0)",
+          "pageErrors": [],
+          "note": {
+            "cause": "library",
+            "text": "roving tabindex: the active item has `tabindex=\"0\"`, as in the roving-tabindex practice the menu pattern links to; the menu text asks for `-1` on every item."
+          }
+        },
+        {
+          "id": "menu.enter-opens",
+          "title": "Enter on the button opens the menu and focuses the first item",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.space-opens",
+          "title": "Space on the button opens the menu and focuses the first item",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.arrow-down-opens",
+          "title": "Down Arrow on the button opens the menu and focuses the first item",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.arrow-up-opens",
+          "title": "Up Arrow on the button opens the menu and focuses the last item",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.aria-controls",
+          "title": "While open, the button has aria-controls referencing the menu",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.arrow-navigation",
+          "title": "Down and Up Arrow move focus to the next and previous item",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.home-end-or-wrap",
+          "title": "Either arrow keys wrap, or Home and End move to the first and last item",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.arrow-wrap",
+          "title": "Arrow keys wrap between the last and first item",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.home-end",
+          "title": "Home and End move focus to the first and last item",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.typeahead",
+          "title": "Typing a character moves focus to the next item starting with it",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.enter-activates",
+          "title": "Enter on an item activates it and closes the menu",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.space-activates",
+          "title": "Space on an item activates it and closes the menu",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.focus-return-after-activation",
+          "title": "After keyboard activation of an item, focus returns to the button",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.escape",
+          "title": "Escape closes the menu and returns focus to the button",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.tab-closes",
+          "title": "Tab on an item moves focus out of the menu and closes it",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        }
+      ],
+      "axe": [
+        {
+          "state": "initial",
+          "violations": []
+        },
+        {
+          "state": "open",
+          "violations": []
+        }
+      ]
+    },
+    {
+      "id": "menu--angular-cdk",
+      "pattern": "menu",
+      "library": "angular-cdk",
+      "status": "ok",
+      "durationMs": 7014,
+      "checks": [
+        {
+          "id": "menu.button",
+          "title": "The trigger has role button and aria-haspopup \"menu\" or \"true\"",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.expanded-state",
+          "title": "The trigger has aria-expanded \"false\" while the menu is hidden and \"true\" while shown",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.structure",
+          "title": "The popup has role menu and contains the three items with a menuitem role",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.name",
+          "title": "The menu is labelled by the button (aria-labelledby) or has an aria-label",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#roles_states_properties",
+          "status": "fail",
+          "flaky": false,
+          "message": "the menu has aria-labelledby=null and aria-label=null",
+          "pageErrors": [],
+          "note": {
+            "cause": "library",
+            "text": "the library puts no `aria-labelledby`/`aria-label` on the menu, and the scenario does not add one by hand."
+          }
+        },
+        {
+          "id": "menu.item-focus-model",
+          "title": "Menu items have tabindex -1, or the menu uses aria-activedescendant",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#roles_states_properties",
+          "status": "fail",
+          "flaky": false,
+          "message": "items with tabindex >= 0: Edit (0)",
+          "pageErrors": [],
+          "note": {
+            "cause": "library",
+            "text": "roving tabindex: the active item has `tabindex=\"0\"`, as in the roving-tabindex practice the menu pattern links to; the menu text asks for `-1` on every item."
+          }
+        },
+        {
+          "id": "menu.enter-opens",
+          "title": "Enter on the button opens the menu and focuses the first item",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.space-opens",
+          "title": "Space on the button opens the menu and focuses the first item",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.arrow-down-opens",
+          "title": "Down Arrow on the button opens the menu and focuses the first item",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.arrow-up-opens",
+          "title": "Up Arrow on the button opens the menu and focuses the last item",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.aria-controls",
+          "title": "While open, the button has aria-controls referencing the menu",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.arrow-navigation",
+          "title": "Down and Up Arrow move focus to the next and previous item",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.home-end-or-wrap",
+          "title": "Either arrow keys wrap, or Home and End move to the first and last item",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.arrow-wrap",
+          "title": "Arrow keys wrap between the last and first item",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.home-end",
+          "title": "Home and End move focus to the first and last item",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.typeahead",
+          "title": "Typing a character moves focus to the next item starting with it",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.enter-activates",
+          "title": "Enter on an item activates it and closes the menu",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.space-activates",
+          "title": "Space on an item activates it and closes the menu",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.focus-return-after-activation",
+          "title": "After keyboard activation of an item, focus returns to the button",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.escape",
+          "title": "Escape closes the menu and returns focus to the button",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "menu.tab-closes",
+          "title": "Tab on an item moves focus out of the menu and closes it",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        }
+      ],
+      "axe": [
+        {
+          "state": "initial",
+          "violations": []
+        },
+        {
+          "state": "open",
+          "violations": []
+        }
+      ]
+    },
+    {
+      "id": "listbox--forty",
+      "pattern": "listbox",
+      "library": "forty",
+      "status": "ok",
+      "durationMs": 5029,
+      "checks": [
+        {
+          "id": "listbox.roles",
+          "title": "A listbox labelled \"Fruits\" contains the five options and is not multiselectable",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.unselected-state",
+          "title": "With nothing selected, every option has aria-selected (or aria-checked) \"false\"",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.selected-state",
+          "title": "The selected option has aria-selected \"true\", all others \"false\", one at a time",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.focus-first",
+          "title": "Focusing the listbox with nothing selected focuses the first option",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.focus-selected",
+          "title": "Focusing the listbox with a selected option focuses that option",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.arrows",
+          "title": "Down and Up Arrow move focus to the next and previous option",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.keyboard-selection",
+          "title": "The focused option can be selected from the keyboard (selection follows focus, Space or Enter)",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.home-end",
+          "title": "Home focuses the first option, End the last",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.typeahead",
+          "title": "Typing one or several characters moves focus to the matching option",
+          "level": "recommended",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.single-tab-stop",
+          "title": "The listbox is a single Tab stop: Tab from an option leaves the listbox",
+          "level": "recommended",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#kbd_general_within",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        }
+      ],
+      "axe": [
+        {
+          "state": "initial",
+          "violations": []
+        }
+      ]
+    },
+    {
+      "id": "listbox--ng-primitives",
+      "pattern": "listbox",
+      "library": "ng-primitives",
+      "status": "ok",
+      "durationMs": 5119,
+      "checks": [
+        {
+          "id": "listbox.roles",
+          "title": "A listbox labelled \"Fruits\" contains the five options and is not multiselectable",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.unselected-state",
+          "title": "With nothing selected, every option has aria-selected (or aria-checked) \"false\"",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.selected-state",
+          "title": "The selected option has aria-selected \"true\", all others \"false\", one at a time",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.focus-first",
+          "title": "Focusing the listbox with nothing selected focuses the first option",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.focus-selected",
+          "title": "Focusing the listbox with a selected option focuses that option",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.arrows",
+          "title": "Down and Up Arrow move focus to the next and previous option",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.keyboard-selection",
+          "title": "The focused option can be selected from the keyboard (selection follows focus, Space or Enter)",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.home-end",
+          "title": "Home focuses the first option, End the last",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.typeahead",
+          "title": "Typing one or several characters moves focus to the matching option",
+          "level": "recommended",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.single-tab-stop",
+          "title": "The listbox is a single Tab stop: Tab from an option leaves the listbox",
+          "level": "recommended",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#kbd_general_within",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        }
+      ],
+      "axe": [
+        {
+          "state": "initial",
+          "violations": []
+        }
+      ]
+    },
+    {
+      "id": "listbox--angular-aria",
+      "pattern": "listbox",
+      "library": "angular-aria",
+      "status": "ok",
+      "durationMs": 4832,
+      "checks": [
+        {
+          "id": "listbox.roles",
+          "title": "A listbox labelled \"Fruits\" contains the five options and is not multiselectable",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.unselected-state",
+          "title": "With nothing selected, every option has aria-selected (or aria-checked) \"false\"",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.selected-state",
+          "title": "The selected option has aria-selected \"true\", all others \"false\", one at a time",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.focus-first",
+          "title": "Focusing the listbox with nothing selected focuses the first option",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.focus-selected",
+          "title": "Focusing the listbox with a selected option focuses that option",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.arrows",
+          "title": "Down and Up Arrow move focus to the next and previous option",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.keyboard-selection",
+          "title": "The focused option can be selected from the keyboard (selection follows focus, Space or Enter)",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.home-end",
+          "title": "Home focuses the first option, End the last",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.typeahead",
+          "title": "Typing one or several characters moves focus to the matching option",
+          "level": "recommended",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.single-tab-stop",
+          "title": "The listbox is a single Tab stop: Tab from an option leaves the listbox",
+          "level": "recommended",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#kbd_general_within",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        }
+      ],
+      "axe": [
+        {
+          "state": "initial",
+          "violations": []
+        }
+      ]
+    },
+    {
+      "id": "listbox--angular-cdk",
+      "pattern": "listbox",
+      "library": "angular-cdk",
+      "status": "ok",
+      "durationMs": 5273,
+      "checks": [
+        {
+          "id": "listbox.roles",
+          "title": "A listbox labelled \"Fruits\" contains the five options and is not multiselectable",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.unselected-state",
+          "title": "With nothing selected, every option has aria-selected (or aria-checked) \"false\"",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.selected-state",
+          "title": "The selected option has aria-selected \"true\", all others \"false\", one at a time",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.focus-first",
+          "title": "Focusing the listbox with nothing selected focuses the first option",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.focus-selected",
+          "title": "Focusing the listbox with a selected option focuses that option",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.arrows",
+          "title": "Down and Up Arrow move focus to the next and previous option",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.keyboard-selection",
+          "title": "The focused option can be selected from the keyboard (selection follows focus, Space or Enter)",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.home-end",
+          "title": "Home focuses the first option, End the last",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.typeahead",
+          "title": "Typing one or several characters moves focus to the matching option",
+          "level": "recommended",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "listbox.single-tab-stop",
+          "title": "The listbox is a single Tab stop: Tab from an option leaves the listbox",
+          "level": "recommended",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#kbd_general_within",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        }
+      ],
+      "axe": [
+        {
+          "state": "initial",
+          "violations": []
+        }
+      ]
+    },
+    {
+      "id": "combobox--forty",
+      "pattern": "combobox",
+      "library": "forty",
+      "status": "ok",
+      "durationMs": 5883,
+      "checks": [
+        {
+          "id": "combobox.role",
+          "title": "The input has role combobox and the name \"Fruit\"",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.collapsed-state",
+          "title": "While the popup is hidden, aria-expanded is \"false\" (or unset, its default)",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.expanded-state",
+          "title": "Typing opens a listbox popup of options and sets aria-expanded \"true\"",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.aria-controls",
+          "title": "While open, aria-controls on the combobox references the listbox popup",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.haspopup",
+          "title": "aria-haspopup is unset or \"listbox\" (the popup is a listbox)",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.autocomplete",
+          "title": "aria-autocomplete is \"list\" (filtering popup, no inline completion), collapsed and open",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.tab-sequence",
+          "title": "The combobox is in the Tab sequence; the popup and its options are not",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.arrow-down",
+          "title": "Down Arrow moves to an option via aria-activedescendant while DOM focus stays on the input",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.arrow-up",
+          "title": "Up Arrow in the popup moves to the previous option",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.arrow-up-opens-last",
+          "title": "Up Arrow from the input moves to the last option",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.enter-accepts",
+          "title": "Enter accepts the active option: closes the popup and puts its label in the input",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.enter-caret-at-end",
+          "title": "After Enter accepts an option, the input cursor is at the end of the value",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.escape",
+          "title": "Escape closes the popup and keeps focus on the input",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.printable-keeps-popup",
+          "title": "Typing while an option is active edits the input and keeps the popup open",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.editing-keys",
+          "title": "Left and Right Arrow while an option is active move the input cursor and keep the popup open",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.selected-follows-active",
+          "title": "The option made active with the arrow keys has aria-selected \"true\"",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        }
+      ],
+      "axe": [
+        {
+          "state": "initial",
+          "violations": []
+        },
+        {
+          "state": "open",
+          "violations": []
+        }
+      ]
+    },
+    {
+      "id": "combobox--ng-primitives",
+      "pattern": "combobox",
+      "library": "ng-primitives",
+      "status": "ok",
+      "durationMs": 9381,
+      "checks": [
+        {
+          "id": "combobox.role",
+          "title": "The input has role combobox and the name \"Fruit\"",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.collapsed-state",
+          "title": "While the popup is hidden, aria-expanded is \"false\" (or unset, its default)",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.expanded-state",
+          "title": "Typing opens a listbox popup of options and sets aria-expanded \"true\"",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.aria-controls",
+          "title": "While open, aria-controls on the combobox references the listbox popup",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.haspopup",
+          "title": "aria-haspopup is unset or \"listbox\" (the popup is a listbox)",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.autocomplete",
+          "title": "aria-autocomplete is \"list\" (filtering popup, no inline completion), collapsed and open",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.tab-sequence",
+          "title": "The combobox is in the Tab sequence; the popup and its options are not",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.arrow-down",
+          "title": "Down Arrow moves to an option via aria-activedescendant while DOM focus stays on the input",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.arrow-up",
+          "title": "Up Arrow in the popup moves to the previous option",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.arrow-up-opens-last",
+          "title": "Up Arrow from the input moves to the last option",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.enter-accepts",
+          "title": "Enter accepts the active option: closes the popup and puts its label in the input",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.enter-caret-at-end",
+          "title": "After Enter accepts an option, the input cursor is at the end of the value",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.escape",
+          "title": "Escape closes the popup and keeps focus on the input",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.printable-keeps-popup",
+          "title": "Typing while an option is active edits the input and keeps the popup open",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.editing-keys",
+          "title": "Left and Right Arrow while an option is active move the input cursor and keep the popup open",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.selected-follows-active",
+          "title": "The option made active with the arrow keys has aria-selected \"true\"",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "fail",
+          "flaky": false,
+          "message": "active option \"Mango\" has aria-selected=unset",
+          "pageErrors": [],
+          "note": {
+            "cause": "library",
+            "text": "combobox options never carry `aria-selected` (the same gap NOTES.md records for its listbox)."
+          }
+        }
+      ],
+      "axe": [
+        {
+          "state": "initial",
+          "violations": []
+        },
+        {
+          "state": "open",
+          "violations": []
+        }
+      ]
+    },
+    {
+      "id": "combobox--angular-aria",
+      "pattern": "combobox",
+      "library": "angular-aria",
+      "status": "ok",
+      "durationMs": 8648,
+      "checks": [
+        {
+          "id": "combobox.role",
+          "title": "The input has role combobox and the name \"Fruit\"",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.collapsed-state",
+          "title": "While the popup is hidden, aria-expanded is \"false\" (or unset, its default)",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.expanded-state",
+          "title": "Typing opens a listbox popup of options and sets aria-expanded \"true\"",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.aria-controls",
+          "title": "While open, aria-controls on the combobox references the listbox popup",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.haspopup",
+          "title": "aria-haspopup is unset or \"listbox\" (the popup is a listbox)",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.autocomplete",
+          "title": "aria-autocomplete is \"list\" (filtering popup, no inline completion), collapsed and open",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "fail",
+          "flaky": false,
+          "message": "aria-autocomplete is \"none\" collapsed and \"list\" open, expected \"list\" in both",
+          "pageErrors": [],
+          "note": {
+            "cause": "library",
+            "text": "`aria-autocomplete` is derived from a registered popup; the popup directive lives inside the overlay template (as in the guide), so it reads \"none\" until the popup first opens."
+          }
+        },
+        {
+          "id": "combobox.tab-sequence",
+          "title": "The combobox is in the Tab sequence; the popup and its options are not",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.arrow-down",
+          "title": "Down Arrow moves to an option via aria-activedescendant while DOM focus stays on the input",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.arrow-up",
+          "title": "Up Arrow in the popup moves to the previous option",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.arrow-up-opens-last",
+          "title": "Up Arrow from the input moves to the last option",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.enter-accepts",
+          "title": "Enter accepts the active option: closes the popup and puts its label in the input",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.enter-caret-at-end",
+          "title": "After Enter accepts an option, the input cursor is at the end of the value",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.escape",
+          "title": "Escape closes the popup and keeps focus on the input",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.printable-keeps-popup",
+          "title": "Typing while an option is active edits the input and keeps the popup open",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.editing-keys",
+          "title": "Left and Right Arrow while an option is active move the input cursor and keep the popup open",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.selected-follows-active",
+          "title": "The option made active with the arrow keys has aria-selected \"true\"",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "fail",
+          "flaky": false,
+          "message": "active option \"Mango\" has aria-selected=\"false\"",
+          "pageErrors": [],
+          "note": {
+            "cause": "scenario",
+            "text": "the scenario uses `selectionMode=\"explicit\"` (the guide manual example; the default `follow` would select Apple on open), so the active option is not selected."
+          }
+        }
+      ],
+      "axe": [
+        {
+          "state": "initial",
+          "violations": []
+        },
+        {
+          "state": "open",
+          "violations": []
+        }
+      ]
+    },
+    {
+      "id": "combobox--spartan",
+      "pattern": "combobox",
+      "library": "spartan",
+      "status": "ok",
+      "durationMs": 8993,
+      "checks": [
+        {
+          "id": "combobox.role",
+          "title": "The input has role combobox and the name \"Fruit\"",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.collapsed-state",
+          "title": "While the popup is hidden, aria-expanded is \"false\" (or unset, its default)",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.expanded-state",
+          "title": "Typing opens a listbox popup of options and sets aria-expanded \"true\"",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.aria-controls",
+          "title": "While open, aria-controls on the combobox references the listbox popup",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.haspopup",
+          "title": "aria-haspopup is unset or \"listbox\" (the popup is a listbox)",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.autocomplete",
+          "title": "aria-autocomplete is \"list\" (filtering popup, no inline completion), collapsed and open",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.tab-sequence",
+          "title": "The combobox is in the Tab sequence; the popup and its options are not",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.arrow-down",
+          "title": "Down Arrow moves to an option via aria-activedescendant while DOM focus stays on the input",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.arrow-up",
+          "title": "Up Arrow in the popup moves to the previous option",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.arrow-up-opens-last",
+          "title": "Up Arrow from the input moves to the last option",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.enter-accepts",
+          "title": "Enter accepts the active option: closes the popup and puts its label in the input",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.enter-caret-at-end",
+          "title": "After Enter accepts an option, the input cursor is at the end of the value",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.escape",
+          "title": "Escape closes the popup and keeps focus on the input",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.printable-keeps-popup",
+          "title": "Typing while an option is active edits the input and keeps the popup open",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.editing-keys",
+          "title": "Left and Right Arrow while an option is active move the input cursor and keep the popup open",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "combobox.selected-follows-active",
+          "title": "The option made active with the arrow keys has aria-selected \"true\"",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#roles_states_properties",
+          "status": "fail",
+          "flaky": false,
+          "message": "active option \"Banana\" has aria-selected=\"false\"",
+          "pageErrors": [],
+          "note": {
+            "cause": "library",
+            "text": "the highlighted item keeps `aria-selected=\"false\"`."
+          }
+        }
+      ],
+      "axe": [
+        {
+          "state": "initial",
+          "violations": []
+        },
+        {
+          "state": "open",
+          "violations": []
+        }
+      ]
+    },
+    {
+      "id": "dialog--forty",
+      "pattern": "dialog",
+      "library": "forty",
+      "status": "ok",
+      "durationMs": 4373,
+      "checks": [
+        {
+          "id": "dialog.role-name",
+          "title": "The dialog has role dialog and is named \"Delete file?\" by a visible title or aria-label",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.modal",
+          "title": "The dialog is exposed as modal: aria-modal=\"true\", or the content outside is aria-hidden/inert",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.descendants",
+          "title": "The controls that operate the dialog are descendants of the role=dialog element",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.description",
+          "title": "aria-describedby references the description \"This action cannot be undone.\"",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.initial-focus",
+          "title": "Opening the dialog moves focus inside it",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.tab-wraps",
+          "title": "Tab on the last tabbable element moves focus to the first one inside the dialog",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.shift-tab-wraps",
+          "title": "Shift+Tab on the first tabbable element moves focus to the last one inside the dialog",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.escape",
+          "title": "Escape closes the dialog",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.focus-return-escape",
+          "title": "Closing with Escape returns focus to the \"Open dialog\" button",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.focus-return-cancel",
+          "title": "Closing with the Cancel button returns focus to the \"Open dialog\" button",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.focus-return-delete",
+          "title": "Closing with the Delete button returns focus to the \"Open dialog\" button",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.close-button",
+          "title": "The Tab sequence of the dialog includes a visible button that closes it",
+          "level": "recommended",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        }
+      ],
+      "axe": [
+        {
+          "state": "initial",
+          "violations": []
+        },
+        {
+          "state": "open",
+          "violations": []
+        }
+      ]
+    },
+    {
+      "id": "dialog--ng-primitives",
+      "pattern": "dialog",
+      "library": "ng-primitives",
+      "status": "ok",
+      "durationMs": 4184,
+      "checks": [
+        {
+          "id": "dialog.role-name",
+          "title": "The dialog has role dialog and is named \"Delete file?\" by a visible title or aria-label",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.modal",
+          "title": "The dialog is exposed as modal: aria-modal=\"true\", or the content outside is aria-hidden/inert",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.descendants",
+          "title": "The controls that operate the dialog are descendants of the role=dialog element",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.description",
+          "title": "aria-describedby references the description \"This action cannot be undone.\"",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.initial-focus",
+          "title": "Opening the dialog moves focus inside it",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.tab-wraps",
+          "title": "Tab on the last tabbable element moves focus to the first one inside the dialog",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.shift-tab-wraps",
+          "title": "Shift+Tab on the first tabbable element moves focus to the last one inside the dialog",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.escape",
+          "title": "Escape closes the dialog",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.focus-return-escape",
+          "title": "Closing with Escape returns focus to the \"Open dialog\" button",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.focus-return-cancel",
+          "title": "Closing with the Cancel button returns focus to the \"Open dialog\" button",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.focus-return-delete",
+          "title": "Closing with the Delete button returns focus to the \"Open dialog\" button",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.close-button",
+          "title": "The Tab sequence of the dialog includes a visible button that closes it",
+          "level": "recommended",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        }
+      ],
+      "axe": [
+        {
+          "state": "initial",
+          "violations": []
+        },
+        {
+          "state": "open",
+          "violations": []
+        }
+      ]
+    },
+    {
+      "id": "dialog--angular-cdk",
+      "pattern": "dialog",
+      "library": "angular-cdk",
+      "status": "ok",
+      "durationMs": 4099,
+      "checks": [
+        {
+          "id": "dialog.role-name",
+          "title": "The dialog has role dialog and is named \"Delete file?\" by a visible title or aria-label",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.modal",
+          "title": "The dialog is exposed as modal: aria-modal=\"true\", or the content outside is aria-hidden/inert",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.descendants",
+          "title": "The controls that operate the dialog are descendants of the role=dialog element",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.description",
+          "title": "aria-describedby references the description \"This action cannot be undone.\"",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.initial-focus",
+          "title": "Opening the dialog moves focus inside it",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.tab-wraps",
+          "title": "Tab on the last tabbable element moves focus to the first one inside the dialog",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.shift-tab-wraps",
+          "title": "Shift+Tab on the first tabbable element moves focus to the last one inside the dialog",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.escape",
+          "title": "Escape closes the dialog",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.focus-return-escape",
+          "title": "Closing with Escape returns focus to the \"Open dialog\" button",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.focus-return-cancel",
+          "title": "Closing with the Cancel button returns focus to the \"Open dialog\" button",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.focus-return-delete",
+          "title": "Closing with the Delete button returns focus to the \"Open dialog\" button",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.close-button",
+          "title": "The Tab sequence of the dialog includes a visible button that closes it",
+          "level": "recommended",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        }
+      ],
+      "axe": [
+        {
+          "state": "initial",
+          "violations": []
+        },
+        {
+          "state": "open",
+          "violations": []
+        }
+      ]
+    },
+    {
+      "id": "dialog--spartan",
+      "pattern": "dialog",
+      "library": "spartan",
+      "status": "ok",
+      "durationMs": 4086,
+      "checks": [
+        {
+          "id": "dialog.role-name",
+          "title": "The dialog has role dialog and is named \"Delete file?\" by a visible title or aria-label",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.modal",
+          "title": "The dialog is exposed as modal: aria-modal=\"true\", or the content outside is aria-hidden/inert",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.descendants",
+          "title": "The controls that operate the dialog are descendants of the role=dialog element",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.description",
+          "title": "aria-describedby references the description \"This action cannot be undone.\"",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#roles_states_properties",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.initial-focus",
+          "title": "Opening the dialog moves focus inside it",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.tab-wraps",
+          "title": "Tab on the last tabbable element moves focus to the first one inside the dialog",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.shift-tab-wraps",
+          "title": "Shift+Tab on the first tabbable element moves focus to the last one inside the dialog",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.escape",
+          "title": "Escape closes the dialog",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.focus-return-escape",
+          "title": "Closing with Escape returns focus to the \"Open dialog\" button",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.focus-return-cancel",
+          "title": "Closing with the Cancel button returns focus to the \"Open dialog\" button",
+          "level": "required",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.focus-return-delete",
+          "title": "Closing with the Delete button returns focus to the \"Open dialog\" button",
+          "level": "optional",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        },
+        {
+          "id": "dialog.close-button",
+          "title": "The Tab sequence of the dialog includes a visible button that closes it",
+          "level": "recommended",
+          "apg": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboard_interaction",
+          "status": "pass",
+          "flaky": false,
+          "pageErrors": []
+        }
+      ],
+      "axe": [
+        {
+          "state": "initial",
+          "violations": []
+        },
+        {
+          "state": "open",
+          "violations": []
+        }
+      ]
+    }
+  ]
+}
