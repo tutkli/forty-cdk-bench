@@ -1,0 +1,610 @@
+{
+  "generatedAt": "2026-10-18T00:58:01.031Z",
+  "versions": {
+    "forty-cdk": "0.38.0",
+    "ng-primitives": "0.131.2",
+    "@angular/aria": "22.2.3",
+    "@angular/cdk": "22.2.3",
+    "@spartan-ng/brain": "1.8.0"
+  },
+  "rows": [
+    {
+      "pattern": "accordion",
+      "cells": {
+        "forty": {
+          "entry": "accordion",
+          "evidence": "class ForAccordion",
+          "specifier": "forty-cdk/accordion"
+        },
+        "ng-primitives": {
+          "entry": "accordion",
+          "evidence": "class NgpAccordion",
+          "specifier": "ng-primitives/accordion"
+        },
+        "angular-aria": {
+          "entry": "accordion",
+          "evidence": "class AccordionGroup",
+          "specifier": "@angular/aria/accordion"
+        },
+        "angular-cdk": {
+          "entry": "accordion",
+          "evidence": "class CdkAccordion",
+          "note": "state only; the consumer writes the ARIA and the keyboard handling",
+          "specifier": "@angular/cdk/accordion"
+        },
+        "spartan": {
+          "entry": "accordion",
+          "evidence": "class BrnAccordion",
+          "specifier": "@spartan-ng/brain/accordion"
+        }
+      }
+    },
+    {
+      "pattern": "alert",
+      "cells": {
+        "forty": {
+          "entry": "toast",
+          "evidence": "class ForToast",
+          "specifier": "forty-cdk/toast"
+        },
+        "ng-primitives": {
+          "entry": "toast",
+          "evidence": "class NgpToast",
+          "specifier": "ng-primitives/toast"
+        },
+        "angular-aria": null,
+        "angular-cdk": null,
+        "spartan": null
+      }
+    },
+    {
+      "pattern": "alertdialog",
+      "cells": {
+        "forty": {
+          "entry": "dialog",
+          "evidence": "alertdialog",
+          "specifier": "forty-cdk/dialog"
+        },
+        "ng-primitives": {
+          "entry": "dialog",
+          "evidence": "alertdialog",
+          "specifier": "ng-primitives/dialog"
+        },
+        "angular-aria": null,
+        "angular-cdk": {
+          "entry": "dialog",
+          "evidence": "alertdialog",
+          "specifier": "@angular/cdk/dialog"
+        },
+        "spartan": {
+          "entry": "alert-dialog",
+          "evidence": "class BrnAlertDialog",
+          "specifier": "@spartan-ng/brain/alert-dialog"
+        }
+      }
+    },
+    {
+      "pattern": "breadcrumb",
+      "cells": {
+        "forty": {
+          "entry": "breadcrumbs",
+          "evidence": "class ForBreadcrumbs",
+          "specifier": "forty-cdk/breadcrumbs"
+        },
+        "ng-primitives": {
+          "entry": "breadcrumbs",
+          "evidence": "class NgpBreadcrumbs",
+          "specifier": "ng-primitives/breadcrumbs"
+        },
+        "angular-aria": null,
+        "angular-cdk": null,
+        "spartan": null
+      }
+    },
+    {
+      "pattern": "button",
+      "cells": {
+        "forty": {
+          "entry": "toggle",
+          "evidence": "class ForToggle",
+          "specifier": "forty-cdk/toggle"
+        },
+        "ng-primitives": {
+          "entry": "toggle",
+          "evidence": "class NgpToggle",
+          "specifier": "ng-primitives/toggle"
+        },
+        "angular-aria": null,
+        "angular-cdk": null,
+        "spartan": {
+          "entry": "toggle",
+          "evidence": "class BrnToggle",
+          "specifier": "@spartan-ng/brain/toggle"
+        }
+      }
+    },
+    {
+      "pattern": "carousel",
+      "cells": {
+        "forty": {
+          "entry": "carousel",
+          "evidence": "class ForCarousel",
+          "specifier": "forty-cdk/carousel"
+        },
+        "ng-primitives": null,
+        "angular-aria": null,
+        "angular-cdk": null,
+        "spartan": null
+      }
+    },
+    {
+      "pattern": "checkbox",
+      "cells": {
+        "forty": {
+          "entry": "checkbox",
+          "evidence": "class ForCheckbox",
+          "specifier": "forty-cdk/checkbox"
+        },
+        "ng-primitives": {
+          "entry": "checkbox",
+          "evidence": "class NgpCheckbox",
+          "specifier": "ng-primitives/checkbox"
+        },
+        "angular-aria": null,
+        "angular-cdk": null,
+        "spartan": {
+          "entry": "checkbox",
+          "evidence": "class BrnCheckbox",
+          "specifier": "@spartan-ng/brain/checkbox"
+        }
+      }
+    },
+    {
+      "pattern": "combobox",
+      "cells": {
+        "forty": {
+          "entry": "combobox",
+          "evidence": "class ForCombobox",
+          "specifier": "forty-cdk/combobox"
+        },
+        "ng-primitives": {
+          "entry": "combobox",
+          "evidence": "class NgpCombobox",
+          "specifier": "ng-primitives/combobox"
+        },
+        "angular-aria": {
+          "entry": "combobox",
+          "evidence": "class Combobox",
+          "specifier": "@angular/aria/combobox"
+        },
+        "angular-cdk": null,
+        "spartan": {
+          "entry": "combobox",
+          "evidence": "class BrnCombobox",
+          "specifier": "@spartan-ng/brain/combobox"
+        }
+      }
+    },
+    {
+      "pattern": "dialog",
+      "cells": {
+        "forty": {
+          "entry": "dialog",
+          "evidence": "class ForDialog",
+          "specifier": "forty-cdk/dialog"
+        },
+        "ng-primitives": {
+          "entry": "dialog",
+          "evidence": "class NgpDialog",
+          "specifier": "ng-primitives/dialog"
+        },
+        "angular-aria": null,
+        "angular-cdk": {
+          "entry": "dialog",
+          "evidence": "class Dialog",
+          "specifier": "@angular/cdk/dialog"
+        },
+        "spartan": {
+          "entry": "dialog",
+          "evidence": "class BrnDialog",
+          "specifier": "@spartan-ng/brain/dialog"
+        }
+      }
+    },
+    {
+      "pattern": "disclosure",
+      "cells": {
+        "forty": {
+          "entry": "disclosure",
+          "evidence": "class ForDisclosure",
+          "specifier": "forty-cdk/disclosure"
+        },
+        "ng-primitives": {
+          "entry": "collapsible",
+          "evidence": "class NgpCollapsible",
+          "specifier": "ng-primitives/collapsible"
+        },
+        "angular-aria": null,
+        "angular-cdk": null,
+        "spartan": {
+          "entry": "collapsible",
+          "evidence": "class BrnCollapsible",
+          "specifier": "@spartan-ng/brain/collapsible"
+        }
+      }
+    },
+    {
+      "pattern": "feed",
+      "cells": {
+        "forty": null,
+        "ng-primitives": null,
+        "angular-aria": null,
+        "angular-cdk": null,
+        "spartan": null
+      }
+    },
+    {
+      "pattern": "grid",
+      "cells": {
+        "forty": {
+          "entry": "table",
+          "evidence": "'grid'",
+          "specifier": "forty-cdk/table"
+        },
+        "ng-primitives": null,
+        "angular-aria": {
+          "entry": "grid",
+          "evidence": "class Grid",
+          "specifier": "@angular/aria/grid"
+        },
+        "angular-cdk": null,
+        "spartan": null
+      }
+    },
+    {
+      "pattern": "listbox",
+      "cells": {
+        "forty": {
+          "entry": "listbox",
+          "evidence": "class ForListbox",
+          "specifier": "forty-cdk/listbox"
+        },
+        "ng-primitives": {
+          "entry": "listbox",
+          "evidence": "class NgpListbox",
+          "specifier": "ng-primitives/listbox"
+        },
+        "angular-aria": {
+          "entry": "listbox",
+          "evidence": "class Listbox",
+          "specifier": "@angular/aria/listbox"
+        },
+        "angular-cdk": {
+          "entry": "listbox",
+          "evidence": "class CdkListbox",
+          "specifier": "@angular/cdk/listbox"
+        },
+        "spartan": null
+      }
+    },
+    {
+      "pattern": "menubar",
+      "cells": {
+        "forty": {
+          "entry": "menubar",
+          "evidence": "class ForMenubar",
+          "specifier": "forty-cdk/menubar"
+        },
+        "ng-primitives": {
+          "entry": "navigation-menu",
+          "evidence": "class NgpNavigationMenu",
+          "note": "its navigation menu carries `role=\"menubar\"`",
+          "specifier": "ng-primitives/navigation-menu"
+        },
+        "angular-aria": {
+          "entry": "menu",
+          "evidence": "class MenuBar",
+          "specifier": "@angular/aria/menu"
+        },
+        "angular-cdk": {
+          "entry": "menu",
+          "evidence": "class CdkMenuBar",
+          "specifier": "@angular/cdk/menu"
+        },
+        "spartan": null
+      }
+    },
+    {
+      "pattern": "menu-button",
+      "cells": {
+        "forty": {
+          "entry": "dropdown-menu",
+          "evidence": "class ForDropdownMenu",
+          "specifier": "forty-cdk/dropdown-menu"
+        },
+        "ng-primitives": {
+          "entry": "menu",
+          "evidence": "class NgpMenu",
+          "specifier": "ng-primitives/menu"
+        },
+        "angular-aria": {
+          "entry": "menu",
+          "evidence": "class MenuTrigger",
+          "specifier": "@angular/aria/menu"
+        },
+        "angular-cdk": {
+          "entry": "menu",
+          "evidence": "class CdkMenuTrigger",
+          "specifier": "@angular/cdk/menu"
+        },
+        "spartan": null
+      }
+    },
+    {
+      "pattern": "meter",
+      "cells": {
+        "forty": {
+          "entry": "meter",
+          "evidence": "class ForMeter",
+          "specifier": "forty-cdk/meter"
+        },
+        "ng-primitives": {
+          "entry": "meter",
+          "evidence": "class NgpMeter",
+          "specifier": "ng-primitives/meter"
+        },
+        "angular-aria": null,
+        "angular-cdk": null,
+        "spartan": null
+      }
+    },
+    {
+      "pattern": "radio",
+      "cells": {
+        "forty": {
+          "entry": "radio-group",
+          "evidence": "class ForRadioGroup",
+          "specifier": "forty-cdk/radio-group"
+        },
+        "ng-primitives": {
+          "entry": "radio",
+          "evidence": "class NgpRadioGroup",
+          "specifier": "ng-primitives/radio"
+        },
+        "angular-aria": null,
+        "angular-cdk": null,
+        "spartan": {
+          "entry": "radio-group",
+          "evidence": "class BrnRadioGroup",
+          "specifier": "@spartan-ng/brain/radio-group"
+        }
+      }
+    },
+    {
+      "pattern": "slider",
+      "cells": {
+        "forty": {
+          "entry": "slider",
+          "evidence": "class ForSlider",
+          "specifier": "forty-cdk/slider"
+        },
+        "ng-primitives": {
+          "entry": "slider",
+          "evidence": "class NgpSlider",
+          "specifier": "ng-primitives/slider"
+        },
+        "angular-aria": null,
+        "angular-cdk": null,
+        "spartan": {
+          "entry": "slider",
+          "evidence": "class BrnSlider",
+          "specifier": "@spartan-ng/brain/slider"
+        }
+      }
+    },
+    {
+      "pattern": "slider-multithumb",
+      "cells": {
+        "forty": {
+          "entry": "slider",
+          "evidence": "ModelSignal<readonly number[]>",
+          "specifier": "forty-cdk/slider"
+        },
+        "ng-primitives": {
+          "entry": "slider",
+          "evidence": "class NgpRangeSlider",
+          "specifier": "ng-primitives/slider"
+        },
+        "angular-aria": null,
+        "angular-cdk": null,
+        "spartan": {
+          "entry": "slider",
+          "evidence": "InputSignal<number[]>",
+          "specifier": "@spartan-ng/brain/slider"
+        }
+      }
+    },
+    {
+      "pattern": "spinbutton",
+      "cells": {
+        "forty": {
+          "entry": "number-input",
+          "evidence": "class ForNumberInput",
+          "specifier": "forty-cdk/number-input"
+        },
+        "ng-primitives": {
+          "entry": "number-field",
+          "evidence": "class NgpNumberField",
+          "specifier": "ng-primitives/number-field"
+        },
+        "angular-aria": null,
+        "angular-cdk": null,
+        "spartan": null
+      }
+    },
+    {
+      "pattern": "switch",
+      "cells": {
+        "forty": {
+          "entry": "switch",
+          "evidence": "class ForSwitch",
+          "specifier": "forty-cdk/switch"
+        },
+        "ng-primitives": {
+          "entry": "switch",
+          "evidence": "class NgpSwitch",
+          "specifier": "ng-primitives/switch"
+        },
+        "angular-aria": null,
+        "angular-cdk": null,
+        "spartan": {
+          "entry": "switch",
+          "evidence": "class BrnSwitch",
+          "specifier": "@spartan-ng/brain/switch"
+        }
+      }
+    },
+    {
+      "pattern": "table",
+      "cells": {
+        "forty": {
+          "entry": "table",
+          "evidence": "class ForTable",
+          "specifier": "forty-cdk/table"
+        },
+        "ng-primitives": null,
+        "angular-aria": null,
+        "angular-cdk": {
+          "entry": "table",
+          "evidence": "class CdkTable",
+          "specifier": "@angular/cdk/table"
+        },
+        "spartan": null
+      }
+    },
+    {
+      "pattern": "tabs",
+      "cells": {
+        "forty": {
+          "entry": "tabs",
+          "evidence": "class ForTabs",
+          "specifier": "forty-cdk/tabs"
+        },
+        "ng-primitives": {
+          "entry": "tabs",
+          "evidence": "class NgpTabset",
+          "specifier": "ng-primitives/tabs"
+        },
+        "angular-aria": {
+          "entry": "tabs",
+          "evidence": "class Tabs",
+          "specifier": "@angular/aria/tabs"
+        },
+        "angular-cdk": null,
+        "spartan": {
+          "entry": "tabs",
+          "evidence": "class BrnTabs",
+          "specifier": "@spartan-ng/brain/tabs"
+        }
+      }
+    },
+    {
+      "pattern": "toolbar",
+      "cells": {
+        "forty": {
+          "entry": "toolbar",
+          "evidence": "class ForToolbar",
+          "specifier": "forty-cdk/toolbar"
+        },
+        "ng-primitives": {
+          "entry": "toolbar",
+          "evidence": "class NgpToolbar",
+          "specifier": "ng-primitives/toolbar"
+        },
+        "angular-aria": {
+          "entry": "toolbar",
+          "evidence": "class Toolbar",
+          "specifier": "@angular/aria/toolbar"
+        },
+        "angular-cdk": null,
+        "spartan": null
+      }
+    },
+    {
+      "pattern": "tooltip",
+      "cells": {
+        "forty": {
+          "entry": "tooltip",
+          "evidence": "class ForTooltip",
+          "specifier": "forty-cdk/tooltip"
+        },
+        "ng-primitives": {
+          "entry": "tooltip",
+          "evidence": "class NgpTooltip",
+          "specifier": "ng-primitives/tooltip"
+        },
+        "angular-aria": null,
+        "angular-cdk": null,
+        "spartan": {
+          "entry": "tooltip",
+          "evidence": "class BrnTooltip",
+          "specifier": "@spartan-ng/brain/tooltip"
+        }
+      }
+    },
+    {
+      "pattern": "treeview",
+      "cells": {
+        "forty": {
+          "entry": "tree",
+          "evidence": "class ForTree",
+          "specifier": "forty-cdk/tree"
+        },
+        "ng-primitives": null,
+        "angular-aria": {
+          "entry": "tree",
+          "evidence": "class Tree",
+          "specifier": "@angular/aria/tree"
+        },
+        "angular-cdk": {
+          "entry": "tree",
+          "evidence": "class CdkTree",
+          "specifier": "@angular/cdk/tree"
+        },
+        "spartan": null
+      }
+    },
+    {
+      "pattern": "treegrid",
+      "cells": {
+        "forty": {
+          "entry": "table",
+          "evidence": "'treegrid'",
+          "specifier": "forty-cdk/table"
+        },
+        "ng-primitives": null,
+        "angular-aria": null,
+        "angular-cdk": null,
+        "spartan": null
+      }
+    },
+    {
+      "pattern": "windowsplitter",
+      "cells": {
+        "forty": {
+          "entry": "pane-resizer",
+          "evidence": "class ForPaneResizer",
+          "specifier": "forty-cdk/pane-resizer"
+        },
+        "ng-primitives": null,
+        "angular-aria": null,
+        "angular-cdk": null,
+        "spartan": {
+          "entry": "resizable",
+          "evidence": "class BrnResizableHandle",
+          "specifier": "@spartan-ng/brain/resizable"
+        }
+      }
+    }
+  ]
+}

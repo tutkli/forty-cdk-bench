@@ -1,0 +1,413 @@
+{
+  "generatedAt": "2026-10-18T00:54:36.360Z",
+  "rows": [
+    {
+      "id": "accordion--forty",
+      "pattern": "accordion",
+      "library": "forty",
+      "status": "measured",
+      "templateLines": 12,
+      "typescriptLines": 5,
+      "librarySymbols": 4,
+      "imports": [
+        "ForAccordion",
+        "ForAccordionContent",
+        "ForAccordionItem",
+        "ForAccordionTrigger"
+      ]
+    },
+    {
+      "id": "accordion--ng-primitives",
+      "pattern": "accordion",
+      "library": "ng-primitives",
+      "status": "measured",
+      "templateLines": 17,
+      "typescriptLines": 5,
+      "librarySymbols": 4,
+      "imports": [
+        "NgpAccordion",
+        "NgpAccordionContent",
+        "NgpAccordionItem",
+        "NgpAccordionTrigger"
+      ]
+    },
+    {
+      "id": "accordion--angular-aria",
+      "pattern": "accordion",
+      "library": "angular-aria",
+      "status": "measured",
+      "templateLines": 20,
+      "typescriptLines": 10,
+      "librarySymbols": 4,
+      "imports": [
+        "AccordionContent",
+        "AccordionGroup",
+        "AccordionPanel",
+        "AccordionTrigger"
+      ]
+    },
+    {
+      "id": "accordion--angular-cdk",
+      "pattern": "accordion",
+      "library": "angular-cdk",
+      "status": "measured",
+      "templateLines": 29,
+      "typescriptLines": 10,
+      "librarySymbols": 2,
+      "imports": [
+        "CdkAccordion",
+        "CdkAccordionItem"
+      ]
+    },
+    {
+      "id": "accordion--spartan",
+      "pattern": "accordion",
+      "library": "spartan",
+      "status": "measured",
+      "templateLines": 17,
+      "typescriptLines": 10,
+      "librarySymbols": 5,
+      "imports": [
+        "BrnAccordion",
+        "BrnAccordionContent",
+        "BrnAccordionHeader",
+        "BrnAccordionItem",
+        "BrnAccordionTrigger"
+      ]
+    },
+    {
+      "id": "tabs--forty",
+      "pattern": "tabs",
+      "library": "forty",
+      "status": "measured",
+      "templateLines": 11,
+      "typescriptLines": 5,
+      "librarySymbols": 4,
+      "imports": [
+        "ForTabs",
+        "ForTabsContent",
+        "ForTabsList",
+        "ForTabsTrigger"
+      ]
+    },
+    {
+      "id": "tabs--ng-primitives",
+      "pattern": "tabs",
+      "library": "ng-primitives",
+      "status": "measured",
+      "templateLines": 13,
+      "typescriptLines": 5,
+      "librarySymbols": 4,
+      "imports": [
+        "NgpTabButton",
+        "NgpTabList",
+        "NgpTabPanel",
+        "NgpTabset"
+      ]
+    },
+    {
+      "id": "tabs--angular-aria",
+      "pattern": "tabs",
+      "library": "angular-aria",
+      "status": "measured",
+      "templateLines": 13,
+      "typescriptLines": 5,
+      "librarySymbols": 5,
+      "imports": [
+        "Tab",
+        "TabContent",
+        "TabList",
+        "TabPanel",
+        "Tabs"
+      ]
+    },
+    {
+      "id": "tabs--angular-cdk",
+      "pattern": "tabs",
+      "library": "angular-cdk",
+      "status": "unsupported"
+    },
+    {
+      "id": "tabs--spartan",
+      "pattern": "tabs",
+      "library": "spartan",
+      "status": "measured",
+      "templateLines": 11,
+      "typescriptLines": 5,
+      "librarySymbols": 4,
+      "imports": [
+        "BrnTabs",
+        "BrnTabsContent",
+        "BrnTabsList",
+        "BrnTabsTrigger"
+      ]
+    },
+    {
+      "id": "menu--forty",
+      "pattern": "menu",
+      "library": "forty",
+      "status": "measured",
+      "templateLines": 9,
+      "typescriptLines": 2,
+      "librarySymbols": 4,
+      "imports": [
+        "ForDropdownMenu",
+        "ForDropdownMenuTrigger",
+        "ForMenuContent",
+        "ForMenuItem"
+      ]
+    },
+    {
+      "id": "menu--ng-primitives",
+      "pattern": "menu",
+      "library": "ng-primitives",
+      "status": "measured",
+      "templateLines": 10,
+      "typescriptLines": 5,
+      "librarySymbols": 3,
+      "imports": [
+        "NgpMenu",
+        "NgpMenuItem",
+        "NgpMenuTrigger"
+      ]
+    },
+    {
+      "id": "menu--angular-aria",
+      "pattern": "menu",
+      "library": "angular-aria",
+      "status": "measured",
+      "templateLines": 18,
+      "typescriptLines": 3,
+      "librarySymbols": 5,
+      "imports": [
+        "Menu",
+        "MenuContent",
+        "MenuItem",
+        "MenuTrigger",
+        "OverlayModule"
+      ]
+    },
+    {
+      "id": "menu--angular-cdk",
+      "pattern": "menu",
+      "library": "angular-cdk",
+      "status": "measured",
+      "templateLines": 10,
+      "typescriptLines": 2,
+      "librarySymbols": 3,
+      "imports": [
+        "CdkMenu",
+        "CdkMenuItem",
+        "CdkMenuTrigger"
+      ]
+    },
+    {
+      "id": "menu--spartan",
+      "pattern": "menu",
+      "library": "spartan",
+      "status": "unsupported"
+    },
+    {
+      "id": "listbox--forty",
+      "pattern": "listbox",
+      "library": "forty",
+      "status": "measured",
+      "templateLines": 5,
+      "typescriptLines": 2,
+      "librarySymbols": 2,
+      "imports": [
+        "ForListbox",
+        "ForListboxOption"
+      ]
+    },
+    {
+      "id": "listbox--ng-primitives",
+      "pattern": "listbox",
+      "library": "ng-primitives",
+      "status": "measured",
+      "templateLines": 12,
+      "typescriptLines": 2,
+      "librarySymbols": 2,
+      "imports": [
+        "NgpListbox",
+        "NgpListboxOption"
+      ]
+    },
+    {
+      "id": "listbox--angular-aria",
+      "pattern": "listbox",
+      "library": "angular-aria",
+      "status": "measured",
+      "templateLines": 5,
+      "typescriptLines": 2,
+      "librarySymbols": 2,
+      "imports": [
+        "Listbox",
+        "Option"
+      ]
+    },
+    {
+      "id": "listbox--angular-cdk",
+      "pattern": "listbox",
+      "library": "angular-cdk",
+      "status": "measured",
+      "templateLines": 10,
+      "typescriptLines": 2,
+      "librarySymbols": 2,
+      "imports": [
+        "CdkListbox",
+        "CdkOption"
+      ]
+    },
+    {
+      "id": "listbox--spartan",
+      "pattern": "listbox",
+      "library": "spartan",
+      "status": "unsupported"
+    },
+    {
+      "id": "combobox--forty",
+      "pattern": "combobox",
+      "library": "forty",
+      "status": "measured",
+      "templateLines": 11,
+      "typescriptLines": 6,
+      "librarySymbols": 4,
+      "imports": [
+        "ForCombobox",
+        "ForComboboxContent",
+        "ForComboboxInput",
+        "ForComboboxOption"
+      ]
+    },
+    {
+      "id": "combobox--ng-primitives",
+      "pattern": "combobox",
+      "library": "ng-primitives",
+      "status": "measured",
+      "templateLines": 13,
+      "typescriptLines": 24,
+      "librarySymbols": 5,
+      "imports": [
+        "NgpCombobox",
+        "NgpComboboxDropdown",
+        "NgpComboboxInput",
+        "NgpComboboxOption",
+        "NgpComboboxPortal"
+      ]
+    },
+    {
+      "id": "combobox--angular-aria",
+      "pattern": "combobox",
+      "library": "angular-aria",
+      "status": "measured",
+      "templateLines": 34,
+      "typescriptLines": 14,
+      "librarySymbols": 6,
+      "imports": [
+        "Combobox",
+        "ComboboxPopup",
+        "ComboboxWidget",
+        "Listbox",
+        "Option",
+        "OverlayModule"
+      ]
+    },
+    {
+      "id": "combobox--angular-cdk",
+      "pattern": "combobox",
+      "library": "angular-cdk",
+      "status": "unsupported"
+    },
+    {
+      "id": "combobox--spartan",
+      "pattern": "combobox",
+      "library": "spartan",
+      "status": "measured",
+      "templateLines": 16,
+      "typescriptLines": 9,
+      "librarySymbols": 11,
+      "imports": [
+        "BrnCombobox",
+        "BrnComboboxAnchor",
+        "BrnComboboxContent",
+        "BrnComboboxInput",
+        "BrnComboboxItem",
+        "BrnComboboxList",
+        "BrnComboboxPopoverTrigger",
+        "BrnPopover",
+        "BrnPopoverContent",
+        "provideBrnPopoverConfig",
+        "provideBrnPopoverDefaultOptions"
+      ]
+    },
+    {
+      "id": "dialog--forty",
+      "pattern": "dialog",
+      "library": "forty",
+      "status": "measured",
+      "templateLines": 11,
+      "typescriptLines": 5,
+      "librarySymbols": 5,
+      "imports": [
+        "ForDialog",
+        "ForDialogClose",
+        "ForDialogDescription",
+        "ForDialogTitle",
+        "ForDialogTrigger"
+      ]
+    },
+    {
+      "id": "dialog--ng-primitives",
+      "pattern": "dialog",
+      "library": "ng-primitives",
+      "status": "measured",
+      "templateLines": 12,
+      "typescriptLines": 1,
+      "librarySymbols": 5,
+      "imports": [
+        "NgpDialog",
+        "NgpDialogDescription",
+        "NgpDialogOverlay",
+        "NgpDialogTitle",
+        "NgpDialogTrigger"
+      ]
+    },
+    {
+      "id": "dialog--angular-aria",
+      "pattern": "dialog",
+      "library": "angular-aria",
+      "status": "unsupported"
+    },
+    {
+      "id": "dialog--angular-cdk",
+      "pattern": "dialog",
+      "library": "angular-cdk",
+      "status": "measured",
+      "templateLines": 8,
+      "typescriptLines": 11,
+      "librarySymbols": 1,
+      "imports": [
+        "Dialog"
+      ]
+    },
+    {
+      "id": "dialog--spartan",
+      "pattern": "dialog",
+      "library": "spartan",
+      "status": "measured",
+      "templateLines": 11,
+      "typescriptLines": 1,
+      "librarySymbols": 7,
+      "imports": [
+        "BrnDialog",
+        "BrnDialogClose",
+        "BrnDialogContent",
+        "BrnDialogDescription",
+        "BrnDialogOverlay",
+        "BrnDialogTitle",
+        "BrnDialogTrigger"
+      ]
+    }
+  ]
+}
