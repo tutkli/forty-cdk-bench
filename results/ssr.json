@@ -1,0 +1,2200 @@
+{
+  "meta": {
+    "date": "2026-10-18T01:07:17.217Z",
+    "node": "v24.15.0",
+    "platform": "win32-x64",
+    "chromium": "156.0.8078.4",
+    "versions": {
+      "@angular/core": "22.2.3",
+      "@angular/ssr": "22.2.3",
+      "@angular/platform-server": "22.2.3",
+      "@angular/build": "22.2.3",
+      "playwright": "1.64.1",
+      "forty-cdk": "0.38.0",
+      "ng-primitives": "0.131.2",
+      "@angular/aria": "22.2.3",
+      "@angular/cdk": "22.2.3",
+      "@spartan-ng/brain": "1.8.0"
+    }
+  },
+  "results": {
+    "tabs--angular-cdk": {
+      "status": "n/a",
+      "reason": "`@angular/cdk` has no tabs primitive."
+    },
+    "menu--spartan": {
+      "status": "n/a",
+      "reason": "brain has no menu primitive; Spartan's dropdown menu is a styled wrapper over `@angular/cdk/menu` (the Angular CDK column)."
+    },
+    "listbox--spartan": {
+      "status": "n/a",
+      "reason": "brain has no standalone listbox; listbox roles exist only inside its combobox, select and command widgets."
+    },
+    "combobox--angular-cdk": {
+      "status": "n/a",
+      "reason": "`@angular/cdk` has no combobox; the experimental one ships separately in `@angular/cdk-experimental`."
+    },
+    "dialog--angular-aria": {
+      "status": "n/a",
+      "reason": "No dialog entry point; the Angular team points to `@angular/cdk/dialog` (the Angular CDK column)."
+    },
+    "accordion--forty": {
+      "pattern": "accordion",
+      "library": "forty",
+      "status": "measured",
+      "serverRender": {
+        "ok": true,
+        "exitCode": 0,
+        "seconds": 5.4,
+        "prerendered": true,
+        "setup": {
+          "imports": [],
+          "providers": [],
+          "note": null
+        },
+        "errors": [],
+        "warnings": [],
+        "serverContext": "ssg",
+        "nghAttributes": 1,
+        "hydrationData": true,
+        "skipHydration": false
+      },
+      "serverMarkup": {
+        "ok": true,
+        "rendered": true,
+        "steps": [
+          {
+            "step": {
+              "expect": "role=button[name=\"Shipping\"][expanded=true]",
+              "count": 1
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "text": "output",
+              "equals": "shipping"
+            },
+            "ok": true
+          }
+        ],
+        "ariaSnapshot": "- heading \"Shipping\" [level=3]:\n  - button \"Shipping\" [expanded]\n- region \"Shipping\":\n  - paragraph: Orders ship within two business days.\n- heading \"Returns\" [level=3]:\n  - button \"Returns\"\n- heading \"Warranty\" [level=3]:\n  - button \"Warranty\"\n- status: shipping",
+        "tabStops": [
+          "button \"Shipping\"",
+          "button \"Returns\"",
+          "button \"Warranty\""
+        ]
+      },
+      "hydration": {
+        "ok": true,
+        "hydrated": true,
+        "started": true,
+        "serverElements": 18,
+        "discarded": 0,
+        "clientCreated": 0,
+        "added": 0,
+        "removed": 0,
+        "rootNghConsumed": true,
+        "residualNgh": 0,
+        "codes": [],
+        "console": [],
+        "ariaSnapshot": "- heading \"Shipping\" [level=3]:\n  - button \"Shipping\" [expanded]\n- region \"Shipping\":\n  - paragraph: Orders ship within two business days.\n- heading \"Returns\" [level=3]:\n  - button \"Returns\"\n- heading \"Warranty\" [level=3]:\n  - button \"Warranty\"\n- status: shipping",
+        "tabStops": [
+          "button \"Shipping\"",
+          "button \"Returns\"",
+          "button \"Warranty\""
+        ]
+      },
+      "parity": {
+        "identical": true,
+        "sameTree": true,
+        "sameTabStops": true,
+        "onlyOnServer": [],
+        "onlyAfterHydration": [],
+        "serverTabStops": [
+          "button \"Shipping\"",
+          "button \"Returns\"",
+          "button \"Warranty\""
+        ],
+        "hydratedTabStops": [
+          "button \"Shipping\"",
+          "button \"Returns\"",
+          "button \"Warranty\""
+        ]
+      },
+      "behavior": {
+        "ok": true,
+        "failure": null,
+        "console": []
+      }
+    },
+    "accordion--ng-primitives": {
+      "pattern": "accordion",
+      "library": "ng-primitives",
+      "status": "measured",
+      "serverRender": {
+        "ok": false,
+        "exitCode": 0,
+        "seconds": 21.4,
+        "prerendered": true,
+        "setup": {
+          "imports": [],
+          "providers": [],
+          "note": null
+        },
+        "errors": [
+          "ERROR ReferenceError: MutationObserver is not defined"
+        ],
+        "warnings": [],
+        "serverContext": "ssg",
+        "nghAttributes": 1,
+        "hydrationData": true,
+        "skipHydration": false
+      },
+      "serverMarkup": {
+        "ok": true,
+        "rendered": true,
+        "steps": [
+          {
+            "step": {
+              "expect": "role=button[name=\"Shipping\"][expanded=true]",
+              "count": 1
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "text": "output",
+              "equals": "shipping"
+            },
+            "ok": true
+          }
+        ],
+        "ariaSnapshot": "- heading \"Shipping\" [level=3]:\n  - button \"Shipping\" [expanded]\n- region:\n  - paragraph: Orders ship within two business days.\n- heading [level=3]:\n  - button\n- region:\n  - paragraph\n- heading [level=3]:\n  - button\n- region:\n  - paragraph\n- status: shipping",
+        "tabStops": [
+          "button \"Shipping\"",
+          "button \"\"",
+          "button \"\""
+        ]
+      },
+      "hydration": {
+        "ok": true,
+        "hydrated": true,
+        "started": true,
+        "serverElements": 18,
+        "discarded": 0,
+        "clientCreated": 0,
+        "added": 0,
+        "removed": 0,
+        "rootNghConsumed": true,
+        "residualNgh": 0,
+        "codes": [],
+        "console": [],
+        "ariaSnapshot": "- heading \"Shipping\" [level=3]:\n  - button \"Shipping\" [expanded]\n- region \"Shipping\":\n  - paragraph: Orders ship within two business days.\n- heading \"Returns\" [level=3]:\n  - button \"Returns\"\n- region \"Returns\"\n- heading \"Warranty\" [level=3]:\n  - button \"Warranty\"\n- region \"Warranty\"\n- status: shipping",
+        "tabStops": [
+          "button \"Shipping\"",
+          "button \"Returns\"",
+          "button \"Warranty\""
+        ]
+      },
+      "parity": {
+        "identical": false,
+        "sameTree": false,
+        "sameTabStops": false,
+        "onlyOnServer": [
+          "- region:",
+          "- heading [level=3]:",
+          "  - button",
+          "- region:",
+          "  - paragraph",
+          "- heading [level=3]:",
+          "  - button",
+          "- region:",
+          "  - paragraph"
+        ],
+        "onlyAfterHydration": [
+          "- region \"Shipping\":",
+          "- heading \"Returns\" [level=3]:",
+          "  - button \"Returns\"",
+          "- region \"Returns\"",
+          "- heading \"Warranty\" [level=3]:",
+          "  - button \"Warranty\"",
+          "- region \"Warranty\""
+        ],
+        "serverTabStops": [
+          "button \"Shipping\"",
+          "button \"\"",
+          "button \"\""
+        ],
+        "hydratedTabStops": [
+          "button \"Shipping\"",
+          "button \"Returns\"",
+          "button \"Warranty\""
+        ]
+      },
+      "behavior": {
+        "ok": true,
+        "failure": null,
+        "console": []
+      }
+    },
+    "accordion--angular-aria": {
+      "pattern": "accordion",
+      "library": "angular-aria",
+      "status": "measured",
+      "serverRender": {
+        "ok": true,
+        "exitCode": 0,
+        "seconds": 33.8,
+        "prerendered": true,
+        "setup": {
+          "imports": [],
+          "providers": [],
+          "note": null
+        },
+        "errors": [],
+        "warnings": [],
+        "serverContext": "ssg",
+        "nghAttributes": 1,
+        "hydrationData": true,
+        "skipHydration": false
+      },
+      "serverMarkup": {
+        "ok": true,
+        "rendered": true,
+        "steps": [
+          {
+            "step": {
+              "expect": "role=button[name=\"Shipping\"][expanded=true]",
+              "count": 1
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "text": "output",
+              "equals": "shipping"
+            },
+            "ok": true
+          }
+        ],
+        "ariaSnapshot": "- heading \"Shipping\" [level=3]:\n  - button \"Shipping\" [expanded]\n- region \"Shipping\"\n- heading \"Returns\" [level=3]:\n  - button \"Returns\"\n- region \"Returns\"\n- heading \"Warranty\" [level=3]:\n  - button \"Warranty\"\n- region \"Warranty\"\n- status: shipping",
+        "tabStops": [
+          "button \"Shipping\"",
+          "button \"Returns\"",
+          "button \"Warranty\""
+        ]
+      },
+      "hydration": {
+        "ok": true,
+        "hydrated": true,
+        "started": true,
+        "serverElements": 12,
+        "discarded": 0,
+        "clientCreated": 1,
+        "added": 1,
+        "removed": 0,
+        "rootNghConsumed": true,
+        "residualNgh": 0,
+        "codes": [],
+        "console": [],
+        "ariaSnapshot": "- heading \"Shipping\" [level=3]:\n  - button \"Shipping\" [expanded]\n- region \"Shipping\":\n  - paragraph: Orders ship within two business days.\n- heading \"Returns\" [level=3]:\n  - button \"Returns\"\n- region \"Returns\"\n- heading \"Warranty\" [level=3]:\n  - button \"Warranty\"\n- region \"Warranty\"\n- status: shipping",
+        "tabStops": [
+          "button \"Shipping\"",
+          "button \"Returns\"",
+          "button \"Warranty\""
+        ]
+      },
+      "parity": {
+        "identical": false,
+        "sameTree": false,
+        "sameTabStops": true,
+        "onlyOnServer": [
+          "- region \"Shipping\""
+        ],
+        "onlyAfterHydration": [
+          "- region \"Shipping\":",
+          "  - paragraph: Orders ship within two business days."
+        ],
+        "serverTabStops": [
+          "button \"Shipping\"",
+          "button \"Returns\"",
+          "button \"Warranty\""
+        ],
+        "hydratedTabStops": [
+          "button \"Shipping\"",
+          "button \"Returns\"",
+          "button \"Warranty\""
+        ]
+      },
+      "behavior": {
+        "ok": true,
+        "failure": null,
+        "console": []
+      }
+    },
+    "accordion--angular-cdk": {
+      "pattern": "accordion",
+      "library": "angular-cdk",
+      "status": "measured",
+      "serverRender": {
+        "ok": true,
+        "exitCode": 0,
+        "seconds": 31.5,
+        "prerendered": true,
+        "setup": {
+          "imports": [],
+          "providers": [],
+          "note": null
+        },
+        "errors": [],
+        "warnings": [],
+        "serverContext": "ssg",
+        "nghAttributes": 1,
+        "hydrationData": true,
+        "skipHydration": false
+      },
+      "serverMarkup": {
+        "ok": true,
+        "rendered": true,
+        "steps": [
+          {
+            "step": {
+              "expect": "role=button[name=\"Shipping\"][expanded=true]",
+              "count": 1
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "text": "output",
+              "equals": "shipping"
+            },
+            "ok": true
+          }
+        ],
+        "ariaSnapshot": "- heading \"Shipping\" [level=3]:\n  - button \"Shipping\" [expanded]\n- region \"Shipping\":\n  - paragraph: Orders ship within two business days.\n- heading \"Returns\" [level=3]:\n  - button \"Returns\"\n- heading \"Warranty\" [level=3]:\n  - button \"Warranty\"\n- status: shipping",
+        "tabStops": [
+          "button \"Shipping\"",
+          "button \"Returns\"",
+          "button \"Warranty\""
+        ]
+      },
+      "hydration": {
+        "ok": true,
+        "hydrated": true,
+        "started": true,
+        "serverElements": 14,
+        "discarded": 0,
+        "clientCreated": 0,
+        "added": 0,
+        "removed": 0,
+        "rootNghConsumed": true,
+        "residualNgh": 0,
+        "codes": [],
+        "console": [],
+        "ariaSnapshot": "- heading \"Shipping\" [level=3]:\n  - button \"Shipping\" [expanded]\n- region \"Shipping\":\n  - paragraph: Orders ship within two business days.\n- heading \"Returns\" [level=3]:\n  - button \"Returns\"\n- heading \"Warranty\" [level=3]:\n  - button \"Warranty\"\n- status: shipping",
+        "tabStops": [
+          "button \"Shipping\"",
+          "button \"Returns\"",
+          "button \"Warranty\""
+        ]
+      },
+      "parity": {
+        "identical": true,
+        "sameTree": true,
+        "sameTabStops": true,
+        "onlyOnServer": [],
+        "onlyAfterHydration": [],
+        "serverTabStops": [
+          "button \"Shipping\"",
+          "button \"Returns\"",
+          "button \"Warranty\""
+        ],
+        "hydratedTabStops": [
+          "button \"Shipping\"",
+          "button \"Returns\"",
+          "button \"Warranty\""
+        ]
+      },
+      "behavior": {
+        "ok": true,
+        "failure": null,
+        "console": []
+      }
+    },
+    "accordion--spartan": {
+      "pattern": "accordion",
+      "library": "spartan",
+      "status": "measured",
+      "serverRender": {
+        "ok": true,
+        "exitCode": 0,
+        "seconds": 46.6,
+        "prerendered": true,
+        "setup": {
+          "imports": [],
+          "providers": [],
+          "note": null
+        },
+        "errors": [],
+        "warnings": [],
+        "serverContext": "ssg",
+        "nghAttributes": 1,
+        "hydrationData": true,
+        "skipHydration": false
+      },
+      "serverMarkup": {
+        "ok": true,
+        "rendered": true,
+        "steps": [
+          {
+            "step": {
+              "expect": "role=button[name=\"Shipping\"][expanded=true]",
+              "count": 1
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "text": "output",
+              "equals": "shipping"
+            },
+            "ok": true
+          }
+        ],
+        "ariaSnapshot": "- heading \"Shipping\" [level=3]:\n  - button \"Shipping\" [expanded]\n- region \"Shipping\":\n  - paragraph: Orders ship within two business days.\n- heading \"Returns\" [level=3]:\n  - button \"Returns\"\n- heading \"Warranty\" [level=3]:\n  - button \"Warranty\"\n- status: shipping",
+        "tabStops": [
+          "button \"Shipping\"",
+          "button \"Returns\"",
+          "button \"Warranty\""
+        ]
+      },
+      "hydration": {
+        "ok": true,
+        "hydrated": true,
+        "started": true,
+        "serverElements": 18,
+        "discarded": 0,
+        "clientCreated": 0,
+        "added": 0,
+        "removed": 0,
+        "rootNghConsumed": true,
+        "residualNgh": 0,
+        "codes": [],
+        "console": [],
+        "ariaSnapshot": "- heading \"Shipping\" [level=3]:\n  - button \"Shipping\" [expanded]\n- region \"Shipping\":\n  - paragraph: Orders ship within two business days.\n- heading \"Returns\" [level=3]:\n  - button \"Returns\"\n- heading \"Warranty\" [level=3]:\n  - button \"Warranty\"\n- status: shipping",
+        "tabStops": [
+          "button \"Shipping\"",
+          "button \"Returns\"",
+          "button \"Warranty\""
+        ]
+      },
+      "parity": {
+        "identical": true,
+        "sameTree": true,
+        "sameTabStops": true,
+        "onlyOnServer": [],
+        "onlyAfterHydration": [],
+        "serverTabStops": [
+          "button \"Shipping\"",
+          "button \"Returns\"",
+          "button \"Warranty\""
+        ],
+        "hydratedTabStops": [
+          "button \"Shipping\"",
+          "button \"Returns\"",
+          "button \"Warranty\""
+        ]
+      },
+      "behavior": {
+        "ok": true,
+        "failure": null,
+        "console": []
+      }
+    },
+    "tabs--forty": {
+      "pattern": "tabs",
+      "library": "forty",
+      "status": "measured",
+      "serverRender": {
+        "ok": true,
+        "exitCode": 0,
+        "seconds": 5.4,
+        "prerendered": true,
+        "setup": {
+          "imports": [],
+          "providers": [],
+          "note": null
+        },
+        "errors": [],
+        "warnings": [],
+        "serverContext": "ssg",
+        "nghAttributes": 1,
+        "hydrationData": true,
+        "skipHydration": false
+      },
+      "serverMarkup": {
+        "ok": true,
+        "rendered": true,
+        "steps": [
+          {
+            "step": {
+              "expect": "role=tablist[name=\"Account settings\"] >> role=tab",
+              "count": 3
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "expect": "role=tab[name=\"Profile\"][selected=true]",
+              "count": 1
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "expect": "role=tabpanel",
+              "count": 1
+            },
+            "ok": true
+          }
+        ],
+        "ariaSnapshot": "- tablist \"Account settings\":\n  - tab \"Profile\" [selected]\n  - tab \"Security\"\n  - tab \"Billing\"\n- tabpanel \"Profile\":\n  - paragraph: Your public name, avatar and bio.\n- status: profile",
+        "tabStops": [
+          "tab \"Profile\"",
+          "tabpanel \"Your public name, avatar and bio.\""
+        ]
+      },
+      "hydration": {
+        "ok": true,
+        "hydrated": true,
+        "started": true,
+        "serverElements": 13,
+        "discarded": 0,
+        "clientCreated": 0,
+        "added": 0,
+        "removed": 0,
+        "rootNghConsumed": true,
+        "residualNgh": 0,
+        "codes": [],
+        "console": [],
+        "ariaSnapshot": "- tablist \"Account settings\":\n  - tab \"Profile\" [selected]\n  - tab \"Security\"\n  - tab \"Billing\"\n- tabpanel \"Profile\":\n  - paragraph: Your public name, avatar and bio.\n- status: profile",
+        "tabStops": [
+          "tab \"Profile\"",
+          "tabpanel \"Your public name, avatar and bio.\""
+        ]
+      },
+      "parity": {
+        "identical": true,
+        "sameTree": true,
+        "sameTabStops": true,
+        "onlyOnServer": [],
+        "onlyAfterHydration": [],
+        "serverTabStops": [
+          "tab \"Profile\"",
+          "tabpanel \"Your public name, avatar and bio.\""
+        ],
+        "hydratedTabStops": [
+          "tab \"Profile\"",
+          "tabpanel \"Your public name, avatar and bio.\""
+        ]
+      },
+      "behavior": {
+        "ok": true,
+        "failure": null,
+        "console": []
+      }
+    },
+    "tabs--ng-primitives": {
+      "pattern": "tabs",
+      "library": "ng-primitives",
+      "status": "measured",
+      "serverRender": {
+        "ok": true,
+        "exitCode": 0,
+        "seconds": 39.4,
+        "prerendered": true,
+        "setup": {
+          "imports": [],
+          "providers": [],
+          "note": null
+        },
+        "errors": [],
+        "warnings": [],
+        "serverContext": "ssg",
+        "nghAttributes": 1,
+        "hydrationData": true,
+        "skipHydration": false
+      },
+      "serverMarkup": {
+        "ok": true,
+        "rendered": true,
+        "steps": [
+          {
+            "step": {
+              "expect": "role=tablist[name=\"Account settings\"] >> role=tab",
+              "count": 3
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "expect": "role=tab[name=\"Profile\"][selected=true]",
+              "count": 1
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "expect": "role=tabpanel",
+              "count": 1
+            },
+            "ok": true
+          }
+        ],
+        "ariaSnapshot": "- tablist \"Account settings\":\n  - tab \"Profile\" [selected]\n  - tab \"Security\"\n  - tab \"Billing\"\n- tabpanel \"Profile\":\n  - paragraph: Your public name, avatar and bio.\n- status: profile",
+        "tabStops": [
+          "tab \"Profile\"",
+          "tabpanel \"Your public name, avatar and bio.\""
+        ]
+      },
+      "hydration": {
+        "ok": true,
+        "hydrated": true,
+        "started": true,
+        "serverElements": 13,
+        "discarded": 0,
+        "clientCreated": 0,
+        "added": 0,
+        "removed": 0,
+        "rootNghConsumed": true,
+        "residualNgh": 0,
+        "codes": [],
+        "console": [],
+        "ariaSnapshot": "- tablist \"Account settings\":\n  - tab \"Profile\" [selected]\n  - tab \"Security\"\n  - tab \"Billing\"\n- tabpanel \"Profile\":\n  - paragraph: Your public name, avatar and bio.\n- status: profile",
+        "tabStops": [
+          "tab \"Profile\"",
+          "tabpanel \"Your public name, avatar and bio.\""
+        ]
+      },
+      "parity": {
+        "identical": true,
+        "sameTree": true,
+        "sameTabStops": true,
+        "onlyOnServer": [],
+        "onlyAfterHydration": [],
+        "serverTabStops": [
+          "tab \"Profile\"",
+          "tabpanel \"Your public name, avatar and bio.\""
+        ],
+        "hydratedTabStops": [
+          "tab \"Profile\"",
+          "tabpanel \"Your public name, avatar and bio.\""
+        ]
+      },
+      "behavior": {
+        "ok": true,
+        "failure": null,
+        "console": []
+      }
+    },
+    "tabs--angular-aria": {
+      "pattern": "tabs",
+      "library": "angular-aria",
+      "status": "measured",
+      "serverRender": {
+        "ok": true,
+        "exitCode": 0,
+        "seconds": 34.3,
+        "prerendered": true,
+        "setup": {
+          "imports": [],
+          "providers": [],
+          "note": null
+        },
+        "errors": [],
+        "warnings": [],
+        "serverContext": "ssg",
+        "nghAttributes": 1,
+        "hydrationData": true,
+        "skipHydration": false
+      },
+      "serverMarkup": {
+        "ok": true,
+        "rendered": true,
+        "steps": [
+          {
+            "step": {
+              "expect": "role=tablist[name=\"Account settings\"] >> role=tab",
+              "count": 3
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "expect": "role=tab[name=\"Profile\"][selected=true]",
+              "count": 1
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "expect": "role=tabpanel",
+              "count": 1
+            },
+            "ok": true
+          }
+        ],
+        "ariaSnapshot": "- tablist \"Account settings\":\n  - tab \"Profile\" [selected]\n  - tab \"Security\"\n  - tab \"Billing\"\n- tabpanel \"Profile\"\n- status: profile",
+        "tabStops": [
+          "tabpanel \"\""
+        ]
+      },
+      "hydration": {
+        "ok": true,
+        "hydrated": true,
+        "started": true,
+        "serverElements": 10,
+        "discarded": 0,
+        "clientCreated": 1,
+        "added": 1,
+        "removed": 0,
+        "rootNghConsumed": true,
+        "residualNgh": 0,
+        "codes": [],
+        "console": [],
+        "ariaSnapshot": "- tablist \"Account settings\":\n  - tab \"Profile\" [selected]\n  - tab \"Security\"\n  - tab \"Billing\"\n- tabpanel \"Profile\":\n  - paragraph: Your public name, avatar and bio.\n- status: profile",
+        "tabStops": [
+          "tab \"Profile\"",
+          "tabpanel \"Your public name, avatar and bio.\""
+        ]
+      },
+      "parity": {
+        "identical": false,
+        "sameTree": false,
+        "sameTabStops": false,
+        "onlyOnServer": [
+          "- tabpanel \"Profile\""
+        ],
+        "onlyAfterHydration": [
+          "- tabpanel \"Profile\":",
+          "  - paragraph: Your public name, avatar and bio."
+        ],
+        "serverTabStops": [
+          "tabpanel \"\""
+        ],
+        "hydratedTabStops": [
+          "tab \"Profile\"",
+          "tabpanel \"Your public name, avatar and bio.\""
+        ]
+      },
+      "behavior": {
+        "ok": true,
+        "failure": null,
+        "console": []
+      }
+    },
+    "tabs--spartan": {
+      "pattern": "tabs",
+      "library": "spartan",
+      "status": "measured",
+      "serverRender": {
+        "ok": true,
+        "exitCode": 0,
+        "seconds": 27.2,
+        "prerendered": true,
+        "setup": {
+          "imports": [],
+          "providers": [],
+          "note": null
+        },
+        "errors": [],
+        "warnings": [],
+        "serverContext": "ssg",
+        "nghAttributes": 1,
+        "hydrationData": true,
+        "skipHydration": false
+      },
+      "serverMarkup": {
+        "ok": true,
+        "rendered": true,
+        "steps": [
+          {
+            "step": {
+              "expect": "role=tablist[name=\"Account settings\"] >> role=tab",
+              "count": 3
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "expect": "role=tab[name=\"Profile\"][selected=true]",
+              "count": 1
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "expect": "role=tabpanel",
+              "count": 1
+            },
+            "ok": true
+          }
+        ],
+        "ariaSnapshot": "- tablist \"Account settings\":\n  - tab \"Profile\" [selected]\n  - tab \"Security\"\n  - tab \"Billing\"\n- tabpanel \"Profile\":\n  - paragraph: Your public name, avatar and bio.\n- status: profile",
+        "tabStops": [
+          "tab \"Profile\"",
+          "tabpanel \"Your public name, avatar and bio.\""
+        ]
+      },
+      "hydration": {
+        "ok": true,
+        "hydrated": true,
+        "started": true,
+        "serverElements": 13,
+        "discarded": 0,
+        "clientCreated": 0,
+        "added": 0,
+        "removed": 0,
+        "rootNghConsumed": true,
+        "residualNgh": 0,
+        "codes": [],
+        "console": [],
+        "ariaSnapshot": "- tablist \"Account settings\":\n  - tab \"Profile\" [selected]\n  - tab \"Security\"\n  - tab \"Billing\"\n- tabpanel \"Profile\":\n  - paragraph: Your public name, avatar and bio.\n- status: profile",
+        "tabStops": [
+          "tab \"Profile\"",
+          "tabpanel \"Your public name, avatar and bio.\""
+        ]
+      },
+      "parity": {
+        "identical": true,
+        "sameTree": true,
+        "sameTabStops": true,
+        "onlyOnServer": [],
+        "onlyAfterHydration": [],
+        "serverTabStops": [
+          "tab \"Profile\"",
+          "tabpanel \"Your public name, avatar and bio.\""
+        ],
+        "hydratedTabStops": [
+          "tab \"Profile\"",
+          "tabpanel \"Your public name, avatar and bio.\""
+        ]
+      },
+      "behavior": {
+        "ok": true,
+        "failure": null,
+        "console": []
+      }
+    },
+    "menu--forty": {
+      "pattern": "menu",
+      "library": "forty",
+      "status": "measured",
+      "serverRender": {
+        "ok": true,
+        "exitCode": 0,
+        "seconds": 7.4,
+        "prerendered": true,
+        "setup": {
+          "imports": [],
+          "providers": [],
+          "note": null
+        },
+        "errors": [],
+        "warnings": [],
+        "serverContext": "ssg",
+        "nghAttributes": 1,
+        "hydrationData": true,
+        "skipHydration": false
+      },
+      "serverMarkup": {
+        "ok": true,
+        "rendered": true,
+        "steps": [
+          {
+            "step": {
+              "expect": "role=menu",
+              "count": 0
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "text": "output",
+              "equals": ""
+            },
+            "ok": true
+          }
+        ],
+        "ariaSnapshot": "- button \"Actions\"\n- status",
+        "tabStops": [
+          "button \"Actions\""
+        ]
+      },
+      "hydration": {
+        "ok": true,
+        "hydrated": true,
+        "started": true,
+        "serverElements": 4,
+        "discarded": 0,
+        "clientCreated": 0,
+        "added": 0,
+        "removed": 0,
+        "rootNghConsumed": true,
+        "residualNgh": 0,
+        "codes": [],
+        "console": [],
+        "ariaSnapshot": "- button \"Actions\"\n- status",
+        "tabStops": [
+          "button \"Actions\""
+        ]
+      },
+      "parity": {
+        "identical": true,
+        "sameTree": true,
+        "sameTabStops": true,
+        "onlyOnServer": [],
+        "onlyAfterHydration": [],
+        "serverTabStops": [
+          "button \"Actions\""
+        ],
+        "hydratedTabStops": [
+          "button \"Actions\""
+        ]
+      },
+      "behavior": {
+        "ok": true,
+        "failure": null,
+        "console": []
+      }
+    },
+    "menu--ng-primitives": {
+      "pattern": "menu",
+      "library": "ng-primitives",
+      "status": "measured",
+      "serverRender": {
+        "ok": true,
+        "exitCode": 0,
+        "seconds": 19.1,
+        "prerendered": true,
+        "setup": {
+          "imports": [],
+          "providers": [],
+          "note": null
+        },
+        "errors": [],
+        "warnings": [],
+        "serverContext": "ssg",
+        "nghAttributes": 1,
+        "hydrationData": true,
+        "skipHydration": false
+      },
+      "serverMarkup": {
+        "ok": true,
+        "rendered": true,
+        "steps": [
+          {
+            "step": {
+              "expect": "role=menu",
+              "count": 0
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "text": "output",
+              "equals": ""
+            },
+            "ok": true
+          }
+        ],
+        "ariaSnapshot": "- button \"Actions\"\n- status",
+        "tabStops": [
+          "button \"Actions\""
+        ]
+      },
+      "hydration": {
+        "ok": true,
+        "hydrated": true,
+        "started": true,
+        "serverElements": 3,
+        "discarded": 0,
+        "clientCreated": 0,
+        "added": 0,
+        "removed": 0,
+        "rootNghConsumed": true,
+        "residualNgh": 0,
+        "codes": [],
+        "console": [],
+        "ariaSnapshot": "- button \"Actions\"\n- status",
+        "tabStops": [
+          "button \"Actions\""
+        ]
+      },
+      "parity": {
+        "identical": true,
+        "sameTree": true,
+        "sameTabStops": true,
+        "onlyOnServer": [],
+        "onlyAfterHydration": [],
+        "serverTabStops": [
+          "button \"Actions\""
+        ],
+        "hydratedTabStops": [
+          "button \"Actions\""
+        ]
+      },
+      "behavior": {
+        "ok": true,
+        "failure": null,
+        "console": []
+      }
+    },
+    "menu--angular-aria": {
+      "pattern": "menu",
+      "library": "angular-aria",
+      "status": "measured",
+      "serverRender": {
+        "ok": true,
+        "exitCode": 0,
+        "seconds": 18.2,
+        "prerendered": true,
+        "setup": {
+          "imports": [],
+          "providers": [],
+          "note": null
+        },
+        "errors": [],
+        "warnings": [],
+        "serverContext": "ssg",
+        "nghAttributes": 1,
+        "hydrationData": true,
+        "skipHydration": false
+      },
+      "serverMarkup": {
+        "ok": true,
+        "rendered": true,
+        "steps": [
+          {
+            "step": {
+              "expect": "role=menu",
+              "count": 0
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "text": "output",
+              "equals": ""
+            },
+            "ok": true
+          }
+        ],
+        "ariaSnapshot": "- button \"Actions\"\n- status",
+        "tabStops": [
+          "button \"Actions\""
+        ]
+      },
+      "hydration": {
+        "ok": true,
+        "hydrated": true,
+        "started": true,
+        "serverElements": 3,
+        "discarded": 0,
+        "clientCreated": 0,
+        "added": 0,
+        "removed": 0,
+        "rootNghConsumed": true,
+        "residualNgh": 0,
+        "codes": [],
+        "console": [],
+        "ariaSnapshot": "- button \"Actions\"\n- status",
+        "tabStops": [
+          "button \"Actions\""
+        ]
+      },
+      "parity": {
+        "identical": true,
+        "sameTree": true,
+        "sameTabStops": true,
+        "onlyOnServer": [],
+        "onlyAfterHydration": [],
+        "serverTabStops": [
+          "button \"Actions\""
+        ],
+        "hydratedTabStops": [
+          "button \"Actions\""
+        ]
+      },
+      "behavior": {
+        "ok": true,
+        "failure": null,
+        "console": []
+      }
+    },
+    "menu--angular-cdk": {
+      "pattern": "menu",
+      "library": "angular-cdk",
+      "status": "measured",
+      "serverRender": {
+        "ok": true,
+        "exitCode": 0,
+        "seconds": 11.1,
+        "prerendered": true,
+        "setup": {
+          "imports": [],
+          "providers": [],
+          "note": null
+        },
+        "errors": [],
+        "warnings": [],
+        "serverContext": "ssg",
+        "nghAttributes": 1,
+        "hydrationData": true,
+        "skipHydration": false
+      },
+      "serverMarkup": {
+        "ok": true,
+        "rendered": true,
+        "steps": [
+          {
+            "step": {
+              "expect": "role=menu",
+              "count": 0
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "text": "output",
+              "equals": ""
+            },
+            "ok": true
+          }
+        ],
+        "ariaSnapshot": "- button \"Actions\"\n- status",
+        "tabStops": [
+          "button \"Actions\""
+        ]
+      },
+      "hydration": {
+        "ok": true,
+        "hydrated": true,
+        "started": true,
+        "serverElements": 3,
+        "discarded": 0,
+        "clientCreated": 0,
+        "added": 0,
+        "removed": 0,
+        "rootNghConsumed": true,
+        "residualNgh": 0,
+        "codes": [],
+        "console": [],
+        "ariaSnapshot": "- button \"Actions\"\n- status",
+        "tabStops": [
+          "button \"Actions\""
+        ]
+      },
+      "parity": {
+        "identical": true,
+        "sameTree": true,
+        "sameTabStops": true,
+        "onlyOnServer": [],
+        "onlyAfterHydration": [],
+        "serverTabStops": [
+          "button \"Actions\""
+        ],
+        "hydratedTabStops": [
+          "button \"Actions\""
+        ]
+      },
+      "behavior": {
+        "ok": true,
+        "failure": null,
+        "console": []
+      }
+    },
+    "listbox--forty": {
+      "pattern": "listbox",
+      "library": "forty",
+      "status": "measured",
+      "serverRender": {
+        "ok": true,
+        "exitCode": 0,
+        "seconds": 10,
+        "prerendered": true,
+        "setup": {
+          "imports": [],
+          "providers": [],
+          "note": null
+        },
+        "errors": [],
+        "warnings": [],
+        "serverContext": "ssg",
+        "nghAttributes": 1,
+        "hydrationData": true,
+        "skipHydration": false
+      },
+      "serverMarkup": {
+        "ok": true,
+        "rendered": true,
+        "steps": [
+          {
+            "step": {
+              "expect": "role=listbox[name=\"Fruits\"] >> role=option",
+              "count": 5
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "expect": "role=option[selected=true]",
+              "count": 0
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "text": "output",
+              "equals": ""
+            },
+            "ok": true
+          }
+        ],
+        "ariaSnapshot": "- listbox \"Fruits\":\n  - option \"Apple\"\n  - option \"Banana\"\n  - option \"Cherry\"\n  - option \"Grape\"\n  - option \"Mango\"\n- status",
+        "tabStops": [
+          "option \"Apple\""
+        ]
+      },
+      "hydration": {
+        "ok": true,
+        "hydrated": true,
+        "started": true,
+        "serverElements": 8,
+        "discarded": 0,
+        "clientCreated": 0,
+        "added": 0,
+        "removed": 0,
+        "rootNghConsumed": true,
+        "residualNgh": 0,
+        "codes": [],
+        "console": [],
+        "ariaSnapshot": "- listbox \"Fruits\":\n  - option \"Apple\"\n  - option \"Banana\"\n  - option \"Cherry\"\n  - option \"Grape\"\n  - option \"Mango\"\n- status",
+        "tabStops": [
+          "option \"Apple\""
+        ]
+      },
+      "parity": {
+        "identical": true,
+        "sameTree": true,
+        "sameTabStops": true,
+        "onlyOnServer": [],
+        "onlyAfterHydration": [],
+        "serverTabStops": [
+          "option \"Apple\""
+        ],
+        "hydratedTabStops": [
+          "option \"Apple\""
+        ]
+      },
+      "behavior": {
+        "ok": true,
+        "failure": null,
+        "console": []
+      }
+    },
+    "listbox--ng-primitives": {
+      "pattern": "listbox",
+      "library": "ng-primitives",
+      "status": "measured",
+      "serverRender": {
+        "ok": true,
+        "exitCode": 0,
+        "seconds": 24.1,
+        "prerendered": true,
+        "setup": {
+          "imports": [],
+          "providers": [],
+          "note": null
+        },
+        "errors": [],
+        "warnings": [],
+        "serverContext": "ssg",
+        "nghAttributes": 1,
+        "hydrationData": true,
+        "skipHydration": false
+      },
+      "serverMarkup": {
+        "ok": true,
+        "rendered": true,
+        "steps": [
+          {
+            "step": {
+              "expect": "role=listbox[name=\"Fruits\"] >> role=option",
+              "count": 5
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "expect": "role=option[selected=true]",
+              "count": 0
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "text": "output",
+              "equals": ""
+            },
+            "ok": true
+          }
+        ],
+        "ariaSnapshot": "- listbox \"Fruits\":\n  - option \"Apple\"\n  - option \"Banana\"\n  - option \"Cherry\"\n  - option \"Grape\"\n  - option \"Mango\"\n- status",
+        "tabStops": [
+          "listbox \"Apple Banana Cherry Grape Mango\""
+        ]
+      },
+      "hydration": {
+        "ok": true,
+        "hydrated": true,
+        "started": true,
+        "serverElements": 8,
+        "discarded": 0,
+        "clientCreated": 0,
+        "added": 0,
+        "removed": 0,
+        "rootNghConsumed": true,
+        "residualNgh": 0,
+        "codes": [],
+        "console": [],
+        "ariaSnapshot": "- listbox \"Fruits\":\n  - option \"Apple\"\n  - option \"Banana\"\n  - option \"Cherry\"\n  - option \"Grape\"\n  - option \"Mango\"\n- status",
+        "tabStops": [
+          "listbox \"Apple Banana Cherry Grape Mango\""
+        ]
+      },
+      "parity": {
+        "identical": true,
+        "sameTree": true,
+        "sameTabStops": true,
+        "onlyOnServer": [],
+        "onlyAfterHydration": [],
+        "serverTabStops": [
+          "listbox \"Apple Banana Cherry Grape Mango\""
+        ],
+        "hydratedTabStops": [
+          "listbox \"Apple Banana Cherry Grape Mango\""
+        ]
+      },
+      "behavior": {
+        "ok": true,
+        "failure": null,
+        "console": []
+      }
+    },
+    "listbox--angular-aria": {
+      "pattern": "listbox",
+      "library": "angular-aria",
+      "status": "measured",
+      "serverRender": {
+        "ok": true,
+        "exitCode": 0,
+        "seconds": 23.4,
+        "prerendered": true,
+        "setup": {
+          "imports": [],
+          "providers": [],
+          "note": null
+        },
+        "errors": [],
+        "warnings": [],
+        "serverContext": "ssg",
+        "nghAttributes": 1,
+        "hydrationData": true,
+        "skipHydration": false
+      },
+      "serverMarkup": {
+        "ok": true,
+        "rendered": true,
+        "steps": [
+          {
+            "step": {
+              "expect": "role=listbox[name=\"Fruits\"] >> role=option",
+              "count": 5
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "expect": "role=option[selected=true]",
+              "count": 0
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "text": "output",
+              "equals": ""
+            },
+            "ok": true
+          }
+        ],
+        "ariaSnapshot": "- listbox \"Fruits\":\n  - option \"Apple\"\n  - option \"Banana\"\n  - option \"Cherry\"\n  - option \"Grape\"\n  - option \"Mango\"\n- status",
+        "tabStops": []
+      },
+      "hydration": {
+        "ok": true,
+        "hydrated": true,
+        "started": true,
+        "serverElements": 8,
+        "discarded": 0,
+        "clientCreated": 0,
+        "added": 0,
+        "removed": 0,
+        "rootNghConsumed": true,
+        "residualNgh": 0,
+        "codes": [],
+        "console": [],
+        "ariaSnapshot": "- listbox \"Fruits\":\n  - option \"Apple\"\n  - option \"Banana\"\n  - option \"Cherry\"\n  - option \"Grape\"\n  - option \"Mango\"\n- status",
+        "tabStops": [
+          "option \"Apple\""
+        ]
+      },
+      "parity": {
+        "identical": false,
+        "sameTree": true,
+        "sameTabStops": false,
+        "onlyOnServer": [],
+        "onlyAfterHydration": [],
+        "serverTabStops": [],
+        "hydratedTabStops": [
+          "option \"Apple\""
+        ]
+      },
+      "behavior": {
+        "ok": true,
+        "failure": null,
+        "console": []
+      }
+    },
+    "listbox--angular-cdk": {
+      "pattern": "listbox",
+      "library": "angular-cdk",
+      "status": "measured",
+      "serverRender": {
+        "ok": true,
+        "exitCode": 0,
+        "seconds": 20.9,
+        "prerendered": true,
+        "setup": {
+          "imports": [],
+          "providers": [],
+          "note": null
+        },
+        "errors": [],
+        "warnings": [],
+        "serverContext": "ssg",
+        "nghAttributes": 1,
+        "hydrationData": true,
+        "skipHydration": false
+      },
+      "serverMarkup": {
+        "ok": true,
+        "rendered": true,
+        "steps": [
+          {
+            "step": {
+              "expect": "role=listbox[name=\"Fruits\"] >> role=option",
+              "count": 5
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "expect": "role=option[selected=true]",
+              "count": 0
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "text": "output",
+              "equals": ""
+            },
+            "ok": true
+          }
+        ],
+        "ariaSnapshot": "- listbox \"Fruits\":\n  - option \"Apple\"\n  - option \"Banana\"\n  - option \"Cherry\"\n  - option \"Grape\"\n  - option \"Mango\"\n- status",
+        "tabStops": [
+          "listbox \"AppleBananaCherryGrapeMango\""
+        ]
+      },
+      "hydration": {
+        "ok": true,
+        "hydrated": true,
+        "started": true,
+        "serverElements": 8,
+        "discarded": 0,
+        "clientCreated": 0,
+        "added": 0,
+        "removed": 0,
+        "rootNghConsumed": true,
+        "residualNgh": 0,
+        "codes": [],
+        "console": [],
+        "ariaSnapshot": "- listbox \"Fruits\":\n  - option \"Apple\"\n  - option \"Banana\"\n  - option \"Cherry\"\n  - option \"Grape\"\n  - option \"Mango\"\n- status",
+        "tabStops": [
+          "listbox \"AppleBananaCherryGrapeMango\""
+        ]
+      },
+      "parity": {
+        "identical": true,
+        "sameTree": true,
+        "sameTabStops": true,
+        "onlyOnServer": [],
+        "onlyAfterHydration": [],
+        "serverTabStops": [
+          "listbox \"AppleBananaCherryGrapeMango\""
+        ],
+        "hydratedTabStops": [
+          "listbox \"AppleBananaCherryGrapeMango\""
+        ]
+      },
+      "behavior": {
+        "ok": true,
+        "failure": null,
+        "console": []
+      }
+    },
+    "combobox--forty": {
+      "pattern": "combobox",
+      "library": "forty",
+      "status": "measured",
+      "serverRender": {
+        "ok": true,
+        "exitCode": 0,
+        "seconds": 19.9,
+        "prerendered": true,
+        "setup": {
+          "imports": [],
+          "providers": [],
+          "note": null
+        },
+        "errors": [],
+        "warnings": [],
+        "serverContext": "ssg",
+        "nghAttributes": 1,
+        "hydrationData": true,
+        "skipHydration": false
+      },
+      "serverMarkup": {
+        "ok": true,
+        "rendered": true,
+        "steps": [
+          {
+            "step": {
+              "expect": "role=combobox[name=\"Fruit\"]",
+              "count": 1
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "text": "output",
+              "equals": ""
+            },
+            "ok": true
+          }
+        ],
+        "ariaSnapshot": "- combobox \"Fruit\"\n- status",
+        "tabStops": [
+          "combobox \"\""
+        ]
+      },
+      "hydration": {
+        "ok": true,
+        "hydrated": true,
+        "started": true,
+        "serverElements": 4,
+        "discarded": 0,
+        "clientCreated": 0,
+        "added": 0,
+        "removed": 0,
+        "rootNghConsumed": true,
+        "residualNgh": 0,
+        "codes": [],
+        "console": [],
+        "ariaSnapshot": "- combobox \"Fruit\"\n- status",
+        "tabStops": [
+          "combobox \"\""
+        ]
+      },
+      "parity": {
+        "identical": true,
+        "sameTree": true,
+        "sameTabStops": true,
+        "onlyOnServer": [],
+        "onlyAfterHydration": [],
+        "serverTabStops": [
+          "combobox \"\""
+        ],
+        "hydratedTabStops": [
+          "combobox \"\""
+        ]
+      },
+      "behavior": {
+        "ok": true,
+        "failure": null,
+        "console": []
+      }
+    },
+    "combobox--ng-primitives": {
+      "pattern": "combobox",
+      "library": "ng-primitives",
+      "status": "measured",
+      "serverRender": {
+        "ok": true,
+        "exitCode": 0,
+        "seconds": 21.2,
+        "prerendered": true,
+        "setup": {
+          "imports": [],
+          "providers": [],
+          "note": null
+        },
+        "errors": [],
+        "warnings": [],
+        "serverContext": "ssg",
+        "nghAttributes": 1,
+        "hydrationData": true,
+        "skipHydration": false
+      },
+      "serverMarkup": {
+        "ok": true,
+        "rendered": true,
+        "steps": [
+          {
+            "step": {
+              "expect": "role=combobox[name=\"Fruit\"]",
+              "count": 1
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "text": "output",
+              "equals": ""
+            },
+            "ok": true
+          }
+        ],
+        "ariaSnapshot": "- combobox \"Fruit\"\n- status",
+        "tabStops": [
+          "combobox \"\""
+        ]
+      },
+      "hydration": {
+        "ok": true,
+        "hydrated": true,
+        "started": true,
+        "serverElements": 4,
+        "discarded": 0,
+        "clientCreated": 0,
+        "added": 0,
+        "removed": 0,
+        "rootNghConsumed": true,
+        "residualNgh": 0,
+        "codes": [],
+        "console": [],
+        "ariaSnapshot": "- combobox \"Fruit\"\n- status",
+        "tabStops": [
+          "combobox \"\""
+        ]
+      },
+      "parity": {
+        "identical": true,
+        "sameTree": true,
+        "sameTabStops": true,
+        "onlyOnServer": [],
+        "onlyAfterHydration": [],
+        "serverTabStops": [
+          "combobox \"\""
+        ],
+        "hydratedTabStops": [
+          "combobox \"\""
+        ]
+      },
+      "behavior": {
+        "ok": true,
+        "failure": null,
+        "console": []
+      }
+    },
+    "combobox--angular-aria": {
+      "pattern": "combobox",
+      "library": "angular-aria",
+      "status": "measured",
+      "serverRender": {
+        "ok": true,
+        "exitCode": 0,
+        "seconds": 20.4,
+        "prerendered": true,
+        "setup": {
+          "imports": [],
+          "providers": [],
+          "note": null
+        },
+        "errors": [],
+        "warnings": [],
+        "serverContext": "ssg",
+        "nghAttributes": 1,
+        "hydrationData": true,
+        "skipHydration": false
+      },
+      "serverMarkup": {
+        "ok": true,
+        "rendered": true,
+        "steps": [
+          {
+            "step": {
+              "expect": "role=combobox[name=\"Fruit\"]",
+              "count": 1
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "text": "output",
+              "equals": ""
+            },
+            "ok": true
+          }
+        ],
+        "ariaSnapshot": "- combobox \"Fruit\"\n- status",
+        "tabStops": [
+          "combobox \"\""
+        ]
+      },
+      "hydration": {
+        "ok": true,
+        "hydrated": true,
+        "started": true,
+        "serverElements": 4,
+        "discarded": 0,
+        "clientCreated": 0,
+        "added": 0,
+        "removed": 0,
+        "rootNghConsumed": true,
+        "residualNgh": 0,
+        "codes": [],
+        "console": [],
+        "ariaSnapshot": "- combobox \"Fruit\"\n- status",
+        "tabStops": [
+          "combobox \"\""
+        ]
+      },
+      "parity": {
+        "identical": true,
+        "sameTree": true,
+        "sameTabStops": true,
+        "onlyOnServer": [],
+        "onlyAfterHydration": [],
+        "serverTabStops": [
+          "combobox \"\""
+        ],
+        "hydratedTabStops": [
+          "combobox \"\""
+        ]
+      },
+      "behavior": {
+        "ok": true,
+        "failure": null,
+        "console": []
+      }
+    },
+    "combobox--spartan": {
+      "pattern": "combobox",
+      "library": "spartan",
+      "status": "measured",
+      "serverRender": {
+        "ok": true,
+        "exitCode": 0,
+        "seconds": 11.9,
+        "prerendered": true,
+        "setup": {
+          "imports": [],
+          "providers": [],
+          "note": null
+        },
+        "errors": [],
+        "warnings": [],
+        "serverContext": "ssg",
+        "nghAttributes": 1,
+        "hydrationData": true,
+        "skipHydration": false
+      },
+      "serverMarkup": {
+        "ok": true,
+        "rendered": true,
+        "steps": [
+          {
+            "step": {
+              "expect": "role=combobox[name=\"Fruit\"]",
+              "count": 1
+            },
+            "ok": true
+          },
+          {
+            "step": {
+              "text": "output",
+              "equals": ""
+            },
+            "ok": true
+          }
+        ],
+        "ariaSnapshot": "- combobox \"Fruit\"\n- status",
+        "tabStops": [
+          "combobox \"\""
+        ]
+      },
+      "hydration": {
+        "ok": true,
+        "hydrated": true,
+        "started": true,
+        "serverElements": 4,
+        "discarded": 0,
+        "clientCreated": 0,
+        "added": 0,
+        "removed": 0,
+        "rootNghConsumed": true,
+        "residualNgh": 0,
+        "codes": [],
+        "console": [],
+        "ariaSnapshot": "- combobox \"Fruit\"\n- status",
+        "tabStops": [
+          "combobox \"\""
+        ]
+      },
+      "parity": {
+        "identical": true,
+        "sameTree": true,
+        "sameTabStops": true,
+        "onlyOnServer": [],
+        "onlyAfterHydration": [],
+        "serverTabStops": [
+          "combobox \"\""
+        ],
+        "hydratedTabStops": [
+          "combobox \"\""
+        ]
+      },
+      "behavior": {
+        "ok": true,
+        "failure": null,
+        "console": []
+      }
+    },
+    "dialog--forty": {
+      "pattern": "dialog",
+      "library": "forty",
+      "status": "measured",
+      "serverRender": {
+        "ok": true,
+        "exitCode": 0,
+        "seconds": 10.2,
+        "prerendered": true,
+        "setup": {
+          "imports": [],
+          "providers": [],
+          "note": null
+        },
+        "errors": [],
+        "warnings": [],
+        "serverContext": "ssg",
+        "nghAttributes": 1,
+        "hydrationData": true,
+        "skipHydration": false
+      },
+      "serverMarkup": {
+        "ok": true,
+        "rendered": true,
+        "steps": [
+          {
+            "step": {
+              "expect": "role=dialog",
+              "count": 0
+            },
+            "ok": true
+          }
+        ],
+        "ariaSnapshot": "- button \"Open dialog\"\n- status",
+        "tabStops": [
+          "button \"Open dialog\""
+        ]
+      },
+      "hydration": {
+        "ok": true,
+        "hydrated": true,
+        "started": true,
+        "serverElements": 3,
+        "discarded": 0,
+        "clientCreated": 0,
+        "added": 0,
+        "removed": 0,
+        "rootNghConsumed": true,
+        "residualNgh": 0,
+        "codes": [],
+        "console": [],
+        "ariaSnapshot": "- button \"Open dialog\"\n- status",
+        "tabStops": [
+          "button \"Open dialog\""
+        ]
+      },
+      "parity": {
+        "identical": true,
+        "sameTree": true,
+        "sameTabStops": true,
+        "onlyOnServer": [],
+        "onlyAfterHydration": [],
+        "serverTabStops": [
+          "button \"Open dialog\""
+        ],
+        "hydratedTabStops": [
+          "button \"Open dialog\""
+        ]
+      },
+      "behavior": {
+        "ok": true,
+        "failure": null,
+        "console": []
+      }
+    },
+    "dialog--ng-primitives": {
+      "pattern": "dialog",
+      "library": "ng-primitives",
+      "status": "measured",
+      "serverRender": {
+        "ok": true,
+        "exitCode": 0,
+        "seconds": 11.2,
+        "prerendered": true,
+        "setup": {
+          "imports": [],
+          "providers": [],
+          "note": null
+        },
+        "errors": [],
+        "warnings": [],
+        "serverContext": "ssg",
+        "nghAttributes": 1,
+        "hydrationData": true,
+        "skipHydration": false
+      },
+      "serverMarkup": {
+        "ok": true,
+        "rendered": true,
+        "steps": [
+          {
+            "step": {
+              "expect": "role=dialog",
+              "count": 0
+            },
+            "ok": true
+          }
+        ],
+        "ariaSnapshot": "- button \"Open dialog\"\n- status",
+        "tabStops": [
+          "button \"Open dialog\""
+        ]
+      },
+      "hydration": {
+        "ok": true,
+        "hydrated": true,
+        "started": true,
+        "serverElements": 3,
+        "discarded": 0,
+        "clientCreated": 0,
+        "added": 0,
+        "removed": 0,
+        "rootNghConsumed": true,
+        "residualNgh": 0,
+        "codes": [],
+        "console": [],
+        "ariaSnapshot": "- button \"Open dialog\"\n- status",
+        "tabStops": [
+          "button \"Open dialog\""
+        ]
+      },
+      "parity": {
+        "identical": true,
+        "sameTree": true,
+        "sameTabStops": true,
+        "onlyOnServer": [],
+        "onlyAfterHydration": [],
+        "serverTabStops": [
+          "button \"Open dialog\""
+        ],
+        "hydratedTabStops": [
+          "button \"Open dialog\""
+        ]
+      },
+      "behavior": {
+        "ok": true,
+        "failure": null,
+        "console": []
+      }
+    },
+    "dialog--angular-cdk": {
+      "pattern": "dialog",
+      "library": "angular-cdk",
+      "status": "measured",
+      "serverRender": {
+        "ok": true,
+        "exitCode": 0,
+        "seconds": 9.8,
+        "prerendered": true,
+        "setup": {
+          "imports": [],
+          "providers": [],
+          "note": null
+        },
+        "errors": [],
+        "warnings": [],
+        "serverContext": "ssg",
+        "nghAttributes": 1,
+        "hydrationData": true,
+        "skipHydration": false
+      },
+      "serverMarkup": {
+        "ok": true,
+        "rendered": true,
+        "steps": [
+          {
+            "step": {
+              "expect": "role=dialog",
+              "count": 0
+            },
+            "ok": true
+          }
+        ],
+        "ariaSnapshot": "- button \"Open dialog\"\n- status",
+        "tabStops": [
+          "button \"Open dialog\""
+        ]
+      },
+      "hydration": {
+        "ok": true,
+        "hydrated": true,
+        "started": true,
+        "serverElements": 3,
+        "discarded": 0,
+        "clientCreated": 0,
+        "added": 0,
+        "removed": 0,
+        "rootNghConsumed": true,
+        "residualNgh": 0,
+        "codes": [],
+        "console": [],
+        "ariaSnapshot": "- button \"Open dialog\"\n- status",
+        "tabStops": [
+          "button \"Open dialog\""
+        ]
+      },
+      "parity": {
+        "identical": true,
+        "sameTree": true,
+        "sameTabStops": true,
+        "onlyOnServer": [],
+        "onlyAfterHydration": [],
+        "serverTabStops": [
+          "button \"Open dialog\""
+        ],
+        "hydratedTabStops": [
+          "button \"Open dialog\""
+        ]
+      },
+      "behavior": {
+        "ok": true,
+        "failure": null,
+        "console": []
+      }
+    },
+    "dialog--spartan": {
+      "pattern": "dialog",
+      "library": "spartan",
+      "status": "measured",
+      "serverRender": {
+        "ok": true,
+        "exitCode": 0,
+        "seconds": 6.8,
+        "prerendered": true,
+        "setup": {
+          "imports": [],
+          "providers": [],
+          "note": null
+        },
+        "errors": [],
+        "warnings": [],
+        "serverContext": "ssg",
+        "nghAttributes": 1,
+        "hydrationData": true,
+        "skipHydration": false
+      },
+      "serverMarkup": {
+        "ok": true,
+        "rendered": true,
+        "steps": [
+          {
+            "step": {
+              "expect": "role=dialog",
+              "count": 0
+            },
+            "ok": true
+          }
+        ],
+        "ariaSnapshot": "- button \"Open dialog\"\n- status",
+        "tabStops": [
+          "button \"Open dialog\""
+        ]
+      },
+      "hydration": {
+        "ok": true,
+        "hydrated": true,
+        "started": true,
+        "serverElements": 5,
+        "discarded": 0,
+        "clientCreated": 0,
+        "added": 0,
+        "removed": 0,
+        "rootNghConsumed": true,
+        "residualNgh": 0,
+        "codes": [],
+        "console": [],
+        "ariaSnapshot": "- button \"Open dialog\"\n- status",
+        "tabStops": [
+          "button \"Open dialog\""
+        ]
+      },
+      "parity": {
+        "identical": true,
+        "sameTree": true,
+        "sameTabStops": true,
+        "onlyOnServer": [],
+        "onlyAfterHydration": [],
+        "serverTabStops": [
+          "button \"Open dialog\""
+        ],
+        "hydratedTabStops": [
+          "button \"Open dialog\""
+        ]
+      },
+      "behavior": {
+        "ok": true,
+        "failure": null,
+        "console": []
+      }
+    }
+  }
+}
