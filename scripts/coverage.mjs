@@ -1,6 +1,6 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { apgPatterns, coverage } from '../coverage.config.mjs';
+import { apgPatterns, coverage, partial } from '../coverage.config.mjs';
 import { installedVersion, libraries, resultsDir, root } from './shared.mjs';
 
 const TYPINGS = {
@@ -29,27 +29,41 @@ function backs(typings, evidence) {
 }
 
 const problems = [];
+
+function verify(library, pattern, claim) {
+  const [pkg, file] = TYPINGS[library.id](claim.entry);
+  const path = join(root, 'node_modules', pkg, file);
+  const manifest = JSON.parse(
+    readFileSync(join(root, 'node_modules', pkg, 'package.json'), 'utf8'),
+  );
+  const exported = Object.keys(manifest.exports ?? {}).includes(`./${claim.entry}`);
+  const backed = backs(readTypings(path), claim.evidence);
+  if (!exported || !backed) {
+    problems.push(
+      `${library.id} / ${pattern.id}: ${exported ? '' : `entry point ./${claim.entry} not exported; `}${backed ? '' : `"${claim.evidence}" not found in ${file}`}`,
+    );
+  }
+  return { ...claim, specifier: `${pkg}/${claim.entry}` };
+}
+
 const rows = apgPatterns.map((pattern) => ({
   pattern: pattern.id,
   cells: Object.fromEntries(
     libraries.map((library) => {
       const claim = coverage[library.id]?.[pattern.id];
-      if (!claim) {
-        return [library.id, null];
+      return [library.id, claim ? verify(library, pattern, claim) : null];
+    }),
+  ),
+  partial: Object.fromEntries(
+    libraries.flatMap((library) => {
+      const gap = partial[library.id]?.[pattern.id];
+      if (!gap) {
+        return [];
       }
-      const [pkg, file] = TYPINGS[library.id](claim.entry);
-      const path = join(root, 'node_modules', pkg, file);
-      const manifest = JSON.parse(
-        readFileSync(join(root, 'node_modules', pkg, 'package.json'), 'utf8'),
-      );
-      const exported = Object.keys(manifest.exports ?? {}).includes(`./${claim.entry}`);
-      const backed = backs(readTypings(path), claim.evidence);
-      if (!exported || !backed) {
-        problems.push(
-          `${library.id} / ${pattern.id}: ${exported ? '' : `entry point ./${claim.entry} not exported; `}${backed ? '' : `"${claim.evidence}" not found in ${file}`}`,
-        );
+      if (coverage[library.id]?.[pattern.id]) {
+        problems.push(`${library.id} / ${pattern.id}: listed as both covered and partial`);
       }
-      return [library.id, { ...claim, specifier: `${pkg}/${claim.entry}` }];
+      return [[library.id, verify(library, pattern, gap)]];
     }),
   ),
 }));
@@ -83,6 +97,13 @@ const body = rows.map((row) => {
   const cells = libraries.map((library) => {
     const cell = row.cells[library.id];
     if (!cell) {
+      const gap = row.partial[library.id];
+      if (gap) {
+        notes.push(
+          `${notes.length + 1}. **${library.name} / ${pattern.name}** (not counted): ${gap.note}.`,
+        );
+        return `·<sup>${notes.length}</sup>`;
+      }
       return '·';
     }
     if (cell.note) {
@@ -97,7 +118,7 @@ const body = rows.map((row) => {
 const markdown = [
   '# Coverage',
   '',
-  `Generated ${new Date().toISOString()}. Which [WAI-ARIA APG patterns](https://www.w3.org/WAI/ARIA/apg/patterns/) each library ships a primitive for (Landmarks and Link are left out: they are plain HTML). A cell names the entry point; every claim is checked against the installed package on each run (the entry point must be exported and its typings must contain the evidence recorded in \`coverage.config.mjs\`), so a stale claim fails the script.`,
+  `Generated ${new Date().toISOString()}. Which [WAI-ARIA APG patterns](https://www.w3.org/WAI/ARIA/apg/patterns/) each library ships a primitive for (Landmarks and Link are left out: they are plain HTML). A cell names the entry point, and a \`·\` with a note marks building blocks that fall short of the pattern; every claim is checked against the installed package on each run (the entry point must be exported and its typings must contain the evidence recorded in \`coverage.config.mjs\`), so a stale claim fails the script.`,
   '',
   header,
   divider,

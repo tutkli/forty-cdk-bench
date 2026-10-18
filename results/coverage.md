@@ -1,6 +1,6 @@
 # Coverage
 
-Generated 2026-10-18T01:23:45.731Z. Which [WAI-ARIA APG patterns](https://www.w3.org/WAI/ARIA/apg/patterns/) each library ships a primitive for (Landmarks and Link are left out: they are plain HTML). A cell names the entry point; every claim is checked against the installed package on each run (the entry point must be exported and its typings must contain the evidence recorded in `coverage.config.mjs`), so a stale claim fails the script.
+Generated 2026-10-18T16:59:31.022Z. Which [WAI-ARIA APG patterns](https://www.w3.org/WAI/ARIA/apg/patterns/) each library ships a primitive for (Landmarks and Link are left out: they are plain HTML). A cell names the entry point, and a `·` with a note marks building blocks that fall short of the pattern; every claim is checked against the installed package on each run (the entry point must be exported and its typings must contain the evidence recorded in `coverage.config.mjs`), so a stale claim fails the script.
 
 | APG pattern | forty-cdk | ng-primitives | Angular Aria | Angular CDK | Spartan (brain) |
 | --- | :---: | :---: | :---: | :---: | :---: |
@@ -14,10 +14,10 @@ Generated 2026-10-18T01:23:45.731Z. Which [WAI-ARIA APG patterns](https://www.w3
 | [Combobox](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/) | `combobox` | `combobox` | `combobox` | · | `combobox` |
 | [Dialog (modal)](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/) | `dialog` | `dialog` | · | `dialog` | `dialog` |
 | [Disclosure](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/) | `disclosure` | `collapsible` | · | · | `collapsible` |
-| [Feed](https://www.w3.org/WAI/ARIA/apg/patterns/feed/) | · | · | · | · | · |
+| [Feed](https://www.w3.org/WAI/ARIA/apg/patterns/feed/) | ·<sup>2</sup> | · | · | · | · |
 | [Grid](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) | `table` | · | `grid` | · | · |
 | [Listbox](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/) | `listbox` | `listbox` | `listbox` | `listbox` | · |
-| [Menubar](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/) | `menubar` | `navigation-menu`<sup>2</sup> | `menu` | `menu` | · |
+| [Menubar](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/) | `menubar` | `navigation-menu`<sup>3</sup> | `menu` | `menu` | · |
 | [Menu button](https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/) | `dropdown-menu` | `menu` | `menu` | `menu` | · |
 | [Meter](https://www.w3.org/WAI/ARIA/apg/patterns/meter/) | `meter` | `meter` | · | · | · |
 | [Radio group](https://www.w3.org/WAI/ARIA/apg/patterns/radio/) | `radio-group` | `radio` | · | · | `radio-group` |
@@ -37,7 +37,8 @@ Generated 2026-10-18T01:23:45.731Z. Which [WAI-ARIA APG patterns](https://www.w3
 Notes:
 
 1. **Angular CDK / Accordion**: state only; the consumer writes the ARIA and the keyboard handling.
-2. **ng-primitives / Menubar**: its navigation menu carries `role="menubar"`.
+2. **forty-cdk / Feed** (not counted): `injectInfiniteScroll` / `(endReached)` decide when to load the next page and `*forVirtualFor` writes `aria-setsize` / `aria-posinset`, but there is no `role="feed"` primitive: the consumer writes the feed and article roles, focusable articles, `aria-busy` (from `pending()`) and the Page Down / Page Up / Ctrl+Home / Ctrl+End keyboard.
+3. **ng-primitives / Menubar**: its navigation menu carries `role="menubar"`.
 
 Coverage says a primitive exists, not how well it implements the pattern: that is what the accessibility benchmark measures, for the patterns that have scenarios. Libraries also ship non-APG pieces (popovers, date pickers, drag and drop, virtualization, forms helpers) that this table does not count.
 

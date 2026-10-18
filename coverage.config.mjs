@@ -128,3 +128,13 @@ export const coverage = {
     windowsplitter: { entry: 'resizable', evidence: 'class BrnResizableHandle' },
   },
 };
+
+export const partial = {
+  forty: {
+    feed: {
+      entry: 'virtualization',
+      evidence: 'injectInfiniteScroll',
+      note: '`injectInfiniteScroll` / `(endReached)` decide when to load the next page and `*forVirtualFor` writes `aria-setsize` / `aria-posinset`, but there is no `role="feed"` primitive: the consumer writes the feed and article roles, focusable articles, `aria-busy` (from `pending()`) and the Page Down / Page Up / Ctrl+Home / Ctrl+End keyboard',
+    },
+  },
+};

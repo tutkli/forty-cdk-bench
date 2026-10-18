@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T01:23:45.729Z",
+  "generatedAt": "2026-10-18T16:59:31.020Z",
   "versions": {
     "forty-cdk": "0.38.0",
     "ng-primitives": "0.131.2",
@@ -37,7 +37,8 @@
           "evidence": "class BrnAccordion",
           "specifier": "@spartan-ng/brain/accordion"
         }
-      }
+      },
+      "partial": {}
     },
     {
       "pattern": "alert",
@@ -55,7 +56,8 @@
         "angular-aria": null,
         "angular-cdk": null,
         "spartan": null
-      }
+      },
+      "partial": {}
     },
     {
       "pattern": "alertdialog",
@@ -81,7 +83,8 @@
           "evidence": "class BrnAlertDialog",
           "specifier": "@spartan-ng/brain/alert-dialog"
         }
-      }
+      },
+      "partial": {}
     },
     {
       "pattern": "breadcrumb",
@@ -99,7 +102,8 @@
         "angular-aria": null,
         "angular-cdk": null,
         "spartan": null
-      }
+      },
+      "partial": {}
     },
     {
       "pattern": "button",
@@ -121,7 +125,8 @@
           "evidence": "class BrnToggle",
           "specifier": "@spartan-ng/brain/toggle"
         }
-      }
+      },
+      "partial": {}
     },
     {
       "pattern": "carousel",
@@ -135,7 +140,8 @@
         "angular-aria": null,
         "angular-cdk": null,
         "spartan": null
-      }
+      },
+      "partial": {}
     },
     {
       "pattern": "checkbox",
@@ -157,7 +163,8 @@
           "evidence": "class BrnCheckbox",
           "specifier": "@spartan-ng/brain/checkbox"
         }
-      }
+      },
+      "partial": {}
     },
     {
       "pattern": "combobox",
@@ -183,7 +190,8 @@
           "evidence": "class BrnCombobox",
           "specifier": "@spartan-ng/brain/combobox"
         }
-      }
+      },
+      "partial": {}
     },
     {
       "pattern": "dialog",
@@ -209,7 +217,8 @@
           "evidence": "class BrnDialog",
           "specifier": "@spartan-ng/brain/dialog"
         }
-      }
+      },
+      "partial": {}
     },
     {
       "pattern": "disclosure",
@@ -231,7 +240,8 @@
           "evidence": "class BrnCollapsible",
           "specifier": "@spartan-ng/brain/collapsible"
         }
-      }
+      },
+      "partial": {}
     },
     {
       "pattern": "feed",
@@ -241,6 +251,14 @@
         "angular-aria": null,
         "angular-cdk": null,
         "spartan": null
+      },
+      "partial": {
+        "forty": {
+          "entry": "virtualization",
+          "evidence": "injectInfiniteScroll",
+          "note": "`injectInfiniteScroll` / `(endReached)` decide when to load the next page and `*forVirtualFor` writes `aria-setsize` / `aria-posinset`, but there is no `role=\"feed\"` primitive: the consumer writes the feed and article roles, focusable articles, `aria-busy` (from `pending()`) and the Page Down / Page Up / Ctrl+Home / Ctrl+End keyboard",
+          "specifier": "forty-cdk/virtualization"
+        }
       }
     },
     {
@@ -259,7 +277,8 @@
         },
         "angular-cdk": null,
         "spartan": null
-      }
+      },
+      "partial": {}
     },
     {
       "pattern": "listbox",
@@ -285,7 +304,8 @@
           "specifier": "@angular/cdk/listbox"
         },
         "spartan": null
-      }
+      },
+      "partial": {}
     },
     {
       "pattern": "menubar",
@@ -312,7 +332,8 @@
           "specifier": "@angular/cdk/menu"
         },
         "spartan": null
-      }
+      },
+      "partial": {}
     },
     {
       "pattern": "menu-button",
@@ -338,7 +359,8 @@
           "specifier": "@angular/cdk/menu"
         },
         "spartan": null
-      }
+      },
+      "partial": {}
     },
     {
       "pattern": "meter",
@@ -356,7 +378,8 @@
         "angular-aria": null,
         "angular-cdk": null,
         "spartan": null
-      }
+      },
+      "partial": {}
     },
     {
       "pattern": "radio",
@@ -378,7 +401,8 @@
           "evidence": "class BrnRadioGroup",
           "specifier": "@spartan-ng/brain/radio-group"
         }
-      }
+      },
+      "partial": {}
     },
     {
       "pattern": "slider",
@@ -400,7 +424,8 @@
           "evidence": "class BrnSlider",
           "specifier": "@spartan-ng/brain/slider"
         }
-      }
+      },
+      "partial": {}
     },
     {
       "pattern": "slider-multithumb",
@@ -422,7 +447,8 @@
           "evidence": "InputSignal<number[]>",
           "specifier": "@spartan-ng/brain/slider"
         }
-      }
+      },
+      "partial": {}
     },
     {
       "pattern": "spinbutton",
@@ -440,7 +466,8 @@
         "angular-aria": null,
         "angular-cdk": null,
         "spartan": null
-      }
+      },
+      "partial": {}
     },
     {
       "pattern": "switch",
@@ -462,7 +489,8 @@
           "evidence": "class BrnSwitch",
           "specifier": "@spartan-ng/brain/switch"
         }
-      }
+      },
+      "partial": {}
     },
     {
       "pattern": "table",
@@ -480,7 +508,8 @@
           "specifier": "@angular/cdk/table"
         },
         "spartan": null
-      }
+      },
+      "partial": {}
     },
     {
       "pattern": "tabs",
@@ -506,7 +535,8 @@
           "evidence": "class BrnTabs",
           "specifier": "@spartan-ng/brain/tabs"
         }
-      }
+      },
+      "partial": {}
     },
     {
       "pattern": "toolbar",
@@ -528,7 +558,8 @@
         },
         "angular-cdk": null,
         "spartan": null
-      }
+      },
+      "partial": {}
     },
     {
       "pattern": "tooltip",
@@ -550,7 +581,8 @@
           "evidence": "class BrnTooltip",
           "specifier": "@spartan-ng/brain/tooltip"
         }
-      }
+      },
+      "partial": {}
     },
     {
       "pattern": "treeview",
@@ -572,7 +604,8 @@
           "specifier": "@angular/cdk/tree"
         },
         "spartan": null
-      }
+      },
+      "partial": {}
     },
     {
       "pattern": "treegrid",
@@ -586,7 +619,8 @@
         "angular-aria": null,
         "angular-cdk": null,
         "spartan": null
-      }
+      },
+      "partial": {}
     },
     {
       "pattern": "windowsplitter",
@@ -604,7 +638,8 @@
           "evidence": "class BrnResizableHandle",
           "specifier": "@spartan-ng/brain/resizable"
         }
-      }
+      },
+      "partial": {}
     }
   ]
 }
