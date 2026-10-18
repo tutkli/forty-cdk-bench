@@ -1,6 +1,6 @@
 # Consumer code
 
-Generated 2026-10-18T01:23:45.993Z. How much code a consumer writes to build the same accessible component ([SCENARIOS.md](../SCENARIOS.md)) with each library, read from the scenario files. Every file is formatted by the same Prettier config.
+Generated 2026-10-18T19:16:33.771Z. How much code a consumer writes to build the same accessible component ([SCENARIOS.md](../SCENARIOS.md)) with each library, read from the scenario files. Every file is formatted by the same Prettier config.
 
 Cell: **total lines (template + TypeScript) · library symbols imported**.
 

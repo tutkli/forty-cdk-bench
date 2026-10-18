@@ -21,7 +21,7 @@ Generated from `results/*.json` by `pnpm bench:summary`. Each row links to its f
 |                                                                                         |  forty-cdk   |   ng-primitives   | Angular Aria |      Angular CDK       |    Spartan (brain)     |
 | --------------------------------------------------------------------------------------- | :----------: | :---------------: | :----------: | :--------------------: | :--------------------: |
 | [APG patterns covered](results/coverage.md)                                             |   27 / 28    |      21 / 28      |    9 / 28    |         8 / 28         |        14 / 28         |
-| [Initial JS, all measured patterns in one app (gzip, patterns)](results/bundle-size.md) | 53.0 kB (6)  |    82.6 kB (6)    | 41.4 kB (5)  |      43.1 kB (4)       |      61.4 kB (4)       |
+| [Initial JS, all measured patterns in one app (gzip, patterns)](results/bundle-size.md) | 48.7 kB (6)  |    82.6 kB (6)    | 41.4 kB (5)  |      43.1 kB (4)       |      61.4 kB (4)       |
 | [Required APG checks passed](results/a11y.md)                                           |   59 / 59    |      54 / 59      |   48 / 50    |        33 / 34         |        41 / 41         |
 | [Optional / recommended APG checks passed](results/a11y.md)                             |   22 / 24    |      18 / 24      |   19 / 21    |        15 / 17         |        11 / 12         |
 | [axe violations (WCAG 2.2 AA tags)](results/a11y.md)                                    |      0       |         1         |      0       |           0            |           0            |

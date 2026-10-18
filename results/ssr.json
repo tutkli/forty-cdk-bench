@@ -1,6 +1,6 @@
 {
   "meta": {
-    "date": "2026-10-18T01:23:44.892Z",
+    "date": "2026-10-18T19:16:28.688Z",
     "node": "v24.15.0",
     "platform": "win32-x64",
     "chromium": "156.0.8078.4",
@@ -10,7 +10,7 @@
       "@angular/platform-server": "22.2.3",
       "@angular/build": "22.2.3",
       "playwright": "1.64.1",
-      "forty-cdk": "0.38.0",
+      "forty-cdk": "0.39.0",
       "ng-primitives": "0.131.2",
       "@angular/aria": "22.2.3",
       "@angular/cdk": "22.2.3",
@@ -45,7 +45,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 6.5,
+        "seconds": 7.8,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -135,7 +135,7 @@
       "serverRender": {
         "ok": false,
         "exitCode": 0,
-        "seconds": 6.7,
+        "seconds": 7.8,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -245,7 +245,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 7.1,
+        "seconds": 7.8,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -340,7 +340,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 6.7,
+        "seconds": 7.6,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -430,7 +430,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 13.8,
+        "seconds": 7.8,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -520,7 +520,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 13.3,
+        "seconds": 7.4,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -613,7 +613,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 9.2,
+        "seconds": 6.6,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -706,7 +706,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 9.2,
+        "seconds": 6.6,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -802,7 +802,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 10.2,
+        "seconds": 7.6,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -895,7 +895,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 10.2,
+        "seconds": 7.5,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -977,7 +977,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 10.6,
+        "seconds": 8.3,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -1059,7 +1059,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 11.1,
+        "seconds": 8.2,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -1141,7 +1141,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 11.7,
+        "seconds": 7.7,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -1223,7 +1223,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 10.8,
+        "seconds": 7.7,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -1312,7 +1312,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 8.6,
+        "seconds": 7.9,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -1401,7 +1401,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 8.4,
+        "seconds": 7.5,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -1657,7 +1657,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 9.5,
+        "seconds": 7.7,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -1739,7 +1739,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 9.7,
+        "seconds": 7,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -1821,7 +1821,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 11.1,
+        "seconds": 5.6,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -1903,7 +1903,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 9.4,
+        "seconds": 5.1,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -1978,7 +1978,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 9.4,
+        "seconds": 5.5,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -2053,7 +2053,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 9.1,
+        "seconds": 5.3,
         "prerendered": true,
         "setup": {
           "imports": [],
@@ -2128,7 +2128,7 @@
       "serverRender": {
         "ok": true,
         "exitCode": 0,
-        "seconds": 6.5,
+        "seconds": 4.1,
         "prerendered": true,
         "setup": {
           "imports": [],

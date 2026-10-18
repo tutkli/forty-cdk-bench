@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-10-18T01:23:45.402Z",
+  "generatedAt": "2026-10-18T19:16:32.020Z",
   "rows": [
     {
       "library": "forty",
       "package": "forty-cdk",
-      "version": "0.38.0",
+      "version": "0.39.0",
       "entryPoints": 62,
-      "directives": 290,
+      "directives": 294,
       "components": 3,
-      "standalone": 293,
+      "standalone": 297,
       "ngModules": 0,
       "signalInputs": 682,
       "decoratorInputs": 0,
@@ -17,7 +17,7 @@
       "controlValueAccessors": 0,
       "signalFormsControls": 24,
       "lifecycleHookClasses": 1,
-      "injectables": 312,
+      "injectables": 316,
       "constructorInjectionClasses": 0,
       "valueAccessorBundles": 0,
       "ngControlBundles": 0,

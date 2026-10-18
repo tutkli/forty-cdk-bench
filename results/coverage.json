@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-18T16:59:31.020Z",
+  "generatedAt": "2026-10-18T19:16:32.959Z",
   "versions": {
-    "forty-cdk": "0.38.0",
+    "forty-cdk": "0.39.0",
     "ng-primitives": "0.131.2",
     "@angular/aria": "22.2.3",
     "@angular/cdk": "22.2.3",

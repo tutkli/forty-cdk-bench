@@ -1,8 +1,8 @@
 # SSR and hydration
 
-Generated 2026-10-18T01:23:44.892Z. Angular 22.2.3, `@angular/ssr` 22.2.3, Playwright 1.64.1 (Chromium 156.0.8078.4), Node v24.15.0.
+Generated 2026-10-18T19:16:28.688Z. Angular 22.2.3, `@angular/ssr` 22.2.3, Playwright 1.64.1 (Chromium 156.0.8078.4), Node v24.15.0.
 
-Libraries: forty-cdk 0.38.0, ng-primitives 0.131.2, Angular Aria 22.2.3, Angular CDK 22.2.3, Spartan (brain) 1.8.0.
+Libraries: forty-cdk 0.39.0, ng-primitives 0.131.2, Angular Aria 22.2.3, Angular CDK 22.2.3, Spartan (brain) 1.8.0.
 
 Method: [SSR.md](../SSR.md). Each cell reads, in order: **server render** · **server markup** (no JavaScript) · **hydration** · **post-hydration behavior**.
 
