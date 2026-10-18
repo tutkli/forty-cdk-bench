@@ -19,7 +19,9 @@
     "@angular/core": "^22.2.3",
     "@angular/forms": "^22.2.3",
     "@angular/platform-browser": "^22.2.3",
+    "@angular/platform-server": "22.2.3",
     "@angular/router": "^22.2.3",
+    "@angular/ssr": "22.2.3",
     "@floating-ui/dom": "1.8.0",
     "@internationalized/date": "3.12.4",
     "@spartan-ng/brain": "1.8.0",
@@ -32,6 +34,7 @@
     "@angular/build": "^22.2.3",
     "@angular/cli": "^22.2.3",
     "@angular/compiler-cli": "^22.2.3",
+    "axe-core": "4.11.0",
     "playwright": "1.64.1",
     "prettier": "^3.9.10",
     "typescript": "~6.0.3"

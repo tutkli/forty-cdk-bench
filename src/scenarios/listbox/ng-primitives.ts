@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { NgpListbox, NgpListboxOption } from 'ng-primitives/listbox';
+import { FRUITS } from '../data';
 
 @Component({
   selector: 'bench-scenario',
@@ -22,13 +23,7 @@ import { NgpListbox, NgpListboxOption } from 'ng-primitives/listbox';
   `,
 })
 export class Scenario {
-  protected readonly fruits = [
-    { value: 'apple', label: 'Apple' },
-    { value: 'banana', label: 'Banana' },
-    { value: 'cherry', label: 'Cherry' },
-    { value: 'grape', label: 'Grape' },
-    { value: 'mango', label: 'Mango' },
-  ];
+  protected readonly fruits = FRUITS;
 
   protected readonly value = signal<string[]>([]);
 }

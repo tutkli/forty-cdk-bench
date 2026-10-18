@@ -14,11 +14,7 @@ import {
   provideBrnPopoverConfig,
   provideBrnPopoverDefaultOptions,
 } from '@spartan-ng/brain/popover';
-
-interface Fruit {
-  value: string;
-  label: string;
-}
+import { type Fruit, FRUITS } from '../data';
 
 @Component({
   selector: 'bench-scenario',
@@ -59,13 +55,7 @@ interface Fruit {
   `,
 })
 export class Scenario {
-  protected readonly fruits: Fruit[] = [
-    { value: 'apple', label: 'Apple' },
-    { value: 'banana', label: 'Banana' },
-    { value: 'cherry', label: 'Cherry' },
-    { value: 'grape', label: 'Grape' },
-    { value: 'mango', label: 'Mango' },
-  ];
+  protected readonly fruits = FRUITS;
 
   protected readonly value = signal<Fruit | null | undefined>(null);
   protected readonly search = signal('');

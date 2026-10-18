@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, computed, signal, viewChild } from 
 import { Combobox, ComboboxPopup, ComboboxWidget } from '@angular/aria/combobox';
 import { Listbox, Option } from '@angular/aria/listbox';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { FRUITS } from '../data';
 
 @Component({
   selector: 'bench-scenario',
@@ -46,13 +47,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
   `,
 })
 export class Scenario {
-  protected readonly fruits = [
-    { value: 'apple', label: 'Apple' },
-    { value: 'banana', label: 'Banana' },
-    { value: 'cherry', label: 'Cherry' },
-    { value: 'grape', label: 'Grape' },
-    { value: 'mango', label: 'Mango' },
-  ];
+  protected readonly fruits = FRUITS;
 
   private readonly combobox = viewChild.required(Combobox);
 

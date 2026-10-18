@@ -6,6 +6,7 @@ import {
   NgpComboboxOption,
   NgpComboboxPortal,
 } from 'ng-primitives/combobox';
+import { FRUITS } from '../data';
 
 @Component({
   selector: 'bench-scenario',
@@ -36,13 +37,7 @@ import {
   `,
 })
 export class Scenario {
-  protected readonly fruits = [
-    { value: 'apple', label: 'Apple' },
-    { value: 'banana', label: 'Banana' },
-    { value: 'cherry', label: 'Cherry' },
-    { value: 'grape', label: 'Grape' },
-    { value: 'mango', label: 'Mango' },
-  ];
+  protected readonly fruits = FRUITS;
 
   protected readonly value = signal<string | undefined>(undefined);
   protected readonly inputValue = signal('');
