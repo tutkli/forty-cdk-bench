@@ -7,7 +7,7 @@ Per library, what each scenario had to add by hand to meet [SCENARIOS.md](SCENAR
 - **accordion**: panels are mounted with `@if (item.expanded())`, one of the two ways the README offers; the other needs a `[data-state="closed"] { display: none }` rule, and rule 4 allows no CSS. Closed panels carry `aria-hidden` + `inert` when mounted, but the library never hides them visually. With `@if`, a collapsed trigger has no `aria-controls` (the README says so), which fails the optional `accordion.aria-controls-collapsed` check.
 - **tabs**: the same choice, `@if (value() === tab.value)`, for the same reason.
 - **listbox**: options are `<button>`s, as the README requires: selection rides on the native click, and other host elements break keyboard activation.
-- **combobox**: the root's `ariaLabel` names the listbox popup, not the input, so the input carries its own `aria-label`. The library's own hero example labels only the root and leaves the input named by its `placeholder`.
+- **combobox**: the root's `ariaLabel` names the listbox popup, not the input, so the input carries its own `aria-label`, as the library's own hero example does.
 
 ## ng-primitives
 

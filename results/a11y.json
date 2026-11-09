@@ -1,7 +1,7 @@
 {
   "meta": {
-    "date": "2026-10-18T19:14:23.764Z",
-    "durationMs": 86096,
+    "date": "2026-11-09T18:39:09.436Z",
+    "durationMs": 93114,
     "node": "24.15.0",
     "playwright": "1.64.1",
     "chromium": "156.0.8078.4",
@@ -15,7 +15,7 @@
     ],
     "versions": {
       "@angular/core": "22.2.3",
-      "forty-cdk": "0.39.0",
+      "forty-cdk": "0.43.0",
       "ng-primitives": "0.131.2",
       "@angular/aria": "22.2.3",
       "@angular/cdk": "22.2.3",
@@ -35,7 +35,7 @@
       "pattern": "accordion",
       "library": "forty",
       "status": "ok",
-      "durationMs": 2896,
+      "durationMs": 3346,
       "checks": [
         {
           "id": "accordion.header-structure",
@@ -136,7 +136,7 @@
       "pattern": "accordion",
       "library": "ng-primitives",
       "status": "ok",
-      "durationMs": 12968,
+      "durationMs": 13153,
       "checks": [
         {
           "id": "accordion.header-structure",
@@ -247,7 +247,7 @@
       "pattern": "accordion",
       "library": "angular-aria",
       "status": "ok",
-      "durationMs": 2547,
+      "durationMs": 2568,
       "checks": [
         {
           "id": "accordion.header-structure",
@@ -343,7 +343,7 @@
       "pattern": "accordion",
       "library": "angular-cdk",
       "status": "ok",
-      "durationMs": 2429,
+      "durationMs": 2594,
       "checks": [
         {
           "id": "accordion.header-structure",
@@ -444,7 +444,7 @@
       "pattern": "accordion",
       "library": "spartan",
       "status": "ok",
-      "durationMs": 2574,
+      "durationMs": 2602,
       "checks": [
         {
           "id": "accordion.header-structure",
@@ -540,7 +540,7 @@
       "pattern": "tabs",
       "library": "forty",
       "status": "ok",
-      "durationMs": 5061,
+      "durationMs": 5369,
       "checks": [
         {
           "id": "tabs.roles",
@@ -704,7 +704,7 @@
       "pattern": "tabs",
       "library": "ng-primitives",
       "status": "ok",
-      "durationMs": 5392,
+      "durationMs": 5624,
       "checks": [
         {
           "id": "tabs.roles",
@@ -863,7 +863,7 @@
       "pattern": "tabs",
       "library": "angular-aria",
       "status": "ok",
-      "durationMs": 5429,
+      "durationMs": 5964,
       "checks": [
         {
           "id": "tabs.roles",
@@ -1022,7 +1022,7 @@
       "pattern": "tabs",
       "library": "spartan",
       "status": "ok",
-      "durationMs": 5193,
+      "durationMs": 5782,
       "checks": [
         {
           "id": "tabs.roles",
@@ -1181,7 +1181,7 @@
       "pattern": "menu",
       "library": "forty",
       "status": "ok",
-      "durationMs": 7118,
+      "durationMs": 7933,
       "checks": [
         {
           "id": "menu.button",
@@ -1380,7 +1380,7 @@
       "pattern": "menu",
       "library": "ng-primitives",
       "status": "ok",
-      "durationMs": 21723,
+      "durationMs": 22985,
       "checks": [
         {
           "id": "menu.button",
@@ -1627,7 +1627,7 @@
       "pattern": "menu",
       "library": "angular-aria",
       "status": "ok",
-      "durationMs": 7750,
+      "durationMs": 8782,
       "checks": [
         {
           "id": "menu.button",
@@ -1836,7 +1836,7 @@
       "pattern": "menu",
       "library": "angular-cdk",
       "status": "ok",
-      "durationMs": 7478,
+      "durationMs": 8188,
       "checks": [
         {
           "id": "menu.button",
@@ -2045,7 +2045,7 @@
       "pattern": "listbox",
       "library": "forty",
       "status": "ok",
-      "durationMs": 5084,
+      "durationMs": 6140,
       "checks": [
         {
           "id": "listbox.roles",
@@ -2150,7 +2150,7 @@
       "pattern": "listbox",
       "library": "ng-primitives",
       "status": "ok",
-      "durationMs": 5426,
+      "durationMs": 6024,
       "checks": [
         {
           "id": "listbox.roles",
@@ -2255,7 +2255,7 @@
       "pattern": "listbox",
       "library": "angular-aria",
       "status": "ok",
-      "durationMs": 5185,
+      "durationMs": 5751,
       "checks": [
         {
           "id": "listbox.roles",
@@ -2360,7 +2360,7 @@
       "pattern": "listbox",
       "library": "angular-cdk",
       "status": "ok",
-      "durationMs": 5660,
+      "durationMs": 6215,
       "checks": [
         {
           "id": "listbox.roles",
@@ -2465,7 +2465,7 @@
       "pattern": "combobox",
       "library": "forty",
       "status": "ok",
-      "durationMs": 6472,
+      "durationMs": 7679,
       "checks": [
         {
           "id": "combobox.role",
@@ -2628,7 +2628,7 @@
       "pattern": "combobox",
       "library": "ng-primitives",
       "status": "ok",
-      "durationMs": 10116,
+      "durationMs": 11092,
       "checks": [
         {
           "id": "combobox.role",
@@ -2796,7 +2796,7 @@
       "pattern": "combobox",
       "library": "angular-aria",
       "status": "ok",
-      "durationMs": 10224,
+      "durationMs": 10993,
       "checks": [
         {
           "id": "combobox.role",
@@ -2969,7 +2969,7 @@
       "pattern": "combobox",
       "library": "spartan",
       "status": "ok",
-      "durationMs": 10206,
+      "durationMs": 10870,
       "checks": [
         {
           "id": "combobox.role",
@@ -3137,7 +3137,7 @@
       "pattern": "dialog",
       "library": "forty",
       "status": "ok",
-      "durationMs": 5177,
+      "durationMs": 5442,
       "checks": [
         {
           "id": "dialog.role-name",
@@ -3264,7 +3264,7 @@
       "pattern": "dialog",
       "library": "ng-primitives",
       "status": "ok",
-      "durationMs": 5379,
+      "durationMs": 5852,
       "checks": [
         {
           "id": "dialog.role-name",
@@ -3391,7 +3391,7 @@
       "pattern": "dialog",
       "library": "angular-cdk",
       "status": "ok",
-      "durationMs": 5112,
+      "durationMs": 5967,
       "checks": [
         {
           "id": "dialog.role-name",
@@ -3518,7 +3518,7 @@
       "pattern": "dialog",
       "library": "spartan",
       "status": "ok",
-      "durationMs": 5062,
+      "durationMs": 5268,
       "checks": [
         {
           "id": "dialog.role-name",
