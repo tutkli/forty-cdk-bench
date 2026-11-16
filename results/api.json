@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-09T18:27:23.294Z",
+  "generatedAt": "2026-11-16T09:50:59.385Z",
   "rows": [
     {
       "library": "forty",
       "package": "forty-cdk",
-      "version": "0.43.0",
+      "version": "0.45.0",
       "entryPoints": 64,
       "directives": 294,
       "components": 3,
       "standalone": 297,
       "ngModules": 0,
-      "signalInputs": 686,
+      "signalInputs": 688,
       "decoratorInputs": 0,
       "outputs": 176,
       "eventEmitters": 0,

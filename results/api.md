@@ -1,10 +1,10 @@
 # Modern Angular API
 
-Generated 2026-11-09T18:27:23.298Z. Static analysis of each library's own published typings (`types/**/*.d.ts`) and bundles (`fesm2022/**/*.mjs`), testing entry points excluded. Dependencies are not counted: ng-primitives and Spartan build on `@angular/cdk`, which has its own column.
+Generated 2026-11-16T09:50:59.386Z. Static analysis of each library's own published typings (`types/**/*.d.ts`) and bundles (`fesm2022/**/*.mjs`), testing entry points excluded. Dependencies are not counted: ng-primitives and Spartan build on `@angular/cdk`, which has its own column.
 
 | | forty-cdk | ng-primitives | Angular Aria | Angular CDK | Spartan (brain) |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Package | `forty-cdk` 0.43.0 | `ng-primitives` 0.131.2 | `@angular/aria` 22.2.3 | `@angular/cdk` 22.2.3 | `@spartan-ng/brain` 1.8.0 |
+| Package | `forty-cdk` 0.45.0 | `ng-primitives` 0.131.2 | `@angular/aria` 22.2.3 | `@angular/cdk` 22.2.3 | `@spartan-ng/brain` 1.8.0 |
 | Entry points | 64 | 55 | 24 | 43 | 42 |
 | Directives + components | 297 | 178 | 31 | 79 | 195 |
 | Standalone | 100 % | 100 % | 100 % | 100 % | 100 % |
